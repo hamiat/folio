@@ -19,43 +19,11 @@ const leftContainerVariants = {
   width:"100%",
  
   transition: {
-    duration: 3,
+    duration: 2,
     ease: "easeInOut"
   }
   }
-  , exit: {
-    scale: 0.8,
-    transition: {
-      duration: 1,
-      ease: "easeInOut"
-    }
-  }
-}
-const borderVariants = {
-  initial: {
-    border: "none",
-    boxShadow: "none", 
-  },
-  animate: {
-    border: "1px solid #000000",
-    boxShadow: "2px 2px #ff8d0b",
-    transition: {
-      delay: 5,
-      duration: 2,
-    }
-  }
-}
-const goToSideVariants = {
-  initial: {
-    x: 0, 
-  },
-  animate: {
-   x:"-20vw",
-   transition: {
-    delay: 5,
-    duration: 2,
-  }
-  }
+  
 }
 
 const pathVariants = {
@@ -67,27 +35,55 @@ const pathVariants = {
     opacity: 1,
     pathLength: 1,
     transition: {
-      duration: 3,
+      duration: 2,
       ease: "easeInOut"
     }
+  }
+}
+const goToSideVariants = {
+  initial: {
+    x: 0, 
+  },
+  animate: {
+   x:"-15vw",
+   transition: {
+    delay: 3,
+    duration: 1,
+  }
   }
 }
 
 const startVariants = {
   initial: {
-    
-    y: "200vh"
+   opacity:0
   },
   animate: {
-  
-    y: 0,
+  opacity: 1,
     transition: {
-      delay:5,
-      duration: 3,
+      delay:9,
+      duration: 1,
       ease: "easeInOut"
     }
   }
 }
+
+/* 
+const borderVariants = {
+  initial: {
+    border: "none",
+    boxShadow: "none", 
+  },
+  animate: {
+    border: "1px solid #000000",
+    boxShadow: "2px 2px #ff8d0b",
+    transition: {
+      delay: 3,
+      duration: 2,
+    }
+  }
+} */
+
+
 
 const nameVariants = {
   hover: {
@@ -102,7 +98,7 @@ function App() {
 
   return (
   
-    <motion.main variants={borderVariants} initial="initial" animate="animate"  className={style.main}>
+    <motion.main  className={style.main}>
       
       <motion.section variants={leftContainerVariants} initial="initial" animate="animate" className={style.leftContent}>
   
@@ -160,8 +156,9 @@ function App() {
       className={style.name} src={name} alt="hamiat nalwanga" />
       </motion.section>
 
-      <motion.section variants={startVariants} initial="initial" animate="animate" className={style.rightContent} >
-      <Button onClick={() =>setMode(!mode)}> {mode ? "Light mode" : "Dark mode"} </Button>
+      <motion.section className={style.rightContent} >
+        <motion.div className={style.btn} variants={startVariants} initial="initial" animate="animate" >
+      <Button onClick={() =>setMode(!mode)}> {mode ? "Light mode" : "Dark mode"} </Button></motion.div>
       
       
       <About />

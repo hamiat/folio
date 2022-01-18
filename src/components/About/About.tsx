@@ -31,34 +31,48 @@ import { motion } from "framer-motion"
 
 const childVariants = {
   initial: {
-    opacity: 0,
     y: "100vh",
   },
   animate: {
-    opacity: 1,
-    y:0, transition: {
-      type: 'spring', 
-      delay: 5,
-      duration: 1.5,
-      mass: 2,
-      damping: 15,
-      
-    }
+    y:0, 
+  }
+}
+const reveal = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity:1, 
   }
 }
 
 const About: React.FC = () => {
     return(
 
-<div  >
+<div className={style.about}  >
 
   <motion.h2
   variants={childVariants}
+  initial="initial"
+  animate="animate"
+  transition= {{
+    type: 'tween', 
+    delay: 5,
+    duration: 1.5,
+  }}
   >
-    Welcome to my website!</motion.h2>
-  <motion.h3
-   variants={childVariants}>A little about me...</motion.h3>
-  <motion.p variants={childVariants}>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui </motion.p>
+    Hello there!</motion.h2>
+    <motion.div   variants={reveal}
+  initial="initial"
+  animate="animate" transition= {{
+    type: 'tween', 
+    delay: 6.5,
+    duration: 1.5,
+  }}>
+    <motion.h3>welcome to my website...</motion.h3>
+  <motion.p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui </motion.p>
+  </motion.div>
+  
 </div>
     )
 }

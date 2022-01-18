@@ -1,18 +1,32 @@
 @import '../../styles/main.module.scss';
 
-.bigName {
-  max-width: 100%;
-  padding-bottom: 24px;
-  display: none;
-}
-h3 {
-  color: $redish;
-}
+.about {
 
+    padding-left: 20px;
+  h2 {
+    width: 120%;
+    padding-bottom: 28px;
+    
+  }
 
-p {
-  font-weight: 300;
-  font-size: 22px;
-  width: 85%;
+  .bigName {
+    max-width: 100%;
+    padding-bottom: 24px;
+    display: none;
+  }
+  h3 {
+    color: $redish;
+    margin-left: 48px;
+  }
+  
+  
+  p {
+    font-weight: 300;
+    font-size: 22px;
+    width: 85%;
+    margin-left: 48px;
+  
+  }
+  
 
 }

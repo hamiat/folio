@@ -26,7 +26,7 @@ body {
     max-width: 1280px;
     color: $orange;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr;
     
      
@@ -74,17 +74,12 @@ body {
       flex-direction: column;
       gap: 48px;
       padding: 48px ;
-      width: 50%;
       font-size: 1.2vw;
 
-      .pageContent {
-        padding: 48px 64px;
-       
-      }
-      .bottomBtns {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
+      .btn {
+        
+      margin: 0 48px 0;
+       place-self: end;
       }
 
       
