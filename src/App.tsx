@@ -5,38 +5,56 @@ import Button from "./components/Button/Button"
 import { useState } from "react"
 import { motion } from "framer-motion"
 
-const containerVariants = {
+
+const leftContainerVariants = {
   initial: {
-    opacity: 0,
+    gridColumn: "1/span 2",
+    opacity:0,
+    width:"auto",
+    
   },
   animate: {
+    gridColumn: "1/span1",
   opacity:1,
+  width:"100%",
+ 
   transition: {
-    duration: 1,
+    duration: 3,
     ease: "easeInOut"
   }
+  }
+  , exit: {
+    scale: 0.8,
+    transition: {
+      duration: 1,
+      ease: "easeInOut"
+    }
   }
 }
 const borderVariants = {
   initial: {
     border: "none",
-    boxShadow: "none",
-    pathLength: 0 
+    boxShadow: "none", 
   },
   animate: {
     border: "1px solid #000000",
     boxShadow: "2px 2px #ff8d0b",
     transition: {
-      delay: 5
+      delay: 5,
+      duration: 2,
     }
   }
 }
-const svgVariants = {
+const goToSideVariants = {
   initial: {
-    x: 0.1, 
+    x: 0, 
   },
   animate: {
-   x:0,
+   x:"-20vw",
+   transition: {
+    delay: 5,
+    duration: 2,
+  }
   }
 }
 
@@ -57,15 +75,15 @@ const pathVariants = {
 
 const startVariants = {
   initial: {
-    display: "none",
+    
     y: "200vh"
   },
   animate: {
-    display: "inline-flex",
+  
     y: 0,
     transition: {
       delay:5,
-      duration: 2,
+      duration: 3,
       ease: "easeInOut"
     }
   }
@@ -86,9 +104,9 @@ function App() {
   
     <motion.main variants={borderVariants} initial="initial" animate="animate"  className={style.main}>
       
-      <motion.section variants={containerVariants} initial="initial" animate="animate" className={style.leftContent}>
+      <motion.section variants={leftContainerVariants} initial="initial" animate="animate" className={style.leftContent}>
   
-      <motion.svg variants={svgVariants}
+      <motion.svg variants={goToSideVariants}
       initial="initial"
       animate="animate"
       className={style.face}   width="280" height="393" viewBox="0 0 280 393" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +156,7 @@ function App() {
 </motion.svg>
 
       <motion.img 
-      variants={nameVariants}
+      variants={goToSideVariants}
       className={style.name} src={name} alt="hamiat nalwanga" />
       </motion.section>
 
