@@ -5,7 +5,6 @@ import Button from "./components/Button/Button";
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 
-
 const leftContainerVariants = {
   initial: {
     gridColumn: "1/span 2",
@@ -81,31 +80,31 @@ const startVariants = {
   }
 }  */
 
-const nameVariants : Variants = {
+const nameVariants: Variants = {
   offscreen: {
     y: "-10vh",
-    opacity:0,
+    opacity: 0,
   },
   onscreen: {
     y: 0,
-    opacity:1,
+    opacity: 1,
     transition: {
       ease: "easeInOut",
       duration: 2,
-    }
-  }
+    },
+  },
 };
-const revealVariants : Variants = {
+const revealVariants: Variants = {
   offscreen: {
-    opacity:0,
+    opacity: 0,
   },
   onscreen: {
-    opacity:1,
+    opacity: 1,
     transition: {
       ease: "easeInOut",
       duration: 2,
-    }
-  }
+    },
+  },
 };
 
 function App() {
@@ -406,22 +405,18 @@ function App() {
           alt="hamiat nalwanga"
         />
       </motion.section>
-      <motion.div
-          className={style.btn}
-          
-        >
-          <Button onClick={() => setMode(!mode)}>
-            {mode ? "Light mode" : "Dark mode"}
-          </Button>
-        </motion.div>
-      <motion.section variants={startVariants}
-          initial="initial"
-          animate="animate" className={style.rightContent}>
-        
-
-      
-         <About />
-      
+      <motion.div className={style.btn}>
+        <Button onClick={() => setMode(!mode)}>
+          {mode ? "Light mode" : "Dark mode"}
+        </Button>
+      </motion.div>
+      <motion.section
+        variants={startVariants}
+        initial="initial"
+        animate="animate"
+        className={style.rightContent}
+      >
+        <About />
       </motion.section>
     </motion.main>
   );

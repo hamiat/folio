@@ -12,9 +12,13 @@ grid-row: 1;
    flex-direction: column;
    justify-content: flex-end;
    
+
+  
+    
    
   
   h2 {
+   
     width: 120%;
  
     
@@ -25,26 +29,15 @@ grid-row: 1;
     padding-bottom: 24px;
     display: none;
   }
-  h3 {
-    color: $redish;
-    margin-left: 38px;
-    margin-top: -28px;
-  }
   
-  
-  p {
-    font-weight: 300;
-    font-size: 22px;
-    width: 50%;
-    margin-left: 48px;
-  
-  }
+
   
 
 }
 
 
 .skills {
+
   grid-row: 2;
   height: 100vh;
    display: flex;
