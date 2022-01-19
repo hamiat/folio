@@ -12,8 +12,8 @@ $redish: #BC2633;
 
 
 body {
-  height: 100vh;
-  overflow: hidden;
+  
+  overflow-x: hidden;
   background-color: $lightBlack;
   display: grid;
  justify-content: center;
@@ -23,14 +23,13 @@ body {
 
   
   .main {
-
     background-color: $lightBlack;
-    width: 100vw;
-    height: 100vh;
     color: $orange;
     display: grid;
     grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr;
+    grid-template-rows: 100px 1fr;
+    
+    
   
     
      
@@ -38,12 +37,16 @@ body {
 
     .leftContent {
       grid-column: 1 / span 1;
-      grid-row: 1;
+      grid-row: 1 / span 2;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       place-items: center;
-     
+     position: fixed;
+     right: 0;
+     top:0;
+     bottom: 0;
+     left:0;
     
     
 
@@ -71,19 +74,27 @@ body {
       }
     }
 
+    .btn {
+      grid-column: 2 / span 1;
+      text-align: right;
+     grid-row: 1;
+     padding:  148px;
+     position: fixed;
+     right: 0;
+     top:0;
+     bottom: 0;
+     left:0;
+    
+   
+    }
+
     .rightContent {
       grid-column: 2 / span 1;
-      grid-row: 1;
-      display: grid;
+      grid-row: 2;
       padding: 0 28px;
-     
       font-size: 1.2vw;
 
-      .btn {
-        text-align: right;
-       grid-row: 1;
-       padding:  148px;
-      }
+     
       .pageContent {
         grid-row: 2;
         margin-top: -300px;

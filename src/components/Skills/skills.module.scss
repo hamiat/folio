@@ -1,22 +1,12 @@
 @import '../../styles/main.module.scss';
 
-
-.content {
-  display: grid;
- 
-
 .about {
-grid-row: 1;
-   height: 50vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
-   
+  transform: translateY(500px);
    
   
   h2 {
     width: 120%;
- 
+    
     
   }
 
@@ -40,17 +30,5 @@ grid-row: 1;
   
   }
   
-
-}
-
-
-.skills {
-  grid-row: 2;
-  height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-  
-}
 
 }

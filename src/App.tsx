@@ -3,7 +3,8 @@ import About from "./components/About/About";
 import name from "./name.svg";
 import Button from "./components/Button/Button";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+
 
 const leftContainerVariants = {
   initial: {
@@ -58,7 +59,7 @@ const startVariants = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 8,
+      delay: 3.8,
       duration: 2,
       ease: "easeInOut",
     },
@@ -80,10 +81,31 @@ const startVariants = {
   }
 }  */
 
-const nameVariants = {
-  hover: {
-    display: "block",
+const nameVariants : Variants = {
+  offscreen: {
+    y: "-10vh",
+    opacity:0,
   },
+  onscreen: {
+    y: 0,
+    opacity:1,
+    transition: {
+      ease: "easeInOut",
+      duration: 2,
+    }
+  }
+};
+const revealVariants : Variants = {
+  offscreen: {
+    opacity:0,
+  },
+  onscreen: {
+    opacity:1,
+    transition: {
+      ease: "easeInOut",
+      duration: 2,
+    }
+  }
 };
 
 function App() {
@@ -384,22 +406,22 @@ function App() {
           alt="hamiat nalwanga"
         />
       </motion.section>
-
-      <motion.section className={style.rightContent}>
-        <motion.div
+      <motion.div
           className={style.btn}
-          variants={startVariants}
-          initial="initial"
-          animate="animate"
+          
         >
           <Button onClick={() => setMode(!mode)}>
             {mode ? "Light mode" : "Dark mode"}
           </Button>
         </motion.div>
+      <motion.section variants={startVariants}
+          initial="initial"
+          animate="animate" className={style.rightContent}>
+        
 
-        <section className={style.pageContent}>
-          <About />
-        </section>
+      
+         <About />
+      
       </motion.section>
     </motion.main>
   );
