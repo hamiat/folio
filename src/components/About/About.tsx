@@ -72,10 +72,19 @@ const About: React.FC = () => {
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}  className={style.skills} >
         <motion.div  variants={revealVariants}>
-        <motion.h2 variants={titleVariants}>Hello there!</motion.h2>
+        <motion.h2 variants={titleVariants}>Skills</motion.h2>
         <motion.div>
           <motion.h3 variants={contentVariants}>
-            welcome to my website...
+            Soft
+          </motion.h3>
+          <motion.p variants={contentVariants}>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+            fugit, sed quia consequuntur magni dolores eos qui
+          </motion.p>
+        </motion.div>
+        <motion.div>
+          <motion.h3 variants={contentVariants}>
+            Hard
           </motion.h3>
           <motion.p variants={contentVariants}>
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
