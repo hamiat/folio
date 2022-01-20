@@ -77,7 +77,7 @@ const About: React.FC = () => {
       <motion.section initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}
-      transition={showModal ? {delayChildren: 4} : {delayChildren: 0}} 
+      transition={showModal ? {delayChildren: 4.4, staggerChildren:0.7} : {delayChildren: 0}} 
        className={style.about}>
         <motion.h2 variants={titleVariants}>Hello there!</motion.h2>
         <motion.div>
@@ -93,9 +93,9 @@ const About: React.FC = () => {
 
       <motion.section initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.8 }}  className={style.skills} >
+      viewport={{ once: false, amount: 0.8 }}  className={style.skills}  >
         <motion.h2 variants={titleVariants}>Skills</motion.h2>
-        <motion.div>
+        <motion.div >
           <motion.h3 variants={contentVariants}>
             Soft
           </motion.h3>
