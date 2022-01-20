@@ -1,5 +1,6 @@
 import style from "./about.module.scss";
 import nameTwo from "../../nameTwo.svg";
+import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 
 const contentVariants: Variants = {
@@ -53,27 +54,31 @@ const startVariants = {
   animate: {
     opacity: 1,
     y: "2vh",
-    transition: {
-      delay: 3.8,
-      duration: 1.5,
-      ease: "easeInOut",
-      type: "tween",
-    },
+    
   },
 };
 
 const About: React.FC = () => {
+  const [showModal, setShowModal] = useState(true)
+  useEffect (() => {
+    setTimeout(() => {
+ setShowModal(false);
+    }, 4000)
+  }, [])
+
   return (
     <motion.div
       variants={startVariants}
       initial="initial"
       animate="animate"
-      className={style.content}
-      
+      className={style.content}  
+      transition={showModal ? {delay: 3.8} : {delay: 0}}
     >
       <motion.section initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.8 }} className={style.about}>
+      viewport={{ once: false, amount: 0.8 }}
+      transition={showModal ? {delayChildren: 4} : {delayChildren: 0}} 
+       className={style.about}>
         <motion.h2 variants={titleVariants}>Hello there!</motion.h2>
         <motion.div>
           <motion.h3 variants={contentVariants}>
@@ -89,7 +94,6 @@ const About: React.FC = () => {
       <motion.section initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}  className={style.skills} >
-        <motion.div  variants={revealVariants}>
         <motion.h2 variants={titleVariants}>Skills</motion.h2>
         <motion.div>
           <motion.h3 variants={contentVariants}>
@@ -99,7 +103,6 @@ const About: React.FC = () => {
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
             fugit, sed quia consequuntur magni dolores eos qui
           </motion.p>
-        </motion.div>
         <motion.div>
           <motion.h3 variants={contentVariants}>
             Hard
