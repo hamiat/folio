@@ -410,14 +410,11 @@ function App() {
           {mode ? "Light mode" : "Dark mode"}
         </Button>
       </motion.div>
-      <motion.section
-        variants={startVariants}
-        initial="initial"
-        animate="animate"
+      <section
         className={style.rightContent}
       >
         <About />
-      </motion.section>
+      </section>
     </motion.main>
   );
 }

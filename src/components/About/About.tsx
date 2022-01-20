@@ -10,7 +10,6 @@ const contentVariants: Variants = {
     opacity: 1,
     transition: {
       ease: "easeInOut",
-  
       duration: 2,
     },
   },
@@ -21,12 +20,12 @@ const titleVariants: Variants = {
     opacity: 0,
   },
   onscreen: {
-    y: "-4vh",
+    y: "-3vh",
     opacity: 1,
     transition: {
-      ease: "easeInOut",
+      ease: "easeOut",
       
-      duration: 2,
+      duration: 1,
     },
   },
 };
@@ -46,10 +45,29 @@ const revealVariants: Variants = {
   },
 };
 
+const startVariants = {
+  initial: {
+    opacity: 0,
+    y: 0,
+  },
+  animate: {
+    opacity: 1,
+    y: "2vh",
+    transition: {
+      delay: 3.8,
+      duration: 1.5,
+      ease: "easeInOut",
+      type: "tween",
+    },
+  },
+};
+
 const About: React.FC = () => {
   return (
     <motion.div
-      
+      variants={startVariants}
+      initial="initial"
+      animate="animate"
       className={style.content}
       
     >
