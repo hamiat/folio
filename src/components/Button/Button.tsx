@@ -2,7 +2,7 @@ import style from "./button.module.scss"
 
 export interface iProps {
   children: React.ReactChild | React.ReactChild[];
-  onClick?: (() => void) | undefined
+  onClick?: any
 }
 
 function Button( {children, onClick, }: iProps) {
