@@ -32,32 +32,48 @@ const titleVariants: Variants = {
   },
 };
 
-
 const startVariants = {
   initial: {
     opacity: 0,
-    y: 0,
+    
   },
   animate: {
     opacity: 1,
-    y: "2vh",
+   
   },
 };
 
-
-
 const comeDownVariants = {
-  initial: {
-    opacity: 1,
-     
+  onscreen: {
+    opacity: 0,
+
   },
-  animate: {
+  offscreen: {
     opacity: 1,
-  
     transition: {
+      type: "spring",
+      stiffness: 120,
+      mass: 0.4,
+     
       
-      duration: 1.5,
-      ease: "easeInOut",
+    },
+  },
+};
+const sideVariants = {
+  offscreen: {
+    opacity: 1,
+    y:"-50vw"
+  },
+  onscreen: {
+    opacity: 1,
+    y:0
+,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      mass: 0.4,
+      duration: 1.5
+      
     },
   },
 };
@@ -81,9 +97,11 @@ const About: React.FC = () => {
       initial="initial"
       animate="animate"
       className={style.content}
-      transition={showModal ? { delay: 4.5, duration:1.5 } : { delay: 0 , duration:1.5}}
+      transition={
+        showModal ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
+      }
     >
-      <motion.div variants={comeDownVariants}  className={style.btn}>
+      <motion.div variants={comeDownVariants} className={style.btn}>
         <Button onClick={handleToggle}>
           {mode ? "Light mode" : "Dark mode"}
         </Button>
@@ -95,10 +113,11 @@ const About: React.FC = () => {
         transition={
           showModal
             ? { delayChildren: 5.5, staggerChildren: 1 }
-            : { delayChildren: 0,  }
+            : { delayChildren: 0 }
         }
         className={style.about}
       >
+         
         <motion.h2 variants={titleVariants}>Hello there!</motion.h2>
         <motion.div>
           <motion.h3 variants={contentVariants}>
@@ -117,6 +136,11 @@ const About: React.FC = () => {
         viewport={{ once: false, amount: 0.8 }}
         className={style.skills}
       >
+        <motion.div variants={sideVariants} className={style.btnTwo}>
+        <Button >
+          Get in touch!
+        </Button>
+      </motion.div>
         <motion.h2 variants={titleVariants}>Skills</motion.h2>
         <motion.div>
           <motion.h3 variants={contentVariants}>Soft</motion.h3>
