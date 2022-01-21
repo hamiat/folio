@@ -45,67 +45,13 @@ const goToSideVariants = {
     x: "-15vw",
     transition: {
       delay: 2.5,
-      duration: 1.5,
-      ease: "easeInOut",
-    },
-  },
-};
-
-const startVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      delay: 3.8,
       duration: 2,
       ease: "easeInOut",
     },
   },
 };
 
-/* const borderVariants = {
-  initial: {
-    border: "none",
-    boxShadow: "none", 
-  },
-  animate: {
-    border: "1px solid #000000",
-    boxShadow: "2px 2px #ff8d0b",
-    transition: {
-      delay: 8,
-      duration: 2,
-    }
-  }
-}  */
 
-const nameVariants: Variants = {
-  offscreen: {
-    y: "-10vh",
-    opacity: 0,
-  },
-  onscreen: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      ease: "easeInOut",
-      duration: 2,
-    },
-  },
-};
-const revealVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-  },
-  onscreen: {
-    opacity: 1,
-    transition: {
-      ease: "easeInOut",
-      duration: 2,
-    },
-  },
-};
 
 const App: React.FC = () => {
   return (

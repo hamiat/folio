@@ -12,7 +12,7 @@ const contentVariants: Variants = {
     opacity: 1,
     transition: {
       ease: "easeInOut",
-      duration: 2,
+      duration: 1.5,
     },
   },
 };
@@ -31,19 +31,7 @@ const titleVariants: Variants = {
     },
   },
 };
-const revealVariants: Variants = {
-  offscreen: {
-    y: 0,
-  },
-  onscreen: {
-    y: "-10vh",
 
-    transition: {
-      ease: "easeInOut",
-      duration: 2,
-    },
-  },
-};
 
 const startVariants = {
   initial: {
@@ -56,6 +44,23 @@ const startVariants = {
   },
 };
 
+
+
+const comeDownVariants = {
+  initial: {
+    opacity: 1,
+     
+  },
+  animate: {
+    opacity: 1,
+  
+    transition: {
+      
+      duration: 1.5,
+      ease: "easeInOut",
+    },
+  },
+};
 const About: React.FC = () => {
   const [showModal, setShowModal] = useState(true);
   const [mode, setMode] = useState(true);
@@ -67,7 +72,7 @@ const About: React.FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowModal(false);
-    }, 4000);
+    }, 5000);
   }, []);
 
   return (
@@ -76,20 +81,20 @@ const About: React.FC = () => {
       initial="initial"
       animate="animate"
       className={style.content}
-      transition={showModal ? { delay: 3.8 } : { delay: 0 }}
+      transition={showModal ? { delay: 4.5, duration:1.5 } : { delay: 0 , duration:1.5}}
     >
-      <div className={style.btn}>
+      <motion.div variants={comeDownVariants}  className={style.btn}>
         <Button onClick={handleToggle}>
           {mode ? "Light mode" : "Dark mode"}
         </Button>
-      </div>
+      </motion.div>
       <motion.section
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: false, amount: 0.8 }}
         transition={
           showModal
-            ? { delayChildren: 4.4, staggerChildren: 0.7 }
+            ? { delayChildren: 5.5, staggerChildren: 1 }
             : { delayChildren: 0,  }
         }
         className={style.about}
