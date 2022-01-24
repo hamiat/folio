@@ -107,6 +107,7 @@ const About: React.FC = () => {
         showModal ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
       }
     >
+       
       <motion.div 
       variants={revealBtnVariants} 
       className={style.btn}

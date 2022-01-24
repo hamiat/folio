@@ -1,9 +1,7 @@
 import style from "./styles/main.module.scss";
 import About from "./components/About/About";
 import name from "./name.svg";
-import Button from "./components/Button/Button";
-import { useState } from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 const startVariants = {
   initial: {
@@ -14,7 +12,7 @@ const startVariants = {
   animate: {
     gridColumn: "1/span1",
     opacity: 1,
-    width: "100%",
+   
 
     transition: {
       duration: 1.5,
@@ -54,13 +52,15 @@ const goToSideVariants = {
 const App: React.FC = () => {
   return (
     <main className={style.main}>
+       
+
       <motion.section
         variants={startVariants}
         initial="initial"
         animate="animate"
         className={style.leftContent}
       >
-
+        <div className={style.box}></div>
         <motion.svg
           variants={goToSideVariants}
           initial="initial"

@@ -1,12 +1,12 @@
-@import 'abstracts/_mixins.module.scss';
-@import 'abstracts/fonts.module.scss';
+@import "abstracts/_mixins.module.scss";
+@import "abstracts/fonts.module.scss";
 
 /* Variables  */
 $black: #000000;
-$lightBlack: #1D1D1B; 
-$orange: #F7931E; 
+$lightBlack: #1d1d1b;
+$orange: #f7931e;
 $darkOrange: #ff8d0b;
-$redish: #BC2633;
+$redish: #bc2633;
 
 /* Global styles */
 h3 {
@@ -20,36 +20,23 @@ p {
   font-size: 22px;
   width: 50%;
   margin-left: 48px;
-
 }
 
-
-
-
 body {
-  
   overflow-x: hidden;
   background-color: $lightBlack;
-  display: grid;
- justify-content: center;
- align-content: center;
   font-family: montserrat;
-  padding: 0 24px;
+ 
 
-  
   .main {
     background-color: $lightBlack;
     color: $orange;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
 
    
-  
     
-     
-
-
     .leftContent {
       grid-column: 1 / span 1;
       grid-row: 1 / span 2;
@@ -57,56 +44,52 @@ body {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       place-items: center;
-     position: fixed;
-     right: 0;
-     top:0;
-     bottom: 0;
-     left:0;
-    
-    
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      width: 60%;
 
+      .box {
+        grid-column: 1 /auto;
+        grid-row: 1 / span 1;
+        width: 120vh;
+        height: 80vh;
+        @include box;
+        z-index: 1;
+        position: fixed;
+      }
 
       .face {
-        grid-row: 1 ;
+        grid-row: 1;
         grid-column: 1;
         margin: 18px 0 0 63px;
         max-width: 100%;
         z-index: 1;
-        
-        
       }
       .name {
-        
-        grid-row: 1 ;
+        grid-row: 1;
         grid-column: 1;
         margin: -48px 0 0 0;
         z-index: 2;
         max-width: 100%;
-       
-
-      
-       
       }
     }
 
-    
     .rightContent {
       grid-column: 2 / span 1;
       grid-row: 2;
       padding: 0 28px;
       font-size: 1.2vw;
+      z-index: 2;
+       width: 40%;
 
-     
       .pageContent {
         grid-row: 2;
         margin-top: -300px;
-     
-        
-      } 
-
-      
+      }
     }
-    
   }
-
 }
