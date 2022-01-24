@@ -5,7 +5,7 @@ import Button from "./components/Button/Button";
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 
-const leftContainerVariants = {
+const startVariants = {
   initial: {
     gridColumn: "1/span 2",
     opacity: 0,
@@ -51,20 +51,16 @@ const goToSideVariants = {
   },
 };
 
-
-
 const App: React.FC = () => {
   return (
-    <motion.main className={style.main}>
+    <main className={style.main}>
       <motion.section
-        variants={leftContainerVariants}
+        variants={startVariants}
         initial="initial"
         animate="animate"
         className={style.leftContent}
-        onClick={() => {
-          console.log("hey");
-        }}
       >
+
         <motion.svg
           variants={goToSideVariants}
           initial="initial"
@@ -356,7 +352,7 @@ const App: React.FC = () => {
       <section className={style.rightContent}>
         <About />
       </section>
-    </motion.main>
+    </main>
   );
 };
 

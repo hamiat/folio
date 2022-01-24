@@ -4,6 +4,51 @@ import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Button from "../Button/Button";
 
+
+const delayStartVariants = {
+  initial: {
+    opacity: 0,
+    
+  },
+  animate: {
+    opacity: 1,
+   
+  },
+};
+
+const revealBtnVariants = {
+  initial: {
+    opacity: 0,
+
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      mass: 0.4,
+     
+      
+    },
+  },
+};
+
+const titleVariants: Variants = {
+  offscreen: {
+    y: 0,
+    opacity: 0,
+  },
+  onscreen: {
+    y: "-3vh",
+    opacity: 1,
+    transition: {
+      ease: "easeOut",
+      duration: 1,
+    },
+  },
+};
+
+
 const contentVariants: Variants = {
   offscreen: {
     opacity: 0,
@@ -16,49 +61,10 @@ const contentVariants: Variants = {
     },
   },
 };
-const titleVariants: Variants = {
-  offscreen: {
-    y: 0,
-    opacity: 0,
-  },
-  onscreen: {
-    y: "-3vh",
-    opacity: 1,
-    transition: {
-      ease: "easeOut",
 
-      duration: 1,
-    },
-  },
-};
 
-const startVariants = {
-  initial: {
-    opacity: 0,
-    
-  },
-  animate: {
-    opacity: 1,
-   
-  },
-};
 
-const comeDownVariants = {
-  onscreen: {
-    opacity: 0,
 
-  },
-  offscreen: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      mass: 0.4,
-     
-      
-    },
-  },
-};
 const sideVariants = {
   offscreen: {
     opacity: 1,
@@ -93,7 +99,7 @@ const About: React.FC = () => {
 
   return (
     <motion.div
-      variants={startVariants}
+      variants={delayStartVariants}
       initial="initial"
       animate="animate"
       className={style.content}
@@ -101,11 +107,15 @@ const About: React.FC = () => {
         showModal ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
       }
     >
-      <motion.div variants={comeDownVariants} className={style.btn}>
+      <motion.div 
+      variants={revealBtnVariants} 
+      className={style.btn}
+      >
         <Button onClick={handleToggle}>
           {mode ? "Light mode" : "Dark mode"}
         </Button>
       </motion.div>
+
       <motion.section
         initial="offscreen"
         whileInView="onscreen"
@@ -119,7 +129,7 @@ const About: React.FC = () => {
       >
          
         <motion.h2 variants={titleVariants}>Hello there!</motion.h2>
-        <motion.div>
+        <div>
           <motion.h3 variants={contentVariants}>
             welcome to my website...
           </motion.h3>
@@ -127,7 +137,7 @@ const About: React.FC = () => {
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
             fugit, sed quia consequuntur magni dolores eos qui
           </motion.p>
-        </motion.div>
+        </div>
       </motion.section>
 
       <motion.section
@@ -136,13 +146,13 @@ const About: React.FC = () => {
         viewport={{ once: false, amount: 0.8 }}
         className={style.skills}
       >
-        <motion.div variants={sideVariants} className={style.btnTwo}>
-        <Button >
-          Get in touch!
-        </Button>
+        <motion.div variants={revealBtnVariants} className={style.btnTwo}>
+          <Button >
+            Get in touch!
+          </Button>
       </motion.div>
         <motion.h2 variants={titleVariants}>Skills</motion.h2>
-        <motion.div>
+        <div>
           <motion.h3 variants={contentVariants}>Soft</motion.h3>
           <motion.p variants={contentVariants}>
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
@@ -155,7 +165,7 @@ const About: React.FC = () => {
               aut fugit, sed quia consequuntur magni dolores eos qui
             </motion.p>
           </motion.div>
-        </motion.div>
+        </div>
       </motion.section>
     </motion.div>
   );
