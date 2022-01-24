@@ -129,11 +129,11 @@ const About: React.FC = () => {
         className={style.about}
       >
          
-        <motion.h2 variants={titleVariants}>Hello there!</motion.h2>
-        <div>
-          <motion.h3 variants={contentVariants}>
+        <motion.h1 variants={titleVariants}>Hello there!</motion.h1>
+        <div className={style.aboutContent}>
+          <motion.h2 variants={contentVariants}>
             welcome to my website...
-          </motion.h3>
+          </motion.h2>
           <motion.p variants={contentVariants}>
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
             fugit, sed quia consequuntur magni dolores eos qui
@@ -147,20 +147,20 @@ const About: React.FC = () => {
         viewport={{ once: false, amount: 0.8 }}
         className={style.skills}
       >
-        <motion.div variants={revealBtnVariants} className={style.btnTwo}>
+        <motion.div variants={revealBtnVariants} className={style.btn}>
           <Button >
             Get in touch!
           </Button>
       </motion.div>
         <motion.h2 variants={titleVariants}>Skills</motion.h2>
         <div>
-          <motion.h3 variants={contentVariants}>Soft</motion.h3>
+          <motion.h2 variants={contentVariants}>Soft</motion.h2>
           <motion.p variants={contentVariants}>
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
             fugit, sed quia consequuntur magni dolores eos qui
           </motion.p>
           <motion.div>
-            <motion.h3 variants={contentVariants}>Hard</motion.h3>
+            <motion.h2 variants={contentVariants}>Hard</motion.h2>
             <motion.p variants={contentVariants}>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
               aut fugit, sed quia consequuntur magni dolores eos qui

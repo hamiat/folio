@@ -9,10 +9,10 @@ $darkOrange: #ff8d0b;
 $redish: #bc2633;
 
 /* Global styles */
-h3 {
+h2 {
   color: $redish;
-  margin-left: 38px;
-  margin-top: -28px;
+  margin-left: 28px;
+  margin-top: -58px;
 }
 
 p {
@@ -55,7 +55,7 @@ body {
       .box {
         grid-column: 1 /auto;
         grid-row: 1 / span 1;
-        width: 120vh;
+        width: 130vh;
         height: 80vh;
         @include box;
         z-index: 1;
@@ -81,10 +81,10 @@ body {
     .rightContent {
       grid-column: 2 / span 1;
       grid-row: 2;
-      padding: 0 28px;
-      font-size: 1.2vw;
+      padding: 0 50px 0 0;
+     
       z-index: 2;
-       width: 40%;
+       width: auto;
 
       .pageContent {
         grid-row: 2;
