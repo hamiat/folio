@@ -4,7 +4,6 @@
     padding: 24px;
     width: auto;
     background-color: $lightBlack;
-    @include box;
     color: $orange;
     font-family: montserrat;
     font-weight: 700;
@@ -12,5 +11,7 @@
     place-self: self-end;
     cursor: pointer;
     max-width: 100%;
+   
+    @include box;
 }
 
