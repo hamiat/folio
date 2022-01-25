@@ -2,43 +2,53 @@
 
 .content {
   display: grid;
-  grid-template-rows: 100px auto;
-  height: 200vh;
- 
- 
-  .btn {
-    grid-column: 1 ;
-    grid-row: 1;
-    z-index: 2;
-    place-self: start;
-    margin-left: 200px;
-    margin-top: 50px;
+  grid-template-rows: auto;
 
-  }
+  
 
   .about {
+    grid-column: 1;
     grid-row: 2;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    height: 100vh;
 
-    h1 {
-      margin-top: 140px;
-      font-size: 40px;
+    .btns {
+      display: flex;
+      width: max-content;
+      gap: 24px;
+      margin-left: 200px;
+      margin-top: 50px;
+      position: fixed;
       
-     
+    
+
+   
+
+      .btn {
+        grid-column: 1;
+        grid-row: 1;
+        z-index: 2;
+       
+      }
+
+      .btnTwo {
+        grid-column: 1;
+        grid-row: 1;
+        z-index: 2;
+       
+      
+      }
     }
 
-    .bigName {
-      max-width: 100%;
-      padding-bottom: 24px;
-      display: none;
-    }
     .aboutContent {
-height: 40vh;
-margin-top: 30px;
+      
 
+      h1 {
+        font-size: 40px;
+      }
     }
   }
 

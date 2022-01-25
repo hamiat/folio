@@ -109,14 +109,7 @@ const About: React.FC = () => {
       }
     >
        
-      <motion.div 
-      variants={revealBtnVariants} 
-      className={style.btn}
-      >
-        <Button onClick={handleToggle}>
-          {mode ? "Light mode" : "Dark mode"}
-        </Button>
-      </motion.div>
+      
 
       <motion.section
         initial="offscreen"
@@ -129,9 +122,23 @@ const About: React.FC = () => {
         }
         className={style.about}
       >
+        <div className={style.btns}>
+        <motion.div 
+      variants={revealBtnVariants} 
+      className={style.btn}
+      >
+        <Button onClick={handleToggle}>
+          {mode ? "Light mode" : "Dark mode"}
+        </Button>
+      </motion.div>
          
-        <motion.h1 variants={titleVariants}>Hello there!</motion.h1>
+      <motion.div variants={revealBtnVariants} className={style.btnTwo}>
+        <Button>Get in touch!</Button>
+      </motion.div>
+      </div>
+       
         <div className={style.aboutContent}>
+        <motion.h1 variants={titleVariants}>Hello there!</motion.h1>
           <motion.h2 variants={contentVariants}>
             welcome to my website...
           </motion.h2>
@@ -140,6 +147,7 @@ const About: React.FC = () => {
             fugit, sed quia consequuntur magni dolores eos qui
           </motion.p>
         </div>
+      
       </motion.section>
 
      <Skills />
