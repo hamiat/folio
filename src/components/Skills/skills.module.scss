@@ -1,0 +1,57 @@
+@import "../../styles/main.module.scss";
+
+
+
+  .skills {
+    grid-row: 3;
+    z-index: 2;
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+   
+
+ 
+    .hardIcons {
+      display: block;
+      width: 200px;
+
+      .figma {
+        width: 100px;
+        height: 100px;
+      }
+      .github {
+        width: 100px;
+        height: 100px;
+     
+        
+      }
+      .js {
+        width: 100px;
+        height: 100px;
+       
+      }
+      .react {
+        width: 150px;
+        height: 150px;
+       
+      }
+
+      .sass {
+        width: 100px;
+        height: 100px;
+      }
+      .ts {
+        width: 100px;
+        height: 100px;
+      }
+      .htmlfive {
+        width: 100px;
+        height: 100px;
+      }
+      .cssthree {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+

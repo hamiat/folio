@@ -5,15 +5,10 @@ import { motion } from "framer-motion";
 
 const startVariants = {
   initial: {
-    gridColumn: "1/span 2",
     opacity: 0,
-    width: "auto",
   },
   animate: {
-    gridColumn: "1/span1",
     opacity: 1,
-   
-
     transition: {
       duration: 1.5,
       ease: "easeInOut",
@@ -30,6 +25,7 @@ const pathVariants = {
     opacity: 1,
     pathLength: 1,
     transition: {
+    delay: 0.5,
       duration: 1.5,
       ease: "easeInOut",
     },
@@ -37,15 +33,10 @@ const pathVariants = {
 };
 const goToSideVariants = {
   initial: {
-    x: 0,
+    
   },
   animate: {
-    x: "-15vw",
-    transition: {
-      delay: 2.5,
-      duration: 2,
-      ease: "easeInOut",
-    },
+  
   },
 };
 
@@ -53,14 +44,20 @@ const App: React.FC = () => {
   return (
     <main className={style.main}>
        
+ {/*       <svg className={style.box}
+width="512" height="512" fill="none" version="1.1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" > 
 
+ <rect width="512" height="512" rx="50" fill="none" stroke="#3178c6"/>
+ </svg>
+ */}
       <motion.section
         variants={startVariants}
         initial="initial"
         animate="animate"
         className={style.leftContent}
       >
-        <div className={style.box}></div>
+   
+ 
         <motion.svg
           variants={goToSideVariants}
           initial="initial"

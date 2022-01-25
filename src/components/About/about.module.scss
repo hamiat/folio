@@ -3,6 +3,7 @@
 .content {
   display: grid;
   grid-template-rows: 100px auto;
+  height: 200vh;
  
  
   .btn {
@@ -21,11 +22,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 88px;
 
     h1 {
       margin-top: 140px;
-      margin-left: 58px;
       font-size: 40px;
       
      
@@ -39,18 +38,9 @@
     .aboutContent {
 height: 40vh;
 margin-top: 30px;
-margin-left: 58px;
+
     }
   }
 
-  .skills {
-    grid-row: 3;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 68px;
-
-    
-  }
+  
 }

@@ -3,6 +3,7 @@ import nameTwo from "../../nameTwo.svg";
 import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Button from "../Button/Button";
+import Skills from "../Skills/Skills";
 
 
 const delayStartVariants = {
@@ -141,33 +142,7 @@ const About: React.FC = () => {
         </div>
       </motion.section>
 
-      <motion.section
-        initial="offscreen"
-        whileInView="onscreen"
-        viewport={{ once: false, amount: 0.8 }}
-        className={style.skills}
-      >
-        <motion.div variants={revealBtnVariants} className={style.btn}>
-          <Button >
-            Get in touch!
-          </Button>
-      </motion.div>
-        <motion.h2 variants={titleVariants}>Skills</motion.h2>
-        <div>
-          <motion.h2 variants={contentVariants}>Soft</motion.h2>
-          <motion.p variants={contentVariants}>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-            fugit, sed quia consequuntur magni dolores eos qui
-          </motion.p>
-          <motion.div>
-            <motion.h2 variants={contentVariants}>Hard</motion.h2>
-            <motion.p variants={contentVariants}>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui
-            </motion.p>
-          </motion.div>
-        </div>
-      </motion.section>
+     <Skills />
     </motion.div>
   );
 };
