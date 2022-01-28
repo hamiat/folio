@@ -2,10 +2,36 @@
 
 .content {
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
 
   
+  .btns {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    width: max-content;
+    gap: 24px;
+    margin-left: 200px;
+    margin-top: 50px;
+    position: fixed;
+  
 
+    .btn {
+      grid-column: 1;
+      grid-row: 1;
+      z-index: 2;
+     
+    }
+
+    .btnTwo {
+      grid-column: 1;
+      grid-row: 1;
+      z-index: 2;
+     
+    
+    }
+  }
   .about {
     grid-column: 1;
     grid-row: 2;
@@ -15,33 +41,7 @@
     justify-content: space-between;
     height: 100vh;
 
-    .btns {
-      display: flex;
-      width: max-content;
-      gap: 24px;
-      margin-left: 200px;
-      margin-top: 50px;
-      position: fixed;
-      
     
-
-   
-
-      .btn {
-        grid-column: 1;
-        grid-row: 1;
-        z-index: 2;
-       
-      }
-
-      .btnTwo {
-        grid-column: 1;
-        grid-row: 1;
-        z-index: 2;
-       
-      
-      }
-    }
 
     .aboutContent {
       
