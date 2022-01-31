@@ -31,6 +31,11 @@ const revealBtnVariants = {
       mass: 0.4, 
     },
   },
+  hover: 
+  {
+  borderTop:" 2px dotted #ff8d0b",
+  borderBottom:" 2px dotted #ff8d0b",
+}
 };
 
 
@@ -56,6 +61,8 @@ const App: React.FC = () => {
       <div className={style.btns}>
         <motion.div 
       variants={revealBtnVariants} 
+      whileHover="hover"
+      whileTap="hover"
       className={style.btn}
       >
         <Button onClick={handleToggle}>
@@ -63,7 +70,7 @@ const App: React.FC = () => {
         </Button>
       </motion.div>
          
-      <motion.div variants={revealBtnVariants} className={style.btnTwo}>
+      <motion.div variants={revealBtnVariants} whileHover="hover"  whileTap="hover" className={style.btnTwo}>
         <Button>Get in touch!</Button>
       </motion.div>
       </div>
