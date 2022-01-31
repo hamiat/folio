@@ -50,6 +50,7 @@ const App: React.FC = () => {
     }
   };
 
+  
 
   return (
     <main className={style.main}>
@@ -68,6 +69,7 @@ const App: React.FC = () => {
       whileHover="hover"
       whileTap="hover"
       className={style.btn}
+
       >
         <Button >
          Get in touch!

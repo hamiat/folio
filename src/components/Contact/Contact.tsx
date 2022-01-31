@@ -1,6 +1,6 @@
 import style from "./contact.module.scss";
 import { motion, Variants } from "framer-motion";
-import {FaLongArrowAltDown} from "react-icons/fa"
+import {FaLongArrowAltUp} from "react-icons/fa"
 
 const revealBtnVariants = {
   initial: {
@@ -64,6 +64,7 @@ const Contact: React.FC = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 1 }}
+      id="sample"
      
     >
     
@@ -74,7 +75,7 @@ const Contact: React.FC = () => {
           
           
 
-          <motion.div variants={contentVariants} className={style.arrowToContact}><FaLongArrowAltDown/></motion.div>
+       
           <motion.div variants={contentVariants} className={style.contacts}>
 <h2>Let's talk</h2>
 <p>Email</p>
@@ -83,7 +84,7 @@ const Contact: React.FC = () => {
 
 </motion.div>
 </motion.div>
-         
+{/* <motion.div variants={contentVariants} className={style.arrowToContact}><FaLongArrowAltUp/></motion.div> */}
     
     </motion.section>
   );
