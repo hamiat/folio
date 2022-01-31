@@ -4,19 +4,16 @@ import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Button from "../Button/Button";
 import Skills from "../Skills/Skills";
-
+import {FaLongArrowAltDown} from "react-icons/fa"
 
 const delayStartVariants = {
   initial: {
     opacity: 0,
-    
   },
   animate: {
     opacity: 1,
-   
   },
 };
-
 
 const titleVariants: Variants = {
   offscreen: {
@@ -33,7 +30,6 @@ const titleVariants: Variants = {
   },
 };
 
-
 const contentVariants: Variants = {
   offscreen: {
     opacity: 0,
@@ -47,30 +43,25 @@ const contentVariants: Variants = {
   },
 };
 
-
-
-
 const sideVariants = {
   offscreen: {
     opacity: 1,
-    y:"-50vw"
+    y: "-50vw",
   },
   onscreen: {
     opacity: 1,
-    y:0
-,
+    y: 0,
     transition: {
       type: "spring",
       stiffness: 120,
       mass: 0.4,
-      duration: 1.5
-      
+      duration: 1.5,
     },
   },
 };
 const About: React.FC = () => {
   const [showModal, setShowModal] = useState(true);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setShowModal(false);
@@ -87,9 +78,6 @@ const About: React.FC = () => {
         showModal ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
       }
     >
-       
-      
-
       <motion.section
         initial="offscreen"
         whileInView="onscreen"
@@ -101,22 +89,20 @@ const About: React.FC = () => {
         }
         className={style.about}
       >
-       
-       
-        <div className={style.aboutContent}>
-        <motion.h1 variants={titleVariants}>Hello there!</motion.h1>
+        
+          <motion.h1 variants={titleVariants}>Hello there!</motion.h1>
           <motion.h2 variants={contentVariants}>
-            welcome to my website...
+            welcome to my online resume...
           </motion.h2>
           <motion.p variants={contentVariants}>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-            fugit, sed quia consequuntur magni dolores eos qui
+            My name is Hamiat and I am currently studying to become a web
+            developer.
           </motion.p>
-        </div>
-      
+          <motion.div variants={contentVariants} className={style.arrow}><FaLongArrowAltDown/></motion.div> 
+        
       </motion.section>
 
-     <Skills />
+      <Skills />
     </motion.div>
   );
 };
