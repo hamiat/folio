@@ -11,6 +11,17 @@ $redish: #bc2633;
 
 $mn: 48px;
 
+/* Global styles */ 
+h2, h4 {
+  color: $redish; 
+}
+ h4 {
+  color: $redish; 
+  margin: 0 0  8px 0;
+}
+p {
+  margin: 0;
+}
 
 body {
   overflow-x: hidden;

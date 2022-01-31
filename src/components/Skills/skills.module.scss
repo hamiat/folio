@@ -7,24 +7,51 @@
     z-index: 2;
     display: grid;   
     grid-template-rows: auto;
-    height: 100vh;
-   
+    
 
  
- .softSkills {
+ .experiences {
   grid-column: 1 ;
   grid-row: 2;
   z-index: 2;
+ 
+   
 
+  .exp {
+    width: 80%;
+  }
+
+  .jobTitleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+
+ }
+ .arrow {
+  grid-column: 1 ;
+  grid-row: 3;
+  padding: 48px;
+  margin: 0 auto;
+  font-size: 25px;
  }
 
 
+ .skillsIcons{
+  grid-column: 1 ;
+  grid-row: 4;
+ 
+ 
+
     .hardIcons {
-      grid-column: 1 ;
-      grid-row: 3;
       z-index: 2;
       display: flex;
-      width: 200px;
+    
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
 
       .figma {
         width: 100px;
@@ -65,4 +92,4 @@
       }
     }
   }
-
+}

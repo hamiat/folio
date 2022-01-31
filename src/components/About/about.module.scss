@@ -13,14 +13,13 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
-    height: 50vh;
+   
      
     h1 {
       font-size: 40px;
     }
 
 h2 {
-  color: $redish;
   margin-left: 28px;
   margin-top: -24px;
 }
@@ -34,7 +33,7 @@ p {
   margin-bottom: 50px;
 }
     .arrow {
-      margin-left: 250px; 
+      margin: 0 auto;
      font-size: 25px;
     
     }  
