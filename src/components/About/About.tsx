@@ -17,22 +17,6 @@ const delayStartVariants = {
   },
 };
 
-const revealBtnVariants = {
-  initial: {
-    opacity: 0,
-
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      mass: 0.4,
-     
-      
-    },
-  },
-};
 
 const titleVariants: Variants = {
   offscreen: {
@@ -86,12 +70,7 @@ const sideVariants = {
 };
 const About: React.FC = () => {
   const [showModal, setShowModal] = useState(true);
-  const [mode, setMode] = useState(true);
-
-  const handleToggle = () => {
-    setMode(!mode);
-  };
-
+  
   useEffect(() => {
     setTimeout(() => {
       setShowModal(false);
@@ -122,20 +101,7 @@ const About: React.FC = () => {
         }
         className={style.about}
       >
-        <div className={style.btns}>
-        <motion.div 
-      variants={revealBtnVariants} 
-      className={style.btn}
-      >
-        <Button onClick={handleToggle}>
-          {mode ? "Light mode" : "Dark mode"}
-        </Button>
-      </motion.div>
-         
-      <motion.div variants={revealBtnVariants} className={style.btnTwo}>
-        <Button>Get in touch!</Button>
-      </motion.div>
-      </div>
+       
        
         <div className={style.aboutContent}>
         <motion.h1 variants={titleVariants}>Hello there!</motion.h1>

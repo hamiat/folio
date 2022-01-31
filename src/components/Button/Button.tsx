@@ -24,7 +24,7 @@ export interface iProps {
 function Button( {children, onClick, }: iProps) {
   return (
     <>
-    <motion.button onClick={onClick} className={style.button}>{children} </motion.button>
+    <motion.div onClick={onClick} className={style.button}>{children} </motion.div>
 
     </>
   );

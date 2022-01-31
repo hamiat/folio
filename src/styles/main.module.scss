@@ -1,5 +1,6 @@
 @import "abstracts/_mixins.module.scss";
-@import "abstracts/fonts.module.scss";
+@import "abstracts/_breakpoints.module.scss";
+@import "abstracts/_fonts.module.scss";
 
 /* Variables  */
 $black: #000000;
@@ -7,6 +8,8 @@ $lightBlack: #1d1d1b;
 $orange: #f7931e;
 $darkOrange: #ff8d0b;
 $redish: #bc2633;
+
+$mn: 48px;
 
 /* Global styles */
 h2 {
@@ -26,18 +29,14 @@ body {
   overflow-x: hidden;
   background-color: $lightBlack;
   font-family: montserrat;
-  
- 
 
   .main {
     background-color: $lightBlack;
     color: $orange;
-    display: flex;
-    align-items: flex-start;
-    
-    
+    width: 1440px;
+    margin: 0 auto;
 
- /*    .box {
+    /*    .box {
       z-index: 1;
       grid-column: 1 / span 2;
       grid-row: 1 / span 1;
@@ -47,9 +46,12 @@ body {
    
     }
  */
-   
-    
+
     .leftContent {
+      position: fixed;
+      top: 0;
+      bottom: $mn*2;
+      left: 0;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
@@ -58,34 +60,49 @@ body {
       width: 60%;
       margin-top: 150px;
      
-      
 
-      
       .face {
         grid-row: 1;
         grid-column: 1;
         margin: 18px 0 0 63px;
         z-index: 1;
-        
-        
       }
       .name {
         grid-row: 1;
         grid-column: 1;
         margin: -48px 0 0 0;
         z-index: 2;
-       
-       
+      }
+    }
+
+    .btns {
+      position: fixed;
+      right: $mn*2;
+      top: 0;
+      display: flex;
+      width: max-content;
+      gap: 24px;
+      margin-left: 200px;
+      margin-top: 50px;
+      position: fixed;
+
+      .btn {
+        grid-column: 1;
+        grid-row: 1;
+        z-index: 2;
+      }
+
+      .btnTwo {
+        grid-column: 1;
+        grid-row: 1;
+        z-index: 2;
       }
     }
 
     .rightContent {
-    width: 40%;
+      width: 40%;
       z-index: 2;
-      margin-right: 250px;
-    
-
-      
+      margin: $mn*6 $mn*15;
     }
   }
 }
