@@ -43,7 +43,11 @@ const App: React.FC = () => {
   const [mode, setMode] = useState(true);
 
   const handleToggle = () => {
-    setMode(!mode);
+    
+    if(mode) {
+      alert("coming soon!")
+     
+    }
   };
 
 
@@ -65,13 +69,13 @@ const App: React.FC = () => {
       whileTap="hover"
       className={style.btn}
       >
-        <Button onClick={handleToggle}>
-          {mode ? "Light mode" : "Dark mode"}
+        <Button >
+         Get in touch!
         </Button>
       </motion.div>
          
       <motion.div variants={revealBtnVariants} whileHover="hover"  whileTap="hover" className={style.btnTwo}>
-        <Button>Get in touch!</Button>
+        <Button onClick={handleToggle}> {mode ? "Light mode" : "Dark mode"}</Button>
       </motion.div>
       </div>
 

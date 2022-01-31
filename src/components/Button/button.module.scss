@@ -1,16 +1,16 @@
 @import '../../styles/main.module.scss';
 
 .button {
-    padding: 24px;
-    width: auto;
+    padding: 4px;
+    width: max-content;
     background-color: $lightBlack;
     color: $orange;
     font-family: montserrat;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     place-self: self-end;
     cursor: pointer;
-    max-width: 100%;
+    border-bottom: 2px solid #313131;
    
     
 }

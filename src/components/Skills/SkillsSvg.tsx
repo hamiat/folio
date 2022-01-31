@@ -2,8 +2,9 @@ import style from "./skills.module.scss";
 import nameTwo from "../../nameTwo.svg";
 import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
-import Button from "../Button/Button";
-import figma from "../../.././public/assets/figma.svg";
+
+import {FaLongArrowAltDown} from "react-icons/fa"
+import Contact from "../Contact/Contact"
 
 const revealBtnVariants = {
   initial: {
@@ -54,8 +55,15 @@ const contentVariants: Variants = {
   }
 };
 const parentContainer: Variants = {
-  offscreen: {},
-  onscreen: {},
+  offscreen: {
+      opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    transition: {
+        duration: 1.5,
+    }
+  },
 };
 
 
@@ -66,16 +74,15 @@ const SkillsSvg: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 1 }}
+      viewport={{ once: false, amount: 0.6 }}
      
     >
     
 
       
-          <motion.div variants={parentContainer} >
             <motion.h2 variants={titleVariants}>Skills</motion.h2>
 
-            <div className={style.hardIcons}>
+            <motion.div  variants={parentContainer} className={style.hardIcons}>
             <motion.svg variants={contentVariants} whileHover="rotateHover"
               className={style.htmlfive}
               xmlns="http://www.w3.org/2000/svg"
@@ -358,9 +365,17 @@ const SkillsSvg: React.FC = () => {
                 d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z"
               />
             </motion.svg>
-            </div>
-          </motion.div>
-      
+            </motion.div>
+          
+          
+          
+          
+          
+     
+
+          <motion.div variants={contentVariants} className={style.arrowToContact}><FaLongArrowAltDown/></motion.div>
+
+         <Contact />
     
     </motion.section>
   );

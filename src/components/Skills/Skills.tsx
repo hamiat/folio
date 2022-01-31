@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.4 }}
       className={style.skills}
     >
       <motion.div variants={parentContainer} className={style.experiences}>
@@ -89,7 +89,7 @@ Assisting the service department with their day-to-day repair and maintenance wo
           </p>
         </motion.div>
         </motion.div>
-        <motion.div variants={contentVariants} className={style.arrow}><FaLongArrowAltDown/></motion.div> 
+        <motion.div variants={contentVariants} className={style.arrowToSkills}><FaLongArrowAltDown/></motion.div> 
         <div className={style.skillsIcons}>
          <SkillsSvg />
         </div>

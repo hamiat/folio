@@ -74,9 +74,9 @@ body {
     }
 
     .btns {
-      position: fixed;
+      position: absolute;
       right: $mn*2;
-      top: 0;
+      top: 54px;
       display: flex;
       width: max-content;
       gap: 24px;
@@ -94,6 +94,9 @@ body {
         grid-column: 1;
         grid-row: 1;
         z-index: 2;
+        position: fixed;
+      right: $mn*2;
+      top: 24px;
       }
     }
 
