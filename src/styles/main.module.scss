@@ -77,7 +77,6 @@ top: 0;
     }
 
     .btns {
-      position: absolute;
       right: $mn*2;
       top: 54px;
       display: flex;
@@ -86,6 +85,8 @@ top: 0;
       margin-left: 200px;
       margin-top: 50px;
       position: fixed;
+      display: grid;
+      z-index: 100;
 
       .btn {
         grid-column: 1;
