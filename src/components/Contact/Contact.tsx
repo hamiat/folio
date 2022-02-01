@@ -48,8 +48,9 @@ const Contact: React.FC = () => {
       viewport={{ once: false, amount: 1 }}
       id="sample"
     >
-      <motion.div variants={parentContainer}>
-        <motion.div  className={style.contacts}>
+      <motion.div  className={style.contactsDiv} variants={parentContainer}>
+      <motion.h2 variants={titleVariants}>Contact</motion.h2>
+        <motion.div className={style.contacts} >
           <motion.a variants={contentVariants}  whileHover="hover" id="github" href="https://github.com/hamiat">
             Github
           </motion.a>

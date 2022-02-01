@@ -1,6 +1,8 @@
 @import "../../styles/main.module.scss";
 
-
+svg { 
+  cursor: pointer;
+}
 
   .skills {
     display: flex;   
@@ -10,6 +12,18 @@ padding-top: $mn*2;
  
 h2 {
   font-size: 38px;
+  cursor: pointer;
+
+  .clickMe {
+    font-size: 16px;
+    color: "#f7931e";
+    cursor:default;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px
+   
+  }
 }
 
 

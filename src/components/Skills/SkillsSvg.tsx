@@ -83,7 +83,7 @@ const SkillsSvg: React.FC = () => {
             <motion.h2 variants={titleVariants}>Skills</motion.h2>
 
             <motion.div  variants={parentContainer} className={style.hardIcons}>
-            <motion.svg variants={contentVariants} whileHover="rotateHover"
+            <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.htmlfive}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -103,7 +103,7 @@ const SkillsSvg: React.FC = () => {
                 d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8"
               />
             </motion.svg>
-            <motion.svg variants={contentVariants} whileHover="rotateHover"
+            <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.cssthree}
               width="342pt"
               height="480pt"
@@ -151,7 +151,7 @@ const SkillsSvg: React.FC = () => {
                 />
               </g>
             </motion.svg>
-            <motion.svg variants={contentVariants} whileHover="rotateHover"
+            <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.js}
               version="1.1"
               id="Layer_1"
@@ -202,7 +202,7 @@ const SkillsSvg: React.FC = () => {
                 <path fill="#FFFFFF" d="M239.51,173.693" />
               </g>
             </motion.svg>
-            <motion.svg variants={contentVariants} whileHover="rotateHover"
+            <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.react}
               version="1.1"
               id="Layer_2_1_"
@@ -251,7 +251,7 @@ const SkillsSvg: React.FC = () => {
                 />
               </g>
             </motion.svg>
-            <motion.svg variants={contentVariants} whileHover="rotateHover"
+            <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.sass}
               version="1.1"
               id="Layer_1"
@@ -298,7 +298,7 @@ const SkillsSvg: React.FC = () => {
               <g></g>
               <g></g>
             </motion.svg>
-            <motion.svg variants={contentVariants} whileHover="rotateHover"
+            <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.ts}
               width="512"
               height="512"
@@ -315,7 +315,7 @@ const SkillsSvg: React.FC = () => {
                 fill-rule="evenodd"
               />
             </motion.svg>
-            <motion.svg variants={contentVariants} whileHover="rotateHover"
+            <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.github}
               width="1024"
               height="1024"
@@ -331,7 +331,7 @@ const SkillsSvg: React.FC = () => {
                 fill="#fff"
               />
             </motion.svg>
-            <motion.svg variants={contentVariants} whileHover="rotateHover"
+            <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.figma}
               id="Layer_1"
               xmlns="http://www.w3.org/2000/svg"
