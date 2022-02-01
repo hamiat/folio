@@ -35,7 +35,7 @@ const contentVariants: Variants = {
     },
   },
   hover: {
-    borderTop: " 2px dotted #ff8d0b",
+ 
     borderBottom: " 2px dotted #ff8d0b",
   },
 };
