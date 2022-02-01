@@ -1,19 +1,11 @@
 import style from "./contact.module.scss";
 import { motion, Variants } from "framer-motion";
-import {FaLongArrowAltUp} from "react-icons/fa"
+import { FaLongArrowAltUp } from "react-icons/fa";
 
-const revealBtnVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      mass: 0.4,
-    },
-  },
+
+const parentContainer: Variants = {
+  offscreen: {},
+  onscreen: {},
 };
 
 const titleVariants: Variants = {
@@ -42,21 +34,11 @@ const contentVariants: Variants = {
       duration: 1.5,
     },
   },
-  rotateHover: {
-    rotate: 15,
-    transition: {
-      type: 'spring',
-      duration: 3,
-    },
-  }
+  hover: {
+    borderTop: " 2px dotted #ff8d0b",
+    borderBottom: " 2px dotted #ff8d0b",
+  },
 };
-const parentContainer: Variants = {
-  offscreen: {},
-  onscreen: {},
-};
-
-
-    
 
 const Contact: React.FC = () => {
   return (
@@ -65,27 +47,25 @@ const Contact: React.FC = () => {
       whileInView="onscreen"
       viewport={{ once: false, amount: 1 }}
       id="sample"
-     
     >
-    
-
-      
-          <motion.div variants={parentContainer} >
-           
-          
-          
-
-       
-          <motion.div variants={contentVariants} className={style.contacts}>
-<h2>Let's talk</h2>
-<p>Email</p>
-<p>LinkedIn</p>
-<p>Github</p>
-
-</motion.div>
-</motion.div>
-{/* <motion.div variants={contentVariants} className={style.arrowToContact}><FaLongArrowAltUp/></motion.div> */}
-    
+      <motion.div variants={parentContainer}>
+        <motion.div  className={style.contacts}>
+          <motion.a variants={contentVariants}  whileHover="hover" id="github" href="https://github.com/hamiat">
+            Github
+          </motion.a>
+          <motion.a variants={contentVariants}  whileHover="hover" 
+            id="linkedin"
+            href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
+          >
+            LinkedIn
+          </motion.a>
+          <motion.a variants={contentVariants}  whileHover="hover" 
+          id="mail" href="mailto:hamiat.n@hotmai.com">
+            Email
+          </motion.a>
+        </motion.div>
+      </motion.div>
+      {/* <motion.div variants={contentVariants} className={style.arrowToContact}><FaLongArrowAltUp/></motion.div> */}
     </motion.section>
   );
 };

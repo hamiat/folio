@@ -8,4 +8,13 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   gap: 24px;
+
+
+   a {
+    text-decoration: none;
+    color: $darkOrange;
+    font-size: 24px;
+    @include bottomBorder;
+}
   }

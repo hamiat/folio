@@ -3,3 +3,8 @@
     box-shadow: 2px 2px $darkOrange;
   
 }
+@mixin bottomBorder {
+    border-bottom: 2px dotted #313131;
+ 
+  
+}
