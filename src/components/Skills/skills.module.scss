@@ -8,7 +8,12 @@ svg {
     display: flex;   
     flex-direction: column;
     justify-content: space-between;
-padding-top: $mn*2;
+padding-top: $mn*3;
+
+.softDiv {
+  width: 80%;
+  color: $redish;
+}
  
 h2 {
   font-size: 38px;
@@ -63,8 +68,18 @@ h2 {
  }
  
 
- 
+ .skillsTitles {
+   font-size: 22px;
+   color: $darkOrange;
+  
+   
+ }
+.skillsTitlesSoft {
+font-size: 22px;
+color: $darkOrange;
 
+
+}
 
  .skillsIcons{
   grid-column: 1 ;

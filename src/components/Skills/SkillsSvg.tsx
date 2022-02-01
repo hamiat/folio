@@ -38,9 +38,11 @@ const titleVariants: Variants = {
 const contentVariants: Variants = {
   offscreen: {
     opacity: 0,
+    
   },
   onscreen: {
     opacity: 1,
+
     transition: {
       ease: "easeInOut",
       duration: 1.5,
@@ -57,11 +59,15 @@ const contentVariants: Variants = {
 const parentContainer: Variants = {
   offscreen: {
       opacity: 0,
+      x:"100vw"
   },
   onscreen: {
     opacity: 1,
+    x:0,
     transition: {
-        duration: 1.5,
+        duration: 1,
+        type: "spring",
+        stiffness: 120
     }
   },
 };
@@ -80,8 +86,17 @@ const SkillsSvg: React.FC = () => {
     
 
       
-            <motion.h2 variants={titleVariants}>Skills</motion.h2>
+            <motion.h2 variants={titleVariants}>Skills </motion.h2>
+            <span className={style.skillsTitlesSoft}>Soft  </span> <br/ > <br/ > 
+          <motion.div className={style.softDiv} variants={contentVariants}>
+          
+          Problem solving, Empathy, Active listening, Time and self management Adaptivity, Teamwork, Positive attitude
+          </motion.div>
+          <br/ >
+          <br/ >
+       
 
+            <span className={style.skillsTitles}>Hard  </span> 
             <motion.div  variants={parentContainer} className={style.hardIcons}>
             <motion.svg drag variants={contentVariants} whileHover="rotateHover"
               className={style.htmlfive}
@@ -367,8 +382,7 @@ const SkillsSvg: React.FC = () => {
             </motion.svg>
             </motion.div>
           
-          
-          
+         
           
           
      
