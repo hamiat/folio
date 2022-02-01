@@ -77,30 +77,19 @@ top: 0;
     }
 
     .btns {
-      right: $mn*2;
-      top: 54px;
-      display: flex;
       width: max-content;
-      gap: 24px;
-      margin-left: 200px;
-      margin-top: 50px;
       position: fixed;
       display: grid;
       z-index: 100;
 
-      .btn {
-        grid-column: 1;
-        grid-row: 1;
-        z-index: 2;
-      }
-
+      
       .btnTwo {
         grid-column: 1;
         grid-row: 1;
         z-index: 2;
         position: fixed;
-      right: $mn*2;
-      top: 24px;
+      right: $mn*3;
+      top: $mn;
       }
     }
 

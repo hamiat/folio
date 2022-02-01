@@ -45,12 +45,12 @@ const Contact: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 1 }}
+      viewport={{ once: false, amount: 0.8 }}
       id="sample"
     >
       <motion.div  className={style.contactsDiv} variants={parentContainer}>
       <motion.h2 variants={titleVariants}>Contact</motion.h2>
-        <motion.div className={style.contacts} >
+        <motion.div variants={parentContainer} className={style.contacts} >
           <motion.a variants={contentVariants}  whileHover="hover" id="github" href="https://github.com/hamiat">
             Github
           </motion.a>
