@@ -54,6 +54,7 @@ const App: React.FC = () => {
 
   return (
     <main className={style.main}>
+     
       <motion.section
         variants={startVariants}
         initial="initial"
@@ -72,7 +73,7 @@ const App: React.FC = () => {
 
       >
         <Button >
-         Get in touch!
+         Menu
         </Button>
       </motion.div>
          
@@ -84,6 +85,7 @@ const App: React.FC = () => {
       <section className={style.rightContent}>
         <About />
       </section>
+   
     </main>
   );
 };
