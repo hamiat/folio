@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.4 }}
+      viewport={{ once: false, amount: 0.3 }}
       className={style.skills}
     >
       <motion.div variants={parentContainer} className={style.experiencesDiv}>

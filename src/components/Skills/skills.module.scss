@@ -44,8 +44,7 @@ h2 {
  .arrowToSkills {
   grid-column: 1 ;
   grid-row: 3;
-  padding: 48px;
-  margin: 0 auto;
+  padding: $mn $mn*6;
   font-size: 25px;
  }
  
@@ -58,12 +57,14 @@ h2 {
   grid-row: 4;
   padding-top: $mn*4;
  
+  margin: 0 auto;
  
 
     .hardIcons {
+      
       z-index: 2;
       display: flex;
-    
+    width: 80%;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
@@ -112,10 +113,10 @@ h2 {
   .arrowToContact {
     grid-column: 1 ;
     grid-row: 5;
-    padding: 48px;
-    font-size: 22px;
-    margin-left: 250px;
-    margin-top: $mn;
+    font-size: 25px;
+    padding: $mn*3 $mn*6;
+    font-size: 25px;
+   
    } 
 
   
