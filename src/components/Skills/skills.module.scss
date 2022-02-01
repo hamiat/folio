@@ -3,31 +3,41 @@
 
 
   .skills {
-    grid-row: 2;
-    z-index: 2;
-    display: grid;   
-    grid-template-rows: auto;
-    
+    display: flex;   
+    flex-direction: column;
+    justify-content: space-between;
+padding-top: $mn*2;
+ 
+h2 {
+  font-size: 38px;
+}
 
- 
- .experiences {
-  grid-column: 1 ;
-  grid-row: 2;
-  z-index: 2;
- 
 
- 
+ .experiencesDiv {
+   display: flex;
+   flex-direction: column;
    
 
-  .exp {
-    width: 80%;
-  }
-
-  .jobTitleDiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   
+
+  .experiences {
+    display: flex;
+   flex-direction: column;
+   gap: 18px;
+   margin-top: -24px;
+
+    .exp {
+      width: 80%;
+    }
+  
+    .jobTitleDiv {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      
+    
+    }
   }
 
  }

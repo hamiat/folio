@@ -45,8 +45,9 @@ const Skills: React.FC = () => {
       viewport={{ once: false, amount: 0.4 }}
       className={style.skills}
     >
-      <motion.div variants={parentContainer} className={style.experiences}>
+      <motion.div variants={parentContainer} className={style.experiencesDiv}>
         <motion.h2 variants={titleVariants}>Experience</motion.h2>
+        <div className={style.experiences}>
 
         <motion.div variants={contentVariants} className={style.exp}>
           <div className={style.jobTitleDiv}>
@@ -88,6 +89,7 @@ Assisting the service department with their day-to-day repair and maintenance wo
             
           </p>
         </motion.div>
+        </div>
         </motion.div>
         <motion.div variants={contentVariants} className={style.arrowToSkills}><FaLongArrowAltDown/></motion.div> 
         <div className={style.skillsIcons}>
