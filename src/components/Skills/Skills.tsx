@@ -41,13 +41,13 @@ const parentContainer: Variants = {
 const Skills: React.FC = () => {
 
   const [title, setTitle] = useState("Experience")
-  const [whichTitle, setWhichTitle] = useState(true)
+  const [whichTitle, setWhichTitle] = useState(false)
 
   const changeTitle = () => {
     if(title === "Experience") {
       setTitle("Education")
       setWhichTitle(!whichTitle)
-    } else if ( title === "Education") {
+    } else {
       setTitle("Experience")
       setWhichTitle(!whichTitle)
     }

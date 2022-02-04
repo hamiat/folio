@@ -64,15 +64,14 @@ const App: React.FC = () => {
        <FaceSvg />
       </motion.section>
 
-      <div className={style.btns}>
       <motion.div variants={revealBtnVariants} whileHover="hover"  whileTap="hover" className={style.btnTwo}>
         <Button onClick={handleToggle}> {mode ? "Light mode" : "Dark mode"}</Button>
       </motion.div>
-      </div>
+      
 
-      <section className={style.rightContent}>
+     
         <About />
-      </section>
+     
    
     </main>
   );

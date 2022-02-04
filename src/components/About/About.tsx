@@ -69,25 +69,27 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <motion.div
+    <motion.section
       variants={delayStartVariants}
       initial="initial"
       animate="animate"
-      className={style.content}
+      className={style.rightContent}
+      
       transition={
         showModal ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
       }
     >
-      <motion.section
+      <motion.div
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: false, amount: 0.8 }}
+        viewport={{ once: false, amount: 0.5 }}
         transition={
           showModal
             ? { delayChildren: 5.5, staggerChildren: 1 }
             : { delayChildren: 0 }
         }
         className={style.about}
+     
       >
         
           <motion.h1 variants={titleVariants}>Hello there!</motion.h1>
@@ -100,10 +102,10 @@ const About: React.FC = () => {
           </motion.p>
           <motion.div variants={contentVariants} className={style.arrow}><FaLongArrowAltDown/></motion.div> 
         
-      </motion.section>
+      </motion.div>
 
       <Skills />
-    </motion.div>
+    </motion.section>
   );
 };
 

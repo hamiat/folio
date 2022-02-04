@@ -11,13 +11,14 @@ $redish: #bc2633;
 
 $mn: 48px;
 
-/* Global styles */ 
-h2, h4 {
-  color: $redish; 
+/* Global styles */
+h2,
+h4 {
+  color: $redish;
 }
- h4 {
-  color: $redish; 
-  margin: 0 0  8px 0;
+h4 {
+  color: $redish;
+  margin: 0 0 8px 0;
 }
 p {
   margin: 0;
@@ -31,36 +32,26 @@ body {
   .main {
     background-color: $lightBlack;
     color: $orange;
-    width: 1440px;
-    margin: 0 auto;
+    max-width: 1440px;
     display: grid;
-    
+    grid-template-areas:
+      ".  lightMode"
+      "face content";
 
-  /*     .box {
-      z-index: 1;
-     
-      width: 80%;
-      height: 50%;
-position: fixed;  
-top: 0;  
-    @include box;
-   
+    .btnTwo {
+      grid-area: lightMode;
+      place-self: end;
     }
-  */
 
     .leftContent {
-      position: fixed;
-      top: 0;
-      bottom: $mn*2;
-      left: 0;
+      grid-area: face;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       place-items: center;
       z-index: 2;
-      width: 50%;
-      margin-top: 150px;
-     
+      width: max-content;
+      height: max-content;
 
       .face {
         grid-row: 1;
@@ -76,27 +67,11 @@ top: 0;
       }
     }
 
-    .btns {
-      width: max-content;
-      position: fixed;
-      display: grid;
-      z-index: 100;
-
-      
-      .btnTwo {
-        grid-column: 1;
-        grid-row: 1;
-        z-index: 2;
-        position: fixed;
-      right: $mn*3;
-      top: $mn;
-      }
-    }
-
     .rightContent {
-      width: 50%;
+      grid-area: content;
+      width: max-content;
+      height: max-content;
       z-index: 2;
-      margin: $mn*6 $mn*13;
     }
   }
 }
