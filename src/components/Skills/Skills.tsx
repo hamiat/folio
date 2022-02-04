@@ -46,10 +46,10 @@ const Skills: React.FC = () => {
   const changeTitle = () => {
     if(title === "Experience") {
       setTitle("Education")
-      setWhichTitle(true)
+      setWhichTitle(!whichTitle)
     } else if ( title === "Education") {
       setTitle("Experience")
-      setWhichTitle(false)
+      setWhichTitle(!whichTitle)
     }
   }
 
@@ -115,8 +115,10 @@ const Skills: React.FC = () => {
           </div>
           <h4>Judilica AB</h4>
           <p>
-            Wholesome and well rounded internship building the company website
-            from design to deployment.
+          • Created the company’s landing page, from design to
+deployment (continuous deployment).<br/>
+• Worked with Figma, Next.js, TypeScript and Sass for this project,
+as well as Github for collaboration with a fellow intern.
           </p>
         </motion.div>
 
