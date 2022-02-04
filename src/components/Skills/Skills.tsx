@@ -58,13 +58,13 @@ const Skills: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.1 }}
       className={style.skills}
     >
      
      { whichTitle ? 
      <motion.div variants={parentContainer} className={style.experiencesDiv}>
-         <motion.h2 onClick={changeTitle} variants={titleVariants} whileHover={{color: "#f7931e"}} >{title} <motion.span whileHover={{color: "#bc2633"}}  className={style.clickMe}><FaLongArrowAltLeft/> click me!</motion.span> </motion.h2>
+         <motion.h2 onClick={changeTitle} variants={titleVariants} whileHover={{color: "#f7931e"}} >{title} <motion.span  className={style.clickMe}><FaLongArrowAltLeft/> click me!</motion.span> </motion.h2>
         <div className={style.experiences}>
 
         <motion.div variants={contentVariants} className={style.exp}>
@@ -105,19 +105,21 @@ const Skills: React.FC = () => {
         </motion.div> 
         : 
         <motion.div variants={parentContainer} className={style.experiencesDiv}>
-       <motion.h2 onClick={changeTitle} variants={titleVariants} whileHover={{color: "#f7931e"}} >{title} <motion.span whileHover={{color: "#bc2633"}}  className={style.clickMe}><FaLongArrowAltLeft/> click me!</motion.span> </motion.h2>
+       <motion.h2 onClick={changeTitle} variants={titleVariants} whileHover={{color: "#f7931e"}} >{title} <motion.span  className={style.clickMe}><FaLongArrowAltLeft/> click me!</motion.span> </motion.h2>
         <div className={style.experiences}>
 
         <motion.div variants={contentVariants} className={style.exp}>
+          <h3>Judilica AB</h3>
           <div className={style.jobTitleDiv}>
-            <h3>Frontend Developer Intern</h3>
+          
+            <h4>Frontend Developer Intern</h4>
             <p>Sept 2021 - April 2022 </p>
           </div>
-          <h4>Judilica AB</h4>
+         
           <p>
-          • Created the company’s landing page, from design to
+          - Created the company’s landing page, from design to
 deployment (continuous deployment).<br/>
-• Worked with Figma, Next.js, TypeScript and Sass for this project,
+- Worked with Figma, Next.js, TypeScript and Sass for this project,
 as well as Github for collaboration with a fellow intern.
           </p>
         </motion.div>
@@ -157,8 +159,12 @@ Assisting the service department with their day-to-day repair and maintenance wo
         
 
 
+        <motion.div 
+        variants={contentVariants} 
+        className={style.arrowToSkills}>
+          <FaLongArrowAltDown/>
+        </motion.div> 
 
-        <motion.div variants={contentVariants} className={style.arrowToSkills}><FaLongArrowAltDown/></motion.div> 
         <div className={style.skillsIcons}>
          <SkillsSvg />
         </div>

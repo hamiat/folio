@@ -41,6 +41,7 @@ body {
     .btnTwo {
       grid-area: lightMode;
       place-self: end;
+      padding-top: $mn;
     }
 
     .leftContent {
@@ -67,11 +68,6 @@ body {
       }
     }
 
-    .rightContent {
-      grid-area: content;
-      width: max-content;
-      height: max-content;
-      z-index: 2;
-    }
+    
   }
 }

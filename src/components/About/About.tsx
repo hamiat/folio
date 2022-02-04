@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import Button from "../Button/Button";
 import Skills from "../Skills/Skills";
 import {FaLongArrowAltDown} from "react-icons/fa"
+import SkillsSvg from "../Skills/SkillsSvg";
 
 const delayStartVariants = {
   initial: {
@@ -89,7 +90,6 @@ const About: React.FC = () => {
             : { delayChildren: 0 }
         }
         className={style.about}
-     
       >
         
           <motion.h1 variants={titleVariants}>Hello there!</motion.h1>

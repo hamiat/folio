@@ -1,6 +1,5 @@
 @import "../../styles/main.module.scss";
 
-
 .rightContent {
   grid-area: content;
   width: max-content;
@@ -10,35 +9,29 @@
   flex-direction: column;
   justify-content: space-between;
 
-  
-  
   .about {
     z-index: 2;
     display: flex;
     flex-direction: column;
-     
+    padding-top: $mn*2;
+
     h1 {
       font-size: 40px;
     }
 
-h2 {
-  padding: 0 0 10px 48px ;
-}
+    h2 {
+      padding: 0 0 10px 48px;
+    }
 
-p {
-  font-weight: 300;
-  font-size: 22px;
-  width: 70%;
-  padding: 0 0 50px 68px ;
-}
+    p {
+      font-weight: 300;
+      font-size: 22px;
+      width: 50%;
+      padding: 0 0 50px 68px;
+    }
     .arrow {
-      padding: $mn $mn*6;
-     font-size: 25px;
-    
-    }  
-    
-  
-
-  
-}
+      padding: $mn $mn * 6;
+      font-size: 25px;
+    }
+  }
 }
