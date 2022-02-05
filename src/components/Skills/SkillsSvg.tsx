@@ -59,11 +59,11 @@ const contentVariants: Variants = {
 const parentContainer: Variants = {
   offscreen: {
       opacity: 0,
-      x:"100vw"
+      y:"-10vw"
   },
   onscreen: {
     opacity: 1,
-    x:0,
+    y:0,
     transition: {
         duration: 1,
         type: "spring",
