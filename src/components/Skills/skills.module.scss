@@ -1,107 +1,92 @@
 @import "../../styles/main.module.scss";
 
-
-
-  .skills {
-    display: flex;   
-    flex-direction: column;
-    justify-content: space-between;
-padding-top: $mn*3;
-
-.experiences {
+.skills {
   display: flex;
- flex-direction: column;
- gap: 18px;
- margin-top: -$mn;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: $mn * 3;
 
-  .exp {
-    width: 80%;
-
-  
-
-  .jobTitleDiv {
+  .experiences {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
- color: $redish;
- margin: -8px 0 -4px 0;
-  
+    flex-direction: column;
+    gap: 16px;
+    margin-top: -$mn;
+
+    .exp {
+      width: 80%;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .jobTitleDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $redish;
+        margin: -4px 0px ;
+        
+      }
+      p {
+padding: 0  0 0 24px;
+      }
+    }
   }
-}
-}
 
-svg { 
-  cursor: pointer;
-}
-
-
-
-.softDiv {
-  width: 80%;
-  color: $redish;
-}
- 
-h2 {
-  font-size: 38px;
-  cursor: pointer;
-
-  .clickMe {
-    font-size: 16px;
-    color: "#f7931e";
-    cursor:default;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px
-   
+  svg {
+    cursor: pointer;
   }
-}
 
+  .softDiv {
+    width: 80%;
+    color: $redish;
+  }
 
- .experiencesDiv {
-   display: flex;
-   flex-direction: column;
-   
+  h2 {
+    font-size: 38px;
+    cursor: pointer;
 
-  
+    .clickMe {
+      font-size: 16px;
+      color: "#f7931e";
+      cursor: default;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+    }
+  }
 
- 
+  .experiencesDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .arrowToSkills {
+    grid-column: 1;
+    grid-row: 3;
+    padding: $mn $mn * 6;
+    font-size: 25px;
+  }
 
- }
- .arrowToSkills {
-  grid-column: 1 ;
-  grid-row: 3;
-  padding: $mn $mn*6;
-  font-size: 25px;
- }
- 
+  .skillsTitles {
+    font-size: 22px;
+    color: $darkOrange;
+  }
+  .skillsTitlesSoft {
+    font-size: 22px;
+    color: $darkOrange;
+  }
 
- .skillsTitles {
-   font-size: 22px;
-   color: $darkOrange;
-  
-   
- }
-.skillsTitlesSoft {
-font-size: 22px;
-color: $darkOrange;
+  .skillsIcons {
+    grid-column: 1;
+    grid-row: 4;
+    padding-top: $mn * 3;
 
-
-}
-
- .skillsIcons{
-  grid-column: 1 ;
-  grid-row: 4;
-  padding-top: $mn*3;
- 
-  margin: 0 auto;
- 
+    margin: 0 auto;
 
     .hardIcons {
-      
       z-index: 2;
       display: flex;
-    width: 80%;
+      width: 80%;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
@@ -114,18 +99,14 @@ color: $darkOrange;
       .github {
         width: 100px;
         height: 100px;
-     
-        
       }
       .js {
         width: 100px;
         height: 100px;
-       
       }
       .react {
         width: 150px;
         height: 150px;
-       
       }
 
       .sass {
@@ -148,13 +129,10 @@ color: $darkOrange;
   }
 
   .arrowToContact {
-    grid-column: 1 ;
+    grid-column: 1;
     grid-row: 5;
     font-size: 25px;
-    padding: $mn*2 $mn*6;
+    padding: $mn * 2 $mn * 6;
     font-size: 25px;
-   
-   } 
-
-  
+  }
 }
