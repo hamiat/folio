@@ -18,6 +18,10 @@
       flex-direction: column;
       gap: 8px;
 
+      .city {
+        font-size: 14px;
+      }
+
       .jobTitleDiv {
         display: flex;
         justify-content: space-between;

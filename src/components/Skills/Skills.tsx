@@ -71,37 +71,40 @@ const Skills: React.FC = () => {
           </motion.h2>
           <div className={style.experiences}>
             <motion.div variants={contentVariants} className={style.exp}>
+            <h3>Hyper Island<span className={style.city}>, Stockholm (Sweden) </span></h3>
               <div className={style.jobTitleDiv}>
-                <h3>Frontend developer</h3>
+                <h4>Frontend developer</h4>
                 <p>2020 - 2022 </p>
               </div>
-              <h4>Hyper Island (Sweden)</h4>
+             
               <p>
-                • Frontend developer education centering around the web
+                - Frontend developer education centering around the web
                 development languages HTML, CSS & JavaScript, as well as
-                frameworks and tools in the frontend ecosystem. <br />• Soft
+                frameworks and tools in the frontend ecosystem. <br /> - Soft
                 skills development such as working in teams and with Agile
                 software development.
               </p>
             </motion.div>
 
             <motion.div variants={contentVariants} className={style.exp}>
+            <h3>Mälardalens högskola<span className={style.city}>, Västerås (Sweden)</span></h3>
               <div className={style.jobTitleDiv}>
-                <h3>Aeronautical engineering</h3>
+                <h4>Aeronautical engineering</h4>
                 <p>2011-2013 </p>
               </div>
-              <h4>Mälardalens högskola (Sweden)</h4>
-              <p>• Bachelor’s degree</p>
+              
+              <p>- Bachelor’s degree</p>
             </motion.div>
 
             <motion.div variants={contentVariants} className={style.exp}>
+            <h3>Hankuk University of Foreign studies<span className={style.city}>, Seoul (South Korea) </span></h3>
               <div className={style.jobTitleDiv}>
-                <h3>Customer service engineer</h3>
+                <h4>Exchange year</h4>
                 <p>2014 - 2015</p>
               </div>
-              <h4>Hankuk University of Foreign studies (South Korea)</h4>
+              
               <p>
-                • Emphasis on intercultural skills development and the Korean
+                - Emphasis on intercultural skills development and the Korean
                 language.
               </p>
             </motion.div>
