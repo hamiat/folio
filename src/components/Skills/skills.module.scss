@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding-top: $mn * 3;
+height: 150vh;
 
   h2 {
     cursor: pointer;
@@ -25,6 +26,7 @@
     flex-direction: column;
     gap: 16px;
     margin-top: -$mn;
+    
 
     .exp {
       width: 80%;
@@ -51,7 +53,7 @@
 
 
   .skillsDiv {
-    padding-top: $mn ;
+    padding-top: $mn*2 ;
     
 
     .softSkillsTitle {
@@ -79,37 +81,37 @@
       gap: 24px;
 
       .figma {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
       .github {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
       .js {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
       .react {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
       }
 
       .sass {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
       .ts {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
       .htmlfive {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
       .cssthree {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
       }
     }
   }

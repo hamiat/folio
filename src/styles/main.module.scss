@@ -46,7 +46,8 @@ body {
     .btnTwo {
       grid-area: lightMode;
       place-self: end;
-      padding-top: $mn;
+      margin-top: $mn;
+     
      
     }
 

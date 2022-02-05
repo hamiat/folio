@@ -58,11 +58,11 @@ const contentVariants: Variants = {
 const parentContainer: Variants = {
   offscreen: {
     opacity: 0,
-    x: "-100vw",
+    y: 10,
   },
   onscreen: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       duration: 3,
       type: "spring",
@@ -77,7 +77,7 @@ const SkillsSvg: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.6 }}
+      viewport={{ once: false, amount: 0.4 }}
       className={style.skillsDiv}
     >
       <motion.h2 variants={titleVariants}>Skills </motion.h2>

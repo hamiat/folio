@@ -54,7 +54,7 @@ const Skills: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: false, amount: 0.5 }}
       className={style.skills}
     >
       {whichTitle ? (
