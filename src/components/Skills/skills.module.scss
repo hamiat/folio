@@ -6,6 +6,20 @@
   justify-content: space-between;
   padding-top: $mn * 3;
 
+  h2 {
+    cursor: pointer;
+  }
+
+  .clickMe {
+    font-size: 16px;
+    color: "#f7931e";
+    cursor: default;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
   .experiences {
     display: flex;
     flex-direction: column;
@@ -27,65 +41,33 @@
         justify-content: space-between;
         align-items: center;
         color: $redish;
-        margin: -4px 0px ;
-        
+        margin: -4px 0px;
       }
       p {
-padding: 0  0 0 24px;
+        padding: 0 0 0 24px;
       }
     }
   }
 
-  svg {
-    cursor: pointer;
-  }
 
-  .softDiv {
-    width: 80%;
-    color: $redish;
-  }
+  .skillsDiv {
+    padding-top: $mn ;
+    
 
-  h2 {
-    font-size: 38px;
-    cursor: pointer;
-
-    .clickMe {
-      font-size: 16px;
-      color: "#f7931e";
-      cursor: default;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
+    .softSkillsTitle {
+      margin-top: -14px;
+      
     }
-  }
 
-  .experiencesDiv {
-    display: flex;
-    flex-direction: column;
-  }
-  .arrowToSkills {
-    grid-column: 1;
-    grid-row: 3;
-    padding: $mn $mn * 6;
-    font-size: 25px;
-  }
+    .softSkills {
+      padding-bottom: 24px;
+      width: 80%;
+      color: $redish;
+    }
 
-  .skillsTitles {
-    font-size: 22px;
-    color: $darkOrange;
-  }
-  .skillsTitlesSoft {
-    font-size: 22px;
-    color: $darkOrange;
-  }
-
-  .skillsIcons {
-    grid-column: 1;
-    grid-row: 4;
-    padding-top: $mn * 3;
-
-    margin: 0 auto;
+    svg {
+      cursor: pointer;
+    }
 
     .hardIcons {
       z-index: 2;
@@ -97,16 +79,16 @@ padding: 0  0 0 24px;
       gap: 24px;
 
       .figma {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
       .github {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
       .js {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
       .react {
         width: 150px;
@@ -114,28 +96,36 @@ padding: 0  0 0 24px;
       }
 
       .sass {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
       .ts {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
       .htmlfive {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
       .cssthree {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
     }
   }
 
-  .arrowToContact {
-    grid-column: 1;
-    grid-row: 5;
+
+
+  
+  
+  .arrowToSkills {
+    padding: $mn $mn * 6;
     font-size: 25px;
+  }
+
+  
+ 
+  .arrowToContact {
     padding: $mn * 2 $mn * 6;
     font-size: 25px;
   }

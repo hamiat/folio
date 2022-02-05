@@ -1,11 +1,11 @@
 import style from "./about.module.scss";
-import nameTwo from "../../nameTwo.svg";
+
 import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
-import Button from "../Button/Button";
+
 import Skills from "../Skills/Skills";
 import {FaLongArrowAltDown} from "react-icons/fa"
-import SkillsSvg from "../Skills/SkillsSvg";
+
 
 const delayStartVariants = {
   initial: {

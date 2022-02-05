@@ -177,9 +177,9 @@ const Skills: React.FC = () => {
         <FaLongArrowAltDown />
       </motion.div>
 
-      <div className={style.skillsIcons}>
+      
         <SkillsSvg />
-      </div>
+      
     </motion.section>
   );
 };
