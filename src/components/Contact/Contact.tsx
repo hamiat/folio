@@ -1,10 +1,8 @@
 import style from "./contact.module.scss";
 import { motion, Variants } from "framer-motion";
 import { FaLongArrowAltUp } from "react-icons/fa";
-import { Scene , Controller} from "react-scrollmagic";
+import { Scene, Controller } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
-
-
 
 const parentContainer: Variants = {
   offscreen: {},
@@ -26,7 +24,7 @@ const titleVariants: Variants = {
   },
 };
 
-const btnVariants : Variants = {
+const btnVariants: Variants = {
   offscreen: {
     opacity: 0,
   },
@@ -50,47 +48,43 @@ const btnVariants : Variants = {
 
 const Contact: React.FC = () => {
   return (
-   
     <motion.section
-     initial="offscreen"
-     whileInView="onscreen"
-     viewport={{ once: false, amount: 0.3 }}
-      className={style.contact} 
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: false, amount: 0.3 }}
+      className={style.contact}
     >
-       
-                  <div className={style.contacts}>
-                    <motion.h2 variants={titleVariants} >Contact</motion.h2>
-          <motion.a 
-           variants={btnVariants}
-           whileHover="hover"
-           whileTap="hover"
-            id="github"
-            href="https://github.com/hamiat"
-          >
-            Github
-          </motion.a>
-          <motion.a
-             variants={btnVariants}
-             whileHover="hover"
-             whileTap="hover"
-            id="linkedin"
-            href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
-          >
-            LinkedIn
-          </motion.a>
-          <motion.a
-            variants={btnVariants}
-            whileHover="hover"
-            whileTap="hover"
-            id="mail"
-            href="mailto:hamiat.n@hotmai.com"
-          >
-            Email
-          </motion.a>
-         
-        </div>
+  
+        <motion.h2 variants={titleVariants}>Contact</motion.h2>
+        <motion.a
+          variants={btnVariants}
+          whileHover="hover"
+          whileTap="hover"
+          id="github"
+          href="https://github.com/hamiat"
+        >
+          Github
+        </motion.a>
+        <motion.a
+          variants={btnVariants}
+          whileHover="hover"
+          whileTap="hover"
+          id="linkedin"
+          href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
+        >
+          LinkedIn
+        </motion.a>
+        <motion.a
+          variants={btnVariants}
+          whileHover="hover"
+          whileTap="hover"
+          id="mail"
+          href="mailto:hamiat.n@hotmai.com"
+        >
+          Email
+        </motion.a>
+      
     </motion.section>
-    
   );
 };
 

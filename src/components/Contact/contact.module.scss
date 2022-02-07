@@ -9,17 +9,11 @@
   justify-content: center;
   align-items: center;
   margin-right: $mn * 4;
-  padding-top: $mn * 2;
+  margin-top: -200px;
+  height: 100vh;
   z-index: 5;
+  gap: 28px;
 
-  .contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-top: -180px;
-    margin-left: -170px;
 
     
 
@@ -30,6 +24,7 @@
       width: 100%;
       text-align: center;
       @include box;
+      padding: 8px;
     }
-  }
+  
 }
