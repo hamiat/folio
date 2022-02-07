@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
           </motion.a>
          
         </div>}>
-        <Tween from={{ x: 1000 }} to={{ x: 0 }} />
+        <Tween from={{ x: -1000 }} to={{ x: 0 }} />
                     <Tween from={{ opacity: 1 }} to={{ opacity: 0.9 }} />
         </Timeline>
       </Timeline>

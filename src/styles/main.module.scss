@@ -11,6 +11,7 @@ $redish: #bc2633;
 
 $mn: 48px;
 
+
 /* Global styles */
 h2,
 h4 {
@@ -49,7 +50,6 @@ body {
       grid-area: lightMode;
       place-self: end;
       margin-top: $mn;
-    
      
     }
 
@@ -62,6 +62,11 @@ body {
       z-index: 2;
       width: max-content;
       height: max-content;
+  /*     position: fixed;
+      top:150px;
+      bottom: 0;
+      right: 0;
+      left: 0; */
 
       .face {
         grid-row: 1;
