@@ -11,12 +11,11 @@ const startVariants = {
   initial: {
     gridColumn: "1/span 2",
     opacity: 0,
-    width: "auto"
+    
   },
   animate: {
     gridColumn: "1/span1",
     opacity: 1,
-    width: "100%",  
 
     transition: {
       duration: 1.5,
@@ -44,7 +43,7 @@ const goToSideVariants = {
     x: 0,
   },
   animate: {
-    x: "-15vw",
+    x: "-20vw",
     transition: {
       delay: 2.5,
       duration: 2,
