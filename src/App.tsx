@@ -66,7 +66,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className={style.main}>
+    <motion.main  className={style.main}>
       <motion.section
         variants={startVariants}
         initial="initial"
@@ -392,7 +392,7 @@ const App: React.FC = () => {
       <About />
       <Skills />
       <Contact />
-    </main>
+    </motion.main>
   );
 };
 
