@@ -21,6 +21,12 @@
    gap: 24px;
    margin-top: -180px;
    margin-left: -170px;
+
+   div {
+     padding: 24px;
+   }
+   
+ 
    
   
   
@@ -29,7 +35,9 @@
     text-decoration: none;
     color: $darkOrange;
     font-size: 24px;
-    @include bottomBorder;
+   width: 100%;
+   text-align: center;
+    @include box;
   
 
 

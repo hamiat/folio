@@ -10,9 +10,11 @@
     font-size: 18px;
     place-self: self-end;
     cursor: pointer;
-    @include bottomBorder;
+    @include box;
     
    
+    
+    
     
 }
 

@@ -1,6 +1,6 @@
 @mixin box {
-    border: 1px solid $black;
-    box-shadow: 2px 2px $darkOrange;
+    border: 1px solid $lightBlack;
+    box-shadow: 2px 2px $black;
   
 }
 @mixin bottomBorder {

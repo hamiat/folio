@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
      viewport={{ once: false, amount: 0.3 }}
       className={style.contactsDiv} 
     >
-      <motion.h2 variants={titleVariants} >Contact</motion.h2>
+      
       <Scene
        duration={500}
        triggerHook={0.75}
@@ -65,6 +65,7 @@ const Contact: React.FC = () => {
 
                   <Timeline target={
                   <div className={style.contacts}>
+                    <motion.h2 variants={titleVariants} >Contact</motion.h2>
           <a
             id="github"
             href="https://github.com/hamiat"

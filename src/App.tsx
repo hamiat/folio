@@ -33,8 +33,8 @@ const revealBtnVariants = {
   },
   hover: 
   {
-  borderTop:" 2px dotted #ff8d0b",
-  borderBottom:" 2px dotted #ff8d0b",
+  border:" 1px solid $000000",
+  boxShadow:" 2px 2px  #ff8d0b",
 }
 };
 
@@ -64,7 +64,7 @@ const App: React.FC = () => {
        <FaceSvg />
       </motion.section>
 
-      <motion.div variants={revealBtnVariants} whileHover="hover"  whileTap="hover" className={style.btnTwo}>
+      <motion.div  className={style.btnTwo}>
         <Button onClick={handleToggle}> {mode ? "Light mode" : "Dark mode"}</Button>
       </motion.div>
       
