@@ -50,13 +50,14 @@ const btnVariants : Variants = {
 
 const Contact: React.FC = () => {
   return (
-    <Controller>
+   
     <motion.section
      initial="offscreen"
      whileInView="onscreen"
      viewport={{ once: false, amount: 0.3 }}
-      className={style.contactsDiv} 
+      className={style.contact} 
     >
+       <Controller>
       
       <Scene
        duration={500}
@@ -108,8 +109,9 @@ const Contact: React.FC = () => {
       </div>
           )}
       </Scene>
+      </Controller>
     </motion.section>
-    </Controller>
+    
   );
 };
 

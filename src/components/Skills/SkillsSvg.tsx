@@ -58,11 +58,11 @@ const contentVariants: Variants = {
 const parentContainer: Variants = {
   offscreen: {
     opacity: 0,
-    y: 10,
+  x: -500,
   },
   onscreen: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       duration: 3,
       type: "spring",
@@ -80,15 +80,17 @@ const SkillsSvg: React.FC = () => {
       viewport={{ once: false, amount: 0.4 }}
       className={style.skillsDiv}
     >
+
+    
       <motion.h2 variants={titleVariants}>Skills </motion.h2>
-      <motion.h3 variants={contentVariants} className={style.softSkillsTitle}>Soft : </motion.h3> 
+       
       <motion.div className={style.softSkills}  variants={contentVariants}>
         Problem solving, Empathy, Active listening, Time and self management
         Adaptivity, Teamwork, Positive attitude
       </motion.div>
   
-      <motion.h3 variants={contentVariants} >Hard :</motion.h3>
-      <motion.div variants={parentContainer} className={style.hardIcons}>
+     
+      <motion.div className={style.hardIcons}>
         <motion.svg
           drag
           variants={contentVariants}
@@ -399,8 +401,9 @@ const SkillsSvg: React.FC = () => {
 
       <motion.div variants={contentVariants} className={style.arrowToContact}>
         <FaLongArrowAltDown />
+     
       </motion.div>
-      <Contact />
+     
     </motion.section>
   );
 };

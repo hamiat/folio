@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import FaceSvg from "./components/FaceSvg/FaceSvg";
 import Button from "./components/Button/Button";
 import { Controller, Scene } from "react-scrollmagic";
+import Skills from "./components/Skills/Skills";
+import Contact from "./components/Contact/Contact";
 
 const startVariants = {
   initial: {
@@ -66,6 +68,8 @@ const App: React.FC = () => {
       </motion.div>
 
       <About />
+      <Skills />
+      <Contact />
     </main>
   );
 };

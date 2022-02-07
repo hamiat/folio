@@ -104,8 +104,7 @@ const About: React.FC = () => {
         
       </motion.div>
 
-      <Skills />
-    </motion.section>
+      </motion.section>
   );
 };
 

@@ -1,11 +1,15 @@
 @import "../../styles/main.module.scss";
 
 .skills {
+  grid-column: 1 / span 2 ;
+  grid-row: 3;
+  place-self: center;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-top: $mn * 3;
-height: 150vh;
+
 
   h2 {
     cursor: pointer;
@@ -29,7 +33,7 @@ height: 150vh;
    
 
     .exp {
-      width: 80%;
+      
       display: inline-flex;
       flex-direction: column;
       gap: 8px;
@@ -47,6 +51,7 @@ height: 150vh;
       }
       p {
         padding: 0 0 0 24px;
+        
       }
     }
   }
@@ -64,7 +69,7 @@ height: 150vh;
     .softSkills {
       padding-bottom: 24px;
       width: 80%;
-      color: $redish;
+      color: $darkOrange;
       font-size: 20px;
     }
 

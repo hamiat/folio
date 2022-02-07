@@ -30,6 +30,7 @@ h4 {
 }
 p {
   margin: 0;
+  line-height: 1.5;
 }
 
 body {
@@ -42,26 +43,28 @@ body {
     color: $orange;
     max-width: 1440px;
     display: grid;
-    grid-template-areas:
-      ".  lightMode"
-      "face content";
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 80px repeat(4, auto);
+margin: 0 auto;
 
     .btnTwo {
-      grid-area: lightMode;
+      grid-column: 2 / span 1 ;
+     grid-row: 1;
       place-self: end;
       margin-top: $mn;
      
     }
 
     .leftContent {
-      grid-area: face;
+     grid-column: 1 / span 1 ;
+     grid-row: 2;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       place-items: center;
       z-index: 2;
-      width: max-content;
-      height: max-content;
+      width: 50%;
+      height: 100%;
   /*     position: fixed;
       top:150px;
       bottom: 0;
