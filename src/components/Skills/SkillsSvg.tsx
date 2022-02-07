@@ -5,6 +5,8 @@ import { motion, Variants } from "framer-motion";
 
 import { FaLongArrowAltDown } from "react-icons/fa";
 import Contact from "../Contact/Contact";
+import { Controller, Scene } from "react-scrollmagic";
+import { Timeline, Tween } from "react-gsap";
 
 const revealBtnVariants = {
   initial: {
@@ -77,20 +79,33 @@ const SkillsSvg: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.4 }}
+      viewport={{ once: false, amount: 0.5 }}
       className={style.skillsDiv}
     >
 
     
-      <motion.h2 variants={titleVariants}>Skills </motion.h2>
+      <motion.h2 className={style.softSkillsTitle} variants={titleVariants}>Skills </motion.h2>
        
       <motion.div className={style.softSkills}  variants={contentVariants}>
         Problem solving, Empathy, Active listening, Time and self management
         Adaptivity, Teamwork, Positive attitude
       </motion.div>
   
-     
-      <motion.div className={style.hardIcons}>
+      <Controller>
+      
+      <Scene
+       duration={300}
+       triggerHook={0.75}
+       pin={{ pushFollowers: false }}
+       offset={250}>
+         {(progress: any) => (
+            <div>
+              <Timeline totalProgress={progress} paused>
+               
+            
+
+                  <Timeline target={
+      <motion.div variants={contentVariants} className={style.hardIcons}>
         <motion.svg
           drag
           variants={contentVariants}
@@ -398,6 +413,15 @@ const SkillsSvg: React.FC = () => {
 
       
       </motion.div>
+      }>
+      <Tween from={{ x: -1000 }} to={{ x: 0 }} />
+                  <Tween from={{ opacity: 1 }} to={{ opacity: 0.9 }} />
+      </Timeline>
+    </Timeline>
+    </div>
+        )}
+    </Scene>
+    </Controller>
 
       <motion.div variants={contentVariants} className={style.arrowToContact}>
         <FaLongArrowAltDown />

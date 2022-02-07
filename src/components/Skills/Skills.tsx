@@ -186,7 +186,7 @@ const Skills: React.FC = () => {
       </motion.div>
 
       
-        <SkillsSvg />
+      
        
     </motion.section>
    

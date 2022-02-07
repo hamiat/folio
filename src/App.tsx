@@ -7,6 +7,7 @@ import Button from "./components/Button/Button";
 import { Controller, Scene } from "react-scrollmagic";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
+import SkillsSvg from "./components/Skills/SkillsSvg";
 const startVariants = {
   initial: {
     gridColumn: "1/span 2",
@@ -391,6 +392,7 @@ const App: React.FC = () => {
 
       <About />
       <Skills />
+      <SkillsSvg />
       <Contact />
     </motion.main>
   );

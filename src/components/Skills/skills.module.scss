@@ -30,6 +30,7 @@
     flex-direction: column;
     gap: 16px;
     margin-top: -$mn;
+  
    
 
     .exp {
@@ -57,72 +58,6 @@
   }
 
 
-  .skillsDiv {
-    padding-top: $mn*2 ;
-    
-
-    .softSkillsTitle {
-      margin-top: -14px;
-      
-    }
-
-    .softSkills {
-      padding-bottom: 24px;
-      width: 80%;
-      color: $darkOrange;
-      font-size: 20px;
-    }
-
-    svg {
-      cursor: pointer;
-    }
-
-    .hardIcons {
-      z-index: 2;
-      display: flex;
-      width: 80%;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-
-      .figma {
-        width: 80px;
-        height: 80px;
-      }
-      .github {
-        width: 80px;
-        height: 80px;
-      }
-      .js {
-        width: 80px;
-        height: 80px;
-      }
-      .react {
-        width: 100px;
-        height: 100px;
-      }
-
-      .sass {
-        width: 80px;
-        height: 80px;
-      }
-      .ts {
-        width: 80px;
-        height: 80px;
-      }
-      .htmlfive {
-        width: 80px;
-        height: 80px;
-      }
-      .cssthree {
-        width: 80px;
-        height: 80px;
-      }
-    }
-  }
-
-
 
   
   
@@ -133,8 +68,88 @@
 
   
  
-  .arrowToContact {
-    padding: $mn * 2 $mn * 6;
-    font-size: 25px;
+  
+}
+
+
+
+.skillsDiv {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  z-index: 1;
+  padding-top: $mn*2 ;
+  width: 50%;
+  place-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  
+
+  .softSkillsTitle {
+   grid-row: 1;
+    
   }
+
+  .softSkills {
+    padding-bottom: 24px;
+    width: 80%;
+    color: $darkOrange;
+    font-size: 20px;
+    grid-row: 2;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  .hardIcons {
+    grid-row: 3;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: -84px;
+
+    .figma {
+      width: 80px;
+      height: 80px;
+    }
+    .github {
+      width: 80px;
+      height: 80px;
+    }
+    .js {
+      width: 80px;
+      height: 80px;
+    }
+    .react {
+      width: 100px;
+      height: 100px;
+    }
+
+    .sass {
+      width: 80px;
+      height: 80px;
+    }
+    .ts {
+      width: 80px;
+      height: 80px;
+    }
+    .htmlfive {
+      width: 80px;
+      height: 80px;
+    }
+    .cssthree {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.arrowToContact {
+  padding: $mn * 2 $mn * 6;
+  font-size: 25px;
+  grid-row: 4;
 }

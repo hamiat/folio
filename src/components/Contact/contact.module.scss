@@ -2,7 +2,7 @@
 
 .contact {
   grid-column: 1 / span 2 ;
-  grid-row: 4;
+  grid-row: 5;
   place-self: center;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
   align-items: center;
   margin-right: $mn * 4;
   padding-top: $mn * 2;
+  z-index: 5;
 
   .contacts {
     display: flex;
