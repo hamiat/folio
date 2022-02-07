@@ -46,7 +46,7 @@ const App: React.FC = () => {
     
     if(mode) {
       alert("coming soon!")
-     setMode(!mode)
+     /* setMode(!mode) */
     }
   };
 

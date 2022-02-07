@@ -26,19 +26,25 @@ const titleVariants: Variants = {
   },
 };
 
-const contentVariants: Variants = {
+const btnVariants : Variants = {
   offscreen: {
     opacity: 0,
   },
   onscreen: {
     opacity: 1,
     transition: {
-      ease: "easeInOut",
-      duration: 1.5,
+      type: "spring",
+      stiffness: 120,
+      mass: 0.4,
     },
   },
   hover: {
-    borderBottom: " 2px dotted #ff8d0b",
+    y: -2,
+    x: -2,
+    boxShadow: " 2px 2px  #ff8d0b",
+    transition: {
+      ease: "easeOut",
+    },
   },
 };
 
@@ -66,26 +72,33 @@ const Contact: React.FC = () => {
                   <Timeline target={
                   <div className={style.contacts}>
                     <motion.h2 variants={titleVariants} >Contact</motion.h2>
-          <a
+          <motion.a 
+           variants={btnVariants}
+           whileHover="hover"
+           whileTap="hover"
             id="github"
             href="https://github.com/hamiat"
           >
             Github
-          </a>
-          <a
-            
+          </motion.a>
+          <motion.a
+             variants={btnVariants}
+             whileHover="hover"
+             whileTap="hover"
             id="linkedin"
             href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
           >
             LinkedIn
-          </a>
-          <a
-           
+          </motion.a>
+          <motion.a
+            variants={btnVariants}
+            whileHover="hover"
+            whileTap="hover"
             id="mail"
             href="mailto:hamiat.n@hotmai.com"
           >
             Email
-          </a>
+          </motion.a>
          
         </div>}>
         <Tween from={{ x: 1000 }} to={{ x: 0 }} />
