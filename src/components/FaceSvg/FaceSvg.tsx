@@ -19,12 +19,18 @@ const pathVariants = {
 
   const goToSideVariants = {
     initial: {
-      
+      x: 0,
     },
     animate: {
-    
+      x: "-15vw",
+      transition: {
+        delay: 2.5,
+        duration: 2,
+        ease: "easeInOut",
+      },
     },
-  }
+  };
+  
 
 function FaceSvg () {
 return (
