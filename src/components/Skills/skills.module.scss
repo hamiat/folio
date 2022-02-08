@@ -9,7 +9,10 @@
   flex-direction: column;
   justify-content: space-between;
   padding-top: $mn ;
-
+  @include sm {
+    grid-column: 1 / span 1 ;
+ grid-row: 4;
+  }
 
   h2 {
     cursor: pointer;
@@ -94,6 +97,11 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  @include sm {
+    grid-column: 1 / span 1 ;
+ grid-row: 5;
+  }
+
   
 
   .softSkillsTitle {
@@ -126,6 +134,8 @@
     @include breakpoint(800px) {
       margin-top: -254px;
     }
+
+    
     
 
     .figma {

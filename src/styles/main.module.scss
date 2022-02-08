@@ -70,6 +70,10 @@ body {
    grid-template-rows: 80px repeat(4, auto);
 margin: 0 auto;
 box-sizing: border-box;
+@include sm {
+  grid-template-columns: 1fr;
+}
+
 
     .btnTwo {
       grid-column: 2 / span 1 ;
@@ -91,12 +95,42 @@ box-sizing: border-box;
       grid-template-rows: 1fr;
       place-items: center;
       z-index: 2;
+
+      @include sm {
+        grid-column: 1 / span 1 ;
+     grid-row: 2;
+    
+      }
       
   /*     position: fixed;
       top:150px;
       bottom: 0;
       right: 0;
       left: 0; */
+
+      .faceMobile {
+        display: none;
+        grid-row: 1;
+        grid-column: 1;
+        margin: 18px 0 0 13px;
+        z-index: 10;
+        width: 42%;
+        
+      @include sm {
+        display: block;
+      }
+      }
+      .nameMobile {
+        display: none;
+        grid-row: 1;
+        grid-column: 1;
+        margin: -48px 50px 0 0;
+        z-index: 2;
+        width: 85%;
+        @include sm {
+          display: block;
+        }
+      }
 
       .face {
         grid-row: 1;
@@ -113,6 +147,13 @@ box-sizing: border-box;
         @include breakpoint(800px) {
           width: 24%;
         }
+        @include breakpoint(800px) {
+          width: 26%;
+        }
+
+        @include sm {
+          display: none;
+        }
       }
       .name {
         grid-row: 1;
@@ -127,6 +168,13 @@ box-sizing: border-box;
           }
            @include breakpoint(800px) {
             width: 48%;
+          }
+           @include breakpoint(700px) {
+            width: 50%;
+          }
+
+          @include sm {
+            display: none;
           }
       }
     }
