@@ -409,7 +409,7 @@ const App: React.FC = () => {
       initial="initial"
       animate="animate"
       transition={
-        showModal ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
+        showModal ? { delay: 8.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
        }
         className={style.btnTwo}>
         <Button onClick={handleToggle}>
