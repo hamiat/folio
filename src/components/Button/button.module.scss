@@ -12,7 +12,9 @@
     cursor: pointer;
     @include box;
     
-   
+    @include md {
+        font-size: 16px;
+      }
     
     
     

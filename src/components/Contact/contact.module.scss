@@ -12,7 +12,10 @@
   height: 100vh;
   z-index: 5;
   gap: 28px;
-
+  @include breakpoint(800px) {
+    margin-top: -250px;
+  }
+  
 
     
 

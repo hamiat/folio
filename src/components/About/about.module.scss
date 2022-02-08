@@ -23,6 +23,13 @@
       @include lg {
         font-size: 34px;
       }
+      @include md {
+        font-size: 30px;
+      }
+      @include breakpoint(800px) {
+        font-size: 30px;
+        padding: 0 0 0 48px;
+      }
     
     }
 
@@ -33,6 +40,14 @@
       @include lg {
         font-size: 28px;
         margin-top: -16px;
+      }
+      @include md {
+        font-size: 26px;
+        padding: 0 0 10px 38px;
+      }
+      @include breakpoint(800px) {
+        font-size: 20px;
+        padding: 0  28px 0 68px;
       }
     }
 
@@ -46,6 +61,14 @@
         font-size: 20px;
         padding: 0 0 50px 68px;
       }
+      @include md {
+        font-size: 18px;
+        padding: 0 0 45px 58px;
+      }
+      @include breakpoint(800px) {
+        font-size: 18px;
+        padding: 0  0px 0 78px;
+      }
     }
     .arrow {
       padding: $mn $mn * 4;
@@ -54,6 +77,13 @@
       @include lg {
         font-size: 22px;
         
+      }
+      @include md {
+        font-size: 20px;
+      }
+      @include breakpoint(800px) {
+        font-size: 22px;
+        padding: $mn $mn * 3;
       }
     }
   }
