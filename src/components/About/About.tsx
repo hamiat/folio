@@ -7,6 +7,7 @@ import Skills from "../Skills/Skills";
 import {FaLongArrowAltDown} from "react-icons/fa"
 
 
+
 const delayStartVariants = {
   initial: {
     opacity: 0,
@@ -60,15 +61,16 @@ const sideVariants = {
     },
   },
 };
-const About: React.FC = () => {
-  const [showModal, setShowModal] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowModal(false);
-    }, 5000);
-  }, []);
 
+
+export type Props = {
+  showModal: boolean
+  
+}
+
+const About = ({showModal}: Props) => {
+ 
   return (
     <motion.section
       variants={delayStartVariants}

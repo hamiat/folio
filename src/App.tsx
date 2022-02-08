@@ -38,26 +38,52 @@ const pathVariants = {
       ease: "easeInOut",
     },
   },
+  hover: {
+    stroke: "#bc2633"
+  }
 };
 const goToSideVariants = {
   initial: {
     x: 0,
+   
   },
   animate: {
+     
     x: "-20vw",
     transition: {
       delay: 2.5,
-      duration: 2,
+      duration: 2.5,
       ease: "easeInOut",
+   
     },
-  },
+  }
+            
  
 };
+
+const delayStartVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+};
+
 
 
 
 const App: React.FC = () => {
   const [mode, setMode] = useState(true);
+
+  const [showModal, setShowModal] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(false);
+    }, 5000);
+  }, []);
+
 
   const handleToggle = () => {
     if (mode) {
@@ -67,7 +93,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <motion.main  className={style.main}>
+    <main  className={style.main}>
       <motion.section
         variants={startVariants}
         initial="initial"
@@ -173,6 +199,7 @@ const App: React.FC = () => {
             stroke="#F28D2A"
             strokeWidth="2"
             strokeMiterlimit="10"
+            whileHover="hover"
           />
           <motion.path
             variants={pathVariants}
@@ -357,14 +384,9 @@ const App: React.FC = () => {
           />
         </motion.svg>
 
-        <motion.svg  variants={goToSideVariants} whileHover={ {rotate: 360, 
-            transition: {
-              duration: 20,
-              yoyo: Infinity,
-              ease: "easeInOut",}
-              
-            
-          }} className={style.name} width="586" height="587" viewBox="0 0 586 587" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <motion.svg  
+        variants={goToSideVariants} 
+        className={style.name} width="586" height="587" viewBox="0 0 586 587" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M139.719 426.363C138.324 424.348 137.82 422.483 138.207 420.766C138.579 419.029 139.979 417.301 142.404 415.581L152.175 408.653L154.102 411.437L144.332 418.366C142.806 419.448 141.905 420.484 141.629 421.475C141.339 422.446 141.652 423.594 142.567 424.917C143.634 426.457 145.365 427.526 147.762 428.123L159.762 419.614L161.69 422.398L136.867 440L134.94 437.216L145.268 429.892C142.772 429.277 140.922 428.101 139.719 426.363Z" fill="#BC2633"/>
 <path d="M107.484 355.998C106.939 353.957 106.873 352.309 107.283 351.054C107.67 349.806 108.396 348.851 109.462 348.191C110.504 347.536 111.894 346.975 113.631 346.506L124.749 343.505L125.621 346.776L123.711 347.292C124.779 347.948 125.617 348.667 126.222 349.449C126.828 350.23 127.267 351.132 127.539 352.152C127.861 353.358 127.897 354.518 127.647 355.629C127.374 356.747 126.828 357.728 126.01 358.57C125.162 359.396 124.067 359.99 122.723 360.352C120.639 360.915 118.856 360.7 117.374 359.707C115.87 358.721 114.824 357.125 114.236 354.922C113.772 353.182 113.737 351.513 114.13 349.915C113.001 350.244 112.129 350.604 111.513 350.994C110.897 351.384 110.502 351.951 110.327 352.694C110.13 353.444 110.201 354.456 110.541 355.732L111.228 358.307L108.309 359.095L107.484 355.998ZM124.604 352.459C124.394 351.671 123.989 350.897 123.389 350.139C122.784 349.357 121.999 348.649 121.035 348.014L116.657 349.196C116.355 350.67 116.408 352.172 116.816 353.703C117.144 354.933 117.72 355.884 118.545 356.556C119.347 357.235 120.443 357.387 121.833 357.012C123.13 356.662 123.987 356.058 124.403 355.199C124.791 354.324 124.858 353.41 124.604 352.459Z" fill="#BC2633"/>
 <path d="M101.152 268.947C101.355 266.532 102.15 264.809 103.537 263.779C104.926 262.724 107.104 262.331 110.068 262.6L122.011 263.682L121.729 267.053L109.786 265.971C107.897 265.8 106.544 265.991 105.726 266.543C104.887 267.069 104.401 268.121 104.269 269.699C104.113 271.564 104.853 273.51 106.49 275.537C107.167 275.502 107.996 275.529 108.976 275.618L120.919 276.7L120.637 280.071L108.694 278.989C106.805 278.818 105.452 279.009 104.634 279.561C103.795 280.087 103.309 281.139 103.177 282.717C103.025 284.534 103.685 286.425 105.159 288.389L119.828 289.718L119.545 293.089L99.7113 291.292L99.9941 287.921L102.11 288.113C100.575 286.023 99.8916 283.973 100.06 281.965C100.194 280.363 100.58 279.073 101.216 278.095C101.828 277.114 102.742 276.414 103.958 275.994C101.893 273.615 100.958 271.266 101.152 268.947Z" fill="#BC2633"/>
@@ -383,18 +405,24 @@ const App: React.FC = () => {
       
       </motion.section>
 
-      <motion.div className={style.btnTwo}>
+      <motion.div variants={delayStartVariants}
+      initial="initial"
+      animate="animate"
+      transition={
+        showModal ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
+       }
+        className={style.btnTwo}>
         <Button onClick={handleToggle}>
         
           {mode ? "Light mode" : "Dark mode"}
         </Button>
       </motion.div>
 
-      <About />
+      <About showModal={showModal}  />
       <Skills />
       <SkillsSvg />
       <Contact />
-    </motion.main>
+    </main>
   );
 };
 

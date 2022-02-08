@@ -46,6 +46,7 @@ body {
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 80px repeat(4, auto);
 margin: 0 auto;
+box-sizing: border-box;
 
     .btnTwo {
       grid-column: 2 / span 1 ;

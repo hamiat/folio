@@ -94,7 +94,7 @@ const SkillsSvg: React.FC = () => {
       <Controller>
       
       <Scene
-       duration={300}
+       duration={500}
        triggerHook={0.75}
        pin={{ pushFollowers: false }}
        offset={250}>
@@ -410,7 +410,10 @@ const SkillsSvg: React.FC = () => {
             d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z"
           />
         </motion.svg>
-
+        <motion.div variants={contentVariants} className={style.arrowToContact}>
+        <FaLongArrowAltDown />
+     
+      </motion.div>
       
       </motion.div>
       }>
@@ -423,10 +426,7 @@ const SkillsSvg: React.FC = () => {
     </Scene>
     </Controller>
 
-      <motion.div variants={contentVariants} className={style.arrowToContact}>
-        <FaLongArrowAltDown />
      
-      </motion.div>
      
     </motion.section>
   );
