@@ -97,7 +97,7 @@ const SkillsSvg: React.FC = () => {
        duration={500}
        triggerHook={0.75}
        pin={{ pushFollowers: false }}
-       offset={250}>
+       offset={50}>
          {(progress: any) => (
             <div>
               <Timeline totalProgress={progress} paused>
@@ -417,7 +417,7 @@ const SkillsSvg: React.FC = () => {
       
       </motion.div>
       }>
-      <Tween from={{ x: -1000 }} to={{ x: 0 }} />
+      <Tween from={{ x: -1100 }} to={{ x: 0 }} />
                   <Tween from={{ opacity: 1 }} to={{ opacity: 0.9 }} />
       </Timeline>
     </Timeline>
