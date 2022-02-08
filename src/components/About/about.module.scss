@@ -19,6 +19,11 @@
     display: flex;
     flex-direction: column;
     padding-top: $mn*3;
+    @include sm {
+     padding: $mn*3 $mn;
+     width: 120%;
+    }
+  
     
 
     h1 {
@@ -34,7 +39,9 @@
         font-size: 30px;
         padding: 0 0 0 48px;
       }
-    
+      @include sm {
+        font-size: 34px;
+      }
     }
 
     h2 {
@@ -52,6 +59,9 @@
       @include breakpoint(800px) {
         font-size: 20px;
         padding: 0  28px 0 68px;
+      }
+      @include sm {
+        font-size: 26px;
       }
     }
 
@@ -73,6 +83,9 @@
         font-size: 18px;
         padding: 0  0px 0 78px;
       }
+      @include sm {
+        font-size: 20px;
+      }
     }
     .arrow {
       padding: $mn $mn * 4;
@@ -88,6 +101,11 @@
       @include breakpoint(800px) {
         font-size: 22px;
         padding: $mn $mn * 3;
+      }
+
+      @include sm {
+     
+        padding: $mn * 2 $mn * 4;
       }
     }
   }

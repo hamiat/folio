@@ -12,6 +12,9 @@
   @include sm {
     grid-column: 1 / span 1 ;
  grid-row: 4;
+ padding-top: 0;
+ width: 90%;
+ margin-left: 48px;
   }
 
   h2 {
@@ -42,6 +45,10 @@
       flex-direction: column;
       gap: 8px;
 
+      @include sm {
+        gap: 24px;
+      }
+
       .city {
         font-size: 14px;
       }
@@ -52,12 +59,35 @@
         align-items: center;
         color: $redish;
         margin: -4px 0px;
+
+        @include sm {
+          font-size: 24px;
+          flex-direction: column;
+          margin: -8px 0px;
+         }
+      }
+      h4 {
+        @include sm {
+          width: 100%;
+         }
       }
       p {
         padding: 0 0 0 24px;
         @include md {
           font-size: 14px; 
         }
+
+        @include sm {
+          font-size: 14px;
+         width: 100%;
+         }
+      }
+
+      p {
+        @include sm {
+        
+         margin-bottom: -4px;
+         }
       }
     }
   }
