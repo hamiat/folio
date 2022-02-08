@@ -23,10 +23,24 @@ h4 {
 h2 { 
   
     font-size: 32px;
+    @include lg {
+      font-size: 30px;
+      
+    }
+}
+
+h3 {
+  font-size: 16px;
+  
 }
 h4 {
+  font-size: 18px;
   color: $redish;
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
+  @include lg {
+    font-size: 18px;
+    
+  }
 }
 p {
   margin: 0;
@@ -53,7 +67,11 @@ box-sizing: border-box;
      grid-row: 1;
       place-self: end;
       margin-top: $mn;
+      margin-right: 24px;
      
+      @include lg {
+        margin-right: $mn;
+      }
     }
 
     .leftContent {
@@ -76,12 +94,18 @@ box-sizing: border-box;
         grid-column: 1;
         margin: 18px 0 0 63px;
         z-index: 10;
+        @include lg {
+       width: 20%;
+        }
       }
       .name {
         grid-row: 1;
         grid-column: 1;
         margin: -48px 0 0 0;
         z-index: 2;
+        @include lg {
+          width: 40%;
+           }
       }
     }
 

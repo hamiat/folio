@@ -64,6 +64,10 @@
   .arrowToSkills {
     padding: $mn $mn * 6;
     font-size: 25px;
+    
+    @include lg {
+      font-size: 22px;
+    }
   }
 
   
@@ -92,10 +96,10 @@
 
   .softSkills {
     padding-bottom: 24px;
-    width: 80%;
     color: $darkOrange;
     font-size: 20px;
     grid-row: 2;
+    text-align: center;
   }
 
   svg {
@@ -105,7 +109,6 @@
   .hardIcons {
     grid-row: 3;
     display: flex;
-    width: 80%;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
