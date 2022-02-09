@@ -54,7 +54,7 @@ const contentVariants: Variants = {
     },
   },
 };
-const parentContainer: Variants = {
+const iconsSvg: Variants = {
   offscreen: {
     opacity: 0,
   x: -500,
@@ -105,7 +105,8 @@ const SkillsSvg: React.FC = () => {
             
 
                   <Timeline target={
-      <motion.div variants={contentVariants} className={style.hardIcons}>
+      <motion.div variants={isMobile ? iconsSvg : contentVariants}
+       className={style.hardIcons}>
         <motion.svg
           drag
           variants={contentVariants}

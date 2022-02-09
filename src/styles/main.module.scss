@@ -100,6 +100,7 @@ box-sizing: border-box;
       place-self: end;
       margin-top: $mn;
       margin-right: 24px;
+      z-index: 50;
      
       @include lg {
         margin-right: $mn;
