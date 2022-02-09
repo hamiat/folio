@@ -1,13 +1,7 @@
 import style from "./contact.module.scss";
 import { motion, Variants } from "framer-motion";
-import { FaLongArrowAltUp } from "react-icons/fa";
-import { Scene, Controller } from "react-scrollmagic";
-import { Timeline, Tween } from "react-gsap";
 
-const parentContainer: Variants = {
-  offscreen: {},
-  onscreen: {},
-};
+
 
 const titleVariants: Variants = {
   offscreen: {
@@ -54,36 +48,34 @@ const Contact: React.FC = () => {
       viewport={{ once: false, amount: 0.3 }}
       className={style.contact}
     >
-  
-        <motion.h2 variants={titleVariants}>Contact</motion.h2>
-        <motion.a
-          variants={btnVariants}
-          whileHover="hover"
-          whileTap="hover"
-          id="github"
-          href="https://github.com/hamiat"
-        >
-          Github
-        </motion.a>
-        <motion.a
-          variants={btnVariants}
-          whileHover="hover"
-          whileTap="hover"
-          id="linkedin"
-          href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
-        >
-          LinkedIn
-        </motion.a>
-        <motion.a
-          variants={btnVariants}
-          whileHover="hover"
-          whileTap="hover"
-          id="mail"
-          href="mailto:hamiat.n@hotmai.com"
-        >
-          Email
-        </motion.a>
-      
+      <motion.h2 variants={titleVariants}>Contact</motion.h2>
+      <motion.a
+        variants={btnVariants}
+        whileHover="hover"
+        whileTap="hover"
+        id="github"
+        href="https://github.com/hamiat"
+      >
+        Github
+      </motion.a>
+      <motion.a
+        variants={btnVariants}
+        whileHover="hover"
+        whileTap="hover"
+        id="linkedin"
+        href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
+      >
+        LinkedIn
+      </motion.a>
+      <motion.a
+        variants={btnVariants}
+        whileHover="hover"
+        whileTap="hover"
+        id="mail"
+        href="mailto:hamiat.n@hotmai.com"
+      >
+        Email
+      </motion.a>
     </motion.section>
   );
 };

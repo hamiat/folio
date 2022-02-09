@@ -1,9 +1,5 @@
 import style from "./about.module.scss";
-
-import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
-
-import Skills from "../Skills/Skills";
 import {FaLongArrowAltDown} from "react-icons/fa"
 
 
@@ -45,22 +41,6 @@ const contentVariants: Variants = {
   },
 };
 
-const sideVariants = {
-  offscreen: {
-    opacity: 1,
-    y: "-50vw",
-  },
-  onscreen: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      mass: 0.4,
-      duration: 1.5,
-    },
-  },
-};
 
 
 

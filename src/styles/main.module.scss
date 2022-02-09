@@ -144,10 +144,14 @@ box-sizing: border-box;
           width: 26%;
         }
         @include sm {
-          width: 50%;
+          width: 45%;
         }
-
-        
+        @include breakpoint(550px) {
+          width: 40%;
+        }
+        @include breakpoint(400px) {
+          width: 45%;
+        }
 
       }
       .name {
@@ -168,7 +172,13 @@ box-sizing: border-box;
             width: 50%;
           }
           @include sm {
-            width: 95%;
+            width: 90%;
+          }
+          @include breakpoint(550px) {
+            width: 85%;
+          }
+          @include breakpoint(400px) {
+            width: 90%;
           }
          
 

@@ -1,10 +1,7 @@
 import style from "./skills.module.scss";
 import { motion, Variants } from "framer-motion";
-import SkillsSvg from "./SkillsSvg";
 import { FaLongArrowAltDown, FaLongArrowAltLeft } from "react-icons/fa";
 import { useState } from "react";
-import { Scene , Controller} from "react-scrollmagic";
-import { Timeline, Tween } from "react-gsap";
 
 
 const titleVariants: Variants = {

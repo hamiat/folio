@@ -5,20 +5,6 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
 import { useMediaQuery } from 'react-responsive'
 
-const revealBtnVariants = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      mass: 0.4,
-    },
-  },
-};
-
 const titleVariants: Variants = {
   offscreen: {
     y: 0,
