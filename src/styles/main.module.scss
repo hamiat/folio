@@ -88,8 +88,6 @@ box-sizing: border-box;
 
 @include sm {
   grid-template-columns: 1fr ;
-  
-    margin-left: $mn;
    
 
 }
@@ -108,8 +106,7 @@ box-sizing: border-box;
       }
       @include sm {
         grid-column: 1 / span 1 ;
-
-        margin-right: -54px;
+        
        
       }
     }
@@ -146,7 +143,7 @@ box-sizing: border-box;
           width: 26%;
         }
         @include sm {
-          width: 100%;
+          width: 50%;
         }
 
         
@@ -170,7 +167,7 @@ box-sizing: border-box;
             width: 50%;
           }
           @include sm {
-            width: 100%;
+            width: 95%;
           }
          
 

@@ -1,12 +1,9 @@
 import style from "./skills.module.scss";
-import nameTwo from "../../nameTwo.svg";
-import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
-
 import { FaLongArrowAltDown } from "react-icons/fa";
-import Contact from "../Contact/Contact";
 import { Controller, Scene } from "react-scrollmagic";
 import { Timeline, Tween } from "react-gsap";
+import { useMediaQuery } from 'react-responsive'
 
 const revealBtnVariants = {
   initial: {
@@ -75,6 +72,9 @@ const parentContainer: Variants = {
 };
 
 const SkillsSvg: React.FC = () => {
+
+  const isMobile = useMediaQuery({ query: '(max-width: 640px)' }) 
+
   return (
     <motion.section
       initial="offscreen"
@@ -94,7 +94,7 @@ const SkillsSvg: React.FC = () => {
       <Controller>
       
       <Scene
-       duration={500}
+       duration={isMobile ? 1 : 500}
        triggerHook={0.75}
        pin={{ pushFollowers: false }}
        offset={50}>

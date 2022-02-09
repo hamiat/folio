@@ -13,8 +13,8 @@
     grid-column: 1 / span 1 ;
  grid-row: 4;
  padding-top: 0;
- width: 90%;
- margin-left: 48px;
+ width: 80%;
+
   }
 
   h2 {
@@ -130,6 +130,8 @@
   @include sm {
     grid-column: 1 / span 1 ;
  grid-row: 5;
+ width: 90%;
+ gap: 24px;
   }
 
   
@@ -164,7 +166,9 @@
     @include breakpoint(800px) {
       margin-top: -254px;
     }
-
+@include sm {
+  margin-top: 0px; 
+}
     
     
 
