@@ -78,7 +78,7 @@ const Skills: React.FC = () => {
       <motion.div variants={contentVariants} className={style.exp}>
       <h3>Hyper Island<span className={style.city}>, Stockholm (Sweden) </span></h3>
         <div className={style.jobTitleDiv}>
-          <h4>Frontend developer</h4>
+          <h4>Frontend Developer</h4>
           <p>2020 - 2022 </p>
         </div>
        
@@ -94,7 +94,7 @@ const Skills: React.FC = () => {
       <motion.div variants={contentVariants} className={style.exp}>
       <h3>Mälardalens högskola<span className={style.city}>, Västerås (Sweden)</span></h3>
         <div className={style.jobTitleDiv}>
-          <h4>Aeronautical engineering</h4>
+          <h4>Aeronautical Engineering</h4>
           <p>2011-2013 </p>
         </div>
         
@@ -104,7 +104,7 @@ const Skills: React.FC = () => {
       <motion.div variants={contentVariants} className={style.exp}>
       <h3>Hankuk University of Foreign studies<span className={style.city}>, Seoul (South Korea) </span></h3>
         <div className={style.jobTitleDiv}>
-          <h4>Exchange year</h4>
+          <h4>Exchange Year</h4>
           <p>2014 - 2015</p>
         </div>
         
@@ -162,7 +162,7 @@ const Skills: React.FC = () => {
 
       <motion.div variants={contentVariants} className={style.exp}>
         <div className={style.jobTitleDiv}>
-          <h4>Customer service engineer</h4>
+          <h4>Customer Service Engineer</h4>
           <p>March 2016 - June 2019 </p>
         </div>
     

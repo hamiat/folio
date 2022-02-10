@@ -172,38 +172,42 @@
     
     
 
-    .figma {
-      width: 80px;
-      height: 80px;
-    }
-    .github {
-      width: 80px;
-      height: 80px;
-    }
-    .js {
-      width: 80px;
-      height: 80px;
-    }
     .react {
       width: 100px;
       height: 100px;
     }
 
-    .sass {
-      width: 80px;
-      height: 80px;
-    }
-    .ts {
-      width: 80px;
-      height: 80px;
-    }
-    .htmlfive {
-      width: 80px;
-      height: 80px;
-    }
+    .figma,  .github, 
+    .js ,
+    .sass ,
+    .ts ,
+    .htmlfive,
     .cssthree {
       width: 80px;
       height: 80px;
+    }
+
+    @include md {
+      .figma,  .github, 
+    .js ,
+    .sass ,
+    .ts ,
+    .htmlfive,
+    .cssthree {
+      width: 60px;
+      height: 60px;
+    }
+    }
+    @include sm {
+      .figma,  .github, 
+    .js ,
+    .sass ,
+    .ts ,
+    .htmlfive,
+    .cssthree {
+      width: 50px;
+      height: 50px;
+    }
     }
   }
 }

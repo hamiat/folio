@@ -1,7 +1,7 @@
 import style from "./about.module.scss";
 import { motion, Variants } from "framer-motion";
 import {FaLongArrowAltDown} from "react-icons/fa"
-
+import { useMediaQuery } from "react-responsive";
 
 
 const delayStartVariants = {
@@ -50,7 +50,7 @@ export type Props = {
 }
 
 const About = ({showModal}: Props) => {
- 
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   return (
     <motion.section
       variants={delayStartVariants}
@@ -59,7 +59,7 @@ const About = ({showModal}: Props) => {
       className={style.rightContent}
       
       transition={
-        showModal ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
+        showModal && !isMobile ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
       }
     >
       <motion.div
@@ -67,7 +67,7 @@ const About = ({showModal}: Props) => {
         whileInView="onscreen"
         viewport={{ once: false, amount: 0.5 }}
         transition={
-          showModal
+          showModal && !isMobile 
             ? { delayChildren: 5.5, staggerChildren: 1 }
             : { delayChildren: 0 }
         }
