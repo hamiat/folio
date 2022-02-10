@@ -11,30 +11,24 @@ $redish: #bc2633;
 
 $mn: 48px;
 
-
 /* Global styles */
 h2,
 h4 {
   color: $redish;
 }
 
+h2 {
+  font-size: 32px;
+  @include lg {
+    font-size: 30px;
+  }
+  @include breakpoint(800px) {
+    font-size: 28px;
+  }
 
-
-h2 { 
-  
-    font-size: 32px;
-    @include lg {
-      font-size: 30px;
-      
-    }
-    @include breakpoint(800px) {
-      font-size: 28px;
-    }
-
-    @include sm {
-      font-size: 36px;
-     
-     }
+  @include sm {
+    font-size: 36px;
+  }
 }
 
 h3 {
@@ -45,8 +39,8 @@ h3 {
 
   @include sm {
     font-size: 20px;
-   margin-bottom: -4px;
-   }
+    margin-bottom: -4px;
+  }
 }
 h4 {
   font-size: 18px;
@@ -54,17 +48,15 @@ h4 {
   margin: 0 0 4px 0;
   @include lg {
     font-size: 18px;
-    
   }
-  
+
   @include breakpoint(800px) {
     font-size: 16px;
   }
 
   @include sm {
     font-size: 20px;
-   
-   }
+  }
 }
 p {
   margin: 0;
@@ -72,78 +64,66 @@ p {
 }
 
 body {
-  
   background-color: $lightBlack;
   font-family: montserrat;
-  
-  
 
   .main {
     background-color: $lightBlack;
     color: $orange;
     max-width: 1440px;
     display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: 80px repeat(4, auto);
-margin: 0 auto;
-box-sizing: border-box;
-overflow-x: hidden;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px repeat(4, auto);
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
 
-@include sm {
-  grid-template-columns: 1fr ;
-   
-
-}
-
-
+    @include sm {
+      grid-template-columns: 1fr;
+    }
 
     .btnTwo {
-      grid-column: 2 / span 1 ;
-     grid-row: 1;
+      grid-column: 2 / span 1;
+      grid-row: 1;
       place-self: end;
       margin-top: $mn;
       margin-right: 24px;
       z-index: 50;
-     
+
       @include lg {
         margin-right: $mn;
       }
       @include sm {
-        grid-column: 1 / span 1 ;
-        
-       
+        grid-column: 1 / span 1;
       }
     }
 
     .leftContent {
-     grid-column: 1 / span 1 ;
-     grid-row: 2;
+      grid-column: 1 / span 1;
+      grid-row: 2;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       place-items: center;
       margin-top: -64px;
       height: 100vh;
-    
-@include sm {
-  margin-top: 0;
 
-}
-@include breakpoint(550px) {
-  margin-right: 24px;
-  
-}
-    
+      @include sm {
+        margin-top: 0;
+      }
+      @include breakpoint(550px) {
+        margin-right: 24px;
+        margin-top: -64px;
+      }
 
       .face {
         grid-row: 1;
         grid-column: 1;
         margin: 18px 0 0 63px;
         z-index: 10;
-       
-        
+
         width: 17%;
-         
+
         @include breakpoint(1200px) {
           width: 20%;
         }
@@ -157,15 +137,11 @@ overflow-x: hidden;
           width: 26%;
         }
         @include sm {
-          width: 40%;
+        
+         
+          width: 60%;
         }
-        @include breakpoint(550px) {
-          width: 45%;
-        }
-        @include breakpoint(450px) {
-          width: 55%;
-        }
-
+        
       }
       .name {
         grid-row: 1;
@@ -173,35 +149,26 @@ overflow-x: hidden;
         margin: -48px 0 0 0;
         z-index: 2;
         width: 35%;
-       
+
         @include breakpoint(1200px) {
           width: 40%;
         }
-           @include breakpoint(900px) {
-            width: 44%;
-          }
-           @include breakpoint(800px) {
-            width: 48%;
-          }
-           @include breakpoint(700px) {
-            width: 50%;
-          }
-          @include sm {
-            width: 80%;
-          }
-          @include breakpoint(550px) {
-            width: 85%;
-
-          }
-          @include breakpoint(450px) {
-            width: 110%;
-          }
-         
-
-          
+        @include breakpoint(900px) {
+          width: 44%;
+        }
+        @include breakpoint(800px) {
+          width: 48%;
+        }
+        @include breakpoint(700px) {
+          width: 50%;
+        }
+        @include sm {
+        
+        
+          width: 115%;
+        }
+        
       }
     }
-
-    
   }
 }

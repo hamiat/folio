@@ -197,13 +197,20 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
-    margin-top: -204px;
-    width: 90%;
+  
+    width: 70%;
+    margin: -204px auto 0;
+    @include breakpoint(1200px) {
+      width: 80%;
+    }
+    @include breakpoint(900px) {
+      width: 65%;
+    }
     @include breakpoint(800px) {
-      margin-top: -254px;
+      margin: -254px auto 0;
     }
 @include sm {
-  margin-top: 0px; 
+  margin: 0 auto; 
   width: 100%;
 }
     
@@ -259,5 +266,5 @@
     font-size: 25px;
     place-self: center;
 
-  
+ 
 }
