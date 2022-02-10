@@ -120,6 +120,7 @@ box-sizing: border-box;
       grid-template-rows: 1fr;
       place-items: center;
       margin-top: -64px;
+      height: 100vh;
     
 @include sm {
   margin-top: 0;
