@@ -72,9 +72,11 @@ p {
 }
 
 body {
-  overflow-x: hidden;
+  
   background-color: $lightBlack;
   font-family: montserrat;
+  background-color: red;
+  
 
   .main {
     background-color: $lightBlack;
@@ -85,6 +87,7 @@ body {
    grid-template-rows: 80px repeat(4, auto);
 margin: 0 auto;
 box-sizing: border-box;
+overflow-x: hidden;
 
 @include sm {
   grid-template-columns: 1fr ;
@@ -124,6 +127,10 @@ box-sizing: border-box;
     
 @include sm {
   margin-top: 0;
+
+}
+@include breakpoint(550px) {
+  margin-right: 24px;
   
 }
     
@@ -153,10 +160,10 @@ box-sizing: border-box;
           width: 40%;
         }
         @include breakpoint(550px) {
-          width: 40%;
+          width: 45%;
         }
         @include breakpoint(450px) {
-          width: 50%;
+          width: 55%;
         }
 
       }
@@ -184,9 +191,10 @@ box-sizing: border-box;
           }
           @include breakpoint(550px) {
             width: 85%;
+
           }
           @include breakpoint(450px) {
-            width: 100%;
+            width: 110%;
           }
          
 

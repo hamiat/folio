@@ -8,19 +8,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -200px;
-  height: 100vh;
+ 
+ padding: $mn 0 $mn*4;
   z-index: 5;
   gap: 28px;
   @include breakpoint(800px) {
-    margin-top: -250px;
+    
   }
   
   @include sm {
     grid-column: 1 / span 1 ;
  grid-row: 6;
-  margin-top: 0px; 
-  padding: 128px 0;
+ 
+  
  height: auto;
 
   }
