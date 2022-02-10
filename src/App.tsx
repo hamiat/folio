@@ -13,6 +13,7 @@ const startVariants = {
     opacity: 0,
   },
   initialMobile: {
+    gridColumn: "1/span 1",
     opacity: 0,
   },
   animate: {
@@ -24,6 +25,7 @@ const startVariants = {
     },
   },
   animateMobile: {
+    gridColumn: "1/span 1",
     opacity: 1,
     transition: {
       duration: 1.5,
@@ -53,6 +55,9 @@ const goToSideVariants = {
   initial: {
     x: 0,
   },
+  initialMobile: {
+    x:0,
+  },
   animate: {
     x: "-20vw",
     transition: {
@@ -60,6 +65,9 @@ const goToSideVariants = {
       duration: 2.5,
       ease: "easeInOut",
     },
+  },
+  animateMobile: {
+    x: 0,
   },
 };
 
@@ -98,9 +106,12 @@ const App: React.FC = () => {
         initial={isMobile ? "initialMobile" : "initial"}
         animate={isMobile ? "animateMobile" : "animate"}
         className={style.leftContent}
+        
       >
         <motion.svg
           variants={goToSideVariants}
+          initial={isMobile ? "initialMobile" : "initial"}
+          animate={isMobile ? "animateMobile" : "animate"}
           className={style.face}
           width="280"
           height="393"
@@ -151,7 +162,8 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M102.321 156.558L95.1218 160.161V167.815L98.7179 172.761L102.321 175.014H109.975"
             stroke="#F28D2A"
             strokeWidth="2"
@@ -188,7 +200,8 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M192.352 33.2236L198.201 35.4693L203.602 38.1699L205.855 42.6758L209.755 47.6222L216.658 54.381L220.254 61.5803L227.013 69.6822L229.258 75.9861L232.862 85.886L235.115 95.3383L238.263 102.993L241.411 114.243L243.816 120.994L245.917 132.7V138.101V145.307L241.866 156.558L240.964 159.713L237.815 165.786L238.711 175.014L237.815 184.019L235.562 189.117L229.713 202.923L226.558 210.801L221.156 216.874L219.135 225.431L224.312 229.93L232.862 237.136L236.465 240.732L237.36 245.686L241.866 248.387L245.917 251.99V257.391H248.618V264.59L251.318 270.447L254.914 275.393L256.72 282.376L258.973 285.3L263.024 293.402L261.218 297.005L263.024 301.952V310.956L266.172 317.26L269.32 325.81L271.126 333.912L274.722 342.468L277.877 346.519L279.675 350.115"
             stroke="#F28D2A"
             strokeWidth="2"
@@ -196,14 +209,16 @@ const App: React.FC = () => {
             whileHover="hover"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M169.844 26.0171L165.793 20.6158L157.237 15.6694L151.388 9.81322L141.48 5.31456L132.028 3.50932L124.381 0.360977H116.279H111.773H108.17L102.545 3.50932L95.1218 5.76226L87.9153 7.56028L83.6405 8.4629L77.1127 13.1926L75.3147 16.5648L69.4585 18.3628L64.9599 23.7713L61.8115 26.0171"
             stroke="#F28D2A"
             strokeWidth="2"
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M59.1109 23.7713L55.5004 26.0171L51.0017 30.068V33.2163L44.2429 35.4621L40.192 39.0725V43.5712L35.9172 46.7268L31.1947 51.6731L25.7934 58.8941V63.8332L18.1392 67.4437L12.7379 74.6647V80.5136L9.1274 86.3626V90.4208L5.07644 94.9195V111.571L3.29286 124.15V163.764L5.53858 170.263L9.58954 172.631L13.2 174.993C13.2 174.993 16.3556 180.394 17.251 182.214C18.1464 184.033 21.3019 191.673 21.3019 191.673V193.919L19.9516 198.425L19.4967 202.909V206.844L19.049 210.787L12.7451 216.86H10.0445L6.8889 220.015L3.27842 223.626L0.28894 227.684"
             stroke="#F28D2A"
             strokeWidth="2"
@@ -216,7 +231,8 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M191.226 288.448V282.376L192.352 274.043V263.24L191.226 249.961"
             stroke="#F28D2A"
             strokeWidth="2"
@@ -229,49 +245,56 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M78.0153 193.919L75.3147 195.724L73.2639 199.32"
             stroke="#F28D2A"
             strokeWidth="2"
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M171.642 216.427L176.141 213.278"
             stroke="#F28D2A"
             strokeWidth="2"
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M46.0554 255.586L43.3547 259.189L41.1018 261.442V269.204V276.295L43.5786 284.845L49.2037 299.706L55.0599 315.91L64.5122 332.561L73.264 344.714L78.0154 350.115L83.6405 357.322L91.5186 361.821H102.545L112.221 366.326H124.381H132.028H140.585L148.008 361.373L156.897 354.166L163.093 344.266L169.844 336.165L176.141 325.81L180.423 316.357L184.25 310.508L189.55 303.757V299.251L191.226 296.55"
             stroke="#F28D2A"
             strokeWidth="2"
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M192.352 291.597L191.789 301.952L191.226 310.508V316.805L189.55 321.759V326.257L192.352 331.211L190.951 337.067V340.663L192.352 344.266L191.789 350.115L189.55 354.621V357.322V362.723L186.944 366.327L189.55 370.377"
             stroke="#F28D2A"
             strokeWidth="2"
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M24.4503 261.442L16.3483 269.205L14.0954 275.393L16.3483 282.376L19.2728 291.597L24.4503 303.757L29.6999 318.155L32.9999 330.987L35.9244 340.663L42.8998 350.115L48.3011 359.12L54.1573 368.572L59.1109 372.175L64.5121 376.674L75.6396 382.53L90.6159 389.282L102.545 392.43H116.279H132.028L142.831 386.581L156.897 378.024L165.793 368.572L180.423 356.419L186.944 345.617"
             stroke="#F28D2A"
             strokeWidth="2"
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M160.392 108.841L178.849 105.245H186.944L198.201 108.841L203.602 114.698L206.303 117.398"
             stroke="#F28D2A"
             strokeWidth="2"
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M104.538 103.159L106.011 103.462L76.7878 97.4468L71.2205 97.1435L64.0573 100.292L57.3057 105.245"
             stroke="#F28D2A"
             strokeWidth="2"
@@ -290,7 +313,8 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M248.618 260.092L256.265 264.59L263.919 269.205L272.476 274.498"
             stroke="#F28D2A"
             strokeWidth="2"
@@ -315,7 +339,8 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M86.7888 133.154L83.9726 133.588L82.1602 131.385L83.1639 128.757L85.98 128.324L87.7925 130.519L86.7888 133.154Z"
             fill="#F28D2A"
             stroke="#F28D2A"
@@ -323,7 +348,8 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M182.055 133.508L179.239 133.942L177.426 131.739L178.43 129.111L181.246 128.677L183.059 130.88L182.055 133.508Z"
             fill="#F28D2A"
             stroke="#F28D2A"
@@ -331,27 +357,32 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M83.5249 129.941C84.1551 129.941 84.6659 129.43 84.6659 128.8C84.6659 128.17 84.1551 127.659 83.5249 127.659C82.8948 127.659 82.384 128.17 82.384 128.8C82.384 129.43 82.8948 129.941 83.5249 129.941Z"
             fill="#F28D2A"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M179.152 130.252C179.782 130.252 180.293 129.741 180.293 129.111C180.293 128.481 179.782 127.97 179.152 127.97C178.522 127.97 178.011 128.481 178.011 129.111C178.011 129.741 178.522 130.252 179.152 130.252Z"
             fill="#F28D2A"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M181.975 133.075L179.361 134.281L177 132.649L177.253 129.811L179.867 128.612L182.228 130.244L181.975 133.075Z"
             fill="#F28D2A"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M177.925 131.45C178.706 131.45 179.34 130.823 179.34 130.049C179.34 129.276 178.706 128.649 177.925 128.649C177.143 128.649 176.509 129.276 176.509 130.049C176.509 130.823 177.143 131.45 177.925 131.45Z"
             fill="#F28D2A"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M181.174 135.025C181.956 135.025 182.589 134.397 182.589 133.624C182.589 132.85 181.956 132.223 181.174 132.223C180.392 132.223 179.759 132.85 179.759 133.624C179.759 134.397 180.392 135.025 181.174 135.025Z"
             fill="#F28D2A"
           />
@@ -362,17 +393,20 @@ const App: React.FC = () => {
             strokeMiterlimit="10"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M87.3087 132.035L84.6947 133.234L82.3335 131.602L82.5862 128.764L85.193 127.565L87.5542 129.197L87.3087 132.035Z"
             fill="#F28D2A"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M83.2505 130.403C84.0322 130.403 84.6658 129.776 84.6658 129.002C84.6658 128.229 84.0322 127.602 83.2505 127.602C82.4689 127.602 81.8352 128.229 81.8352 129.002C81.8352 129.776 82.4689 130.403 83.2505 130.403Z"
             fill="#F28D2A"
           />
           <motion.path
-            variants={pathVariants}
+            variants={pathVariants} initial="initial"
+        animate="animate"
             d="M86.5072 133.978C87.2889 133.978 87.9225 133.35 87.9225 132.577C87.9225 131.803 87.2889 131.176 86.5072 131.176C85.7256 131.176 85.0919 131.803 85.0919 132.577C85.0919 133.35 85.7256 133.978 86.5072 133.978Z"
             fill="#F28D2A"
           />
@@ -380,6 +414,8 @@ const App: React.FC = () => {
 
         <motion.svg
           variants={goToSideVariants}
+          initial={isMobile ? "initialMobile" : "initial"}
+          animate={isMobile ? "animateMobile" : "animate"}
           className={style.name}
           width="586"
           height="587"
