@@ -489,7 +489,7 @@ const App: React.FC = () => {
         transition={
           showModal && !isMobile
             ? { delay: 8.5, duration: 1.5 }
-            : { delay: 0, duration: 1.5 }
+            : { delay: 1.5, duration: 1.5 } 
         }
         className={style.btnTwo}
       >
