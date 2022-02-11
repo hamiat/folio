@@ -1,4 +1,3 @@
-import style from "./flower.module.scss";
 
 export type Props = {
     classNames: string
