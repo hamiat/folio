@@ -91,15 +91,7 @@ const Skills: React.FC = () => {
         </p>
       </motion.div>
 
-      <motion.div variants={contentVariants} className={style.exp}>
-      <h3>Mälardalens högskola<span className={style.city}>, Västerås (Sweden)</span></h3>
-        <div className={style.jobTitleDiv}>
-          <h4>Aeronautical Engineering</h4>
-          <p>2011-2013 </p>
-        </div>
-        
-        <p>- Bachelor’s degree</p>
-      </motion.div>
+      
 
       <motion.div variants={contentVariants} className={style.exp}>
       <h3>Hankuk University of Foreign studies<span className={style.city}>, Seoul (South Korea) </span></h3>
@@ -112,6 +104,16 @@ const Skills: React.FC = () => {
           - Emphasis on intercultural skills development and the Korean
           language.
         </p>
+      </motion.div>
+
+      <motion.div variants={contentVariants} className={style.exp}>
+      <h3>Mälardalens högskola<span className={style.city}>, Västerås (Sweden)</span></h3>
+        <div className={style.jobTitleDiv}>
+          <h4>Aeronautical Engineering</h4>
+          <p>2011-2013 </p>
+        </div>
+        
+        <p>- Bachelor’s degree</p>
       </motion.div>
     </div>
   </motion.div>

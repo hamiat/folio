@@ -112,7 +112,7 @@ body {
       @include sm {
         margin-top: 0;
         height: 80vh;
-        border: 2px solid black;
+       
 
       }
       @include breakpoint(550px) {
@@ -166,7 +166,7 @@ body {
           width: 50%;
         }
         @include sm {
-        
+          border: 2px solid black;
         
           width: 115%;
         }
