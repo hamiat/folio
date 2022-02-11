@@ -77,7 +77,11 @@ const SkillsSvg: React.FC = () => {
       </motion.div>
 
       {isMobile ? (
-        <motion.div variants={iconsSvg} className={style.hardIcons}>
+        <motion.div
+        className={style.timeline}
+        
+      >
+        <motion.div  variants={iconsSvg} className={style.hardIcons}>
           <motion.svg
             drag
             variants={contentVariants}
@@ -382,6 +386,7 @@ const SkillsSvg: React.FC = () => {
               d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z"
             />
           </motion.svg>
+          </motion.div>
           <motion.div
             variants={contentVariants}
             className={style.arrowToContact}
@@ -403,9 +408,10 @@ const SkillsSvg: React.FC = () => {
                   <Timeline
                     target={
                       <motion.div
-                        variants={contentVariants}
-                        className={style.hardIcons}
+                        className={style.timeline}
+                        
                       >
+                        <motion.div  variants={contentVariants} className={style.hardIcons}>
                         <motion.svg
                           drag
                           variants={contentVariants}
@@ -723,6 +729,7 @@ const SkillsSvg: React.FC = () => {
                             d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z"
                           />
                         </motion.svg>
+                        </motion.div>
                         <motion.div
                           variants={contentVariants}
                           className={style.arrowToContact}

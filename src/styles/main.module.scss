@@ -137,9 +137,10 @@ body {
           width: 26%;
         }
         @include sm {
-        
-         
           width: 60%;
+        }
+        @include xs {
+          width: 70%;
         }
         
       }
@@ -166,6 +167,10 @@ body {
         
         
           width: 115%;
+        }
+        @include xs {
+          width: 130%;
+          
         }
         
       }
