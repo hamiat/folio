@@ -97,6 +97,8 @@ body {
 
 .flowerOne, .flowerTwo, .flowerThree, .flowerFour {
   width: 20%;
+  opacity: 0.9;
+  
 }
 
 .flowerOne, .flowerFour {
@@ -105,16 +107,18 @@ body {
 
       .topFlowers {
         display: flex;
-        width: 100%;
+        width: 70%;
+        place-self: center;
         justify-content: space-between;
-        margin-top: 48px;
+        margin-top: 88px;
         
       }
       .bottomFlowers {
         display: flex;
-        width: 100%;
+        width: 70%;
+        place-self: center;
         justify-content: space-between;
-        margin-bottom: 48px;
+        margin-bottom: 98px;
       }
 
       
