@@ -139,11 +139,9 @@ body {
           width: 26%;
         }
         @include sm {
-          width: 60%;
+          width: 45%;
         }
-        @include xs {
-          width: 65%;
-        }
+        
         
       }
       .name {
