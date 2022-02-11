@@ -110,13 +110,10 @@
 
       @include sm {
      
-        padding:  $mn * 2  $mn * 4;
+       margin: 0 auto;
       }
 
-      @include breakpoint(480px) {
-        font-size: 22px;
-        padding: $mn $mn * 3;
-      }
+      
 
     }
   }
