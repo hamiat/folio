@@ -82,6 +82,32 @@ body {
       grid-template-columns: 1fr;
     }
 
+    .flowers {
+      display: none;
+
+      @include sm {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        z-index: 1;
+      }
+
+      .flower {
+        width: 20%;
+        margin-bottom: 40px;
+  
+      }
+      .flowerTwo {
+        width: 20%;
+        transform: rotateZ(90deg);
+        margin-bottom: 40px;
+       
+      }
+    }
+
     .btnTwo {
       grid-column: 2 / span 1;
       grid-row: 1;
@@ -95,7 +121,6 @@ body {
       }
       @include sm {
         grid-column: 1 / span 1;
-     
       }
     }
 
@@ -108,12 +133,11 @@ body {
       place-items: center;
       margin-top: -64px;
       height: 100vh;
+      z-index: 2;
 
       @include sm {
         margin-top: 0;
         height: 80vh;
-       
-
       }
       @include breakpoint(550px) {
         margin-right: 24px;
@@ -143,8 +167,6 @@ body {
         @include sm {
           width: 55%;
         }
-        
-        
       }
       .name {
         grid-row: 1;
@@ -166,15 +188,11 @@ body {
           width: 50%;
         }
         @include sm {
-          border: 2px solid black;
-        
           width: 115%;
         }
         @include xs {
           width: 130%;
-          
         }
-        
       }
     }
   }
