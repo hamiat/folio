@@ -14,7 +14,7 @@ const titleVariants: Variants = {
     opacity: 1,
     transition: {
       ease: "easeOut",
-      duration: 1,
+      duration: 0.7,
     },
   },
 };

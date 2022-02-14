@@ -127,7 +127,11 @@ const App: React.FC = () => {
         initial={isMobile ? "initialMobile" : "initial"}
         animate={isMobile ? "animateMobile" : "animate"}
         className={style.leftContent}
-      >  <motion.div initial={isMobile ? {opacity: 1} : {opacity: 0}} animate={isMobile ? {opacity: 1} : {opacity: 0.9}} transition={{delay: 3, duration: 5, ease: "easeInOut"}}
+      > 
+       <motion.div 
+       variants={opacityVariants}
+       initial="initial" animate="animate"
+        transition={{delay: 4, duration: 1, ease: "easeInOut"}}
       className={style.flowers}> 
      <div className={style.topFlowers}>
             <Flower classNames={style.flowerOne}/>
