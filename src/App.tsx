@@ -114,23 +114,29 @@ const App: React.FC = () => {
 
   return (
     <main className={style.main}>
-     <div className={style.flowers}> 
-     <div className={style.topFlowers}> 
-     <Flower classNames={style.flowerOne}/>
-     <Flower classNames={style.flowerTwo}/>
-     </div>
-     <div className={style.bottomFlowers}> 
-     <Flower classNames={style.flowerThree}/>
-     <Flower classNames={style.flowerFour} />
-     </div>
-      </div>
+   
+    
+      
+       
+        
+      
+      
 
       <motion.section
         variants={startVariants}
         initial={isMobile ? "initialMobile" : "initial"}
         animate={isMobile ? "animateMobile" : "animate"}
         className={style.leftContent}
-      >
+      >  <div className={style.flowers}> 
+     <div className={style.topFlowers}>
+            <Flower classNames={style.flowerOne}/>
+        <Flower classNames={style.flowerTwo}/>
+        </div>
+        <div className={style.bottomFlowers}> 
+        <Flower classNames={style.flowerThree}/>
+        <Flower classNames={style.flowerFour} />
+        </div>
+        </div>
         <motion.svg
           variants={goToSideVariants}
           initial={isMobile ? "initialMobile" : "initial"}
@@ -526,6 +532,7 @@ const App: React.FC = () => {
             fill="#BC2633"
           />
         </motion.svg>
+       
       </motion.section>
 
       {!isMobile && (

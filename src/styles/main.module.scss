@@ -82,30 +82,30 @@ body {
       grid-template-columns: 1fr;
     }
 
-    .flowers {
-      display: none;
-
-      @include sm {
-        grid-column: 1 / span 2;
+    .flowers {/*
+      grid-column: 1 / span 2;
         grid-row: 1 / span 2;
         z-index: 1;
-        display: flex;
+        display: grid;
+        grid-template-areas: 
+        ". . . . . . "
+      
+        
+        " . one two . . .   "
+        " . three  four . . .  "
+        ". .  . . . . ";
+
+      @include sm {
+        
+        
+         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;
-      }
+        width: 100%; 
+      }*/
 
-.flowerOne, .flowerTwo, .flowerThree, .flowerFour {
-  width: 20%;
-  opacity: 0.9;
-  
-}
 
-.flowerOne, .flowerFour {
-  transform: rotateZ(90deg);
-}
-
-      .topFlowers {
+      /* .topFlowers {
         display: flex;
         width: 70%;
         place-self: center;
@@ -120,7 +120,7 @@ body {
         justify-content: space-between;
         margin-bottom: 98px;
       }
-
+ */
       
      
     }
@@ -146,11 +146,121 @@ body {
       grid-row: 2;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
       place-items: center;
       margin-top: -64px;
       height: 100vh;
       z-index: 2;
+
+      .flowers {
+        grid-row: 1;
+        grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-self: self-start;
+      width: 40%;
+      height: 50%;
+      margin-left: 100px;
+
+     
+@include sm {
+  height:90%;
+  width: 100%;
+  justify-self: center;
+  margin-left: 0px;
+}
+
+@include breakpoint(420px) {
+  justify-self: center;
+  margin-left: 0px;   
+  height: 80%;
+}
+
+.flowerOne, .flowerTwo , .flowerThree ,.flowerFour {
+  width: 20%;
+  @include lg {
+            
+   width: 18%;    
+  }
+  @include breakpoint(920px) {
+    width: 20%;   
+  }
+  @include breakpoint(720px) {
+    width: 25%;   
+  }
+  @include sm {
+    width: 22%;
+  }
+  
+}
+        .flowerOne, .flowerFour {
+          transform: rotateZ(90deg);
+        }
+        
+        .topFlowers {
+          display: flex;
+          place-self: center;
+          justify-content: space-between;
+          width: 80%;
+       
+       
+
+        .flowerOne {
+         
+          @include lg {
+            margin-left: -10px;  
+          margin-top: -50px;
+          }
+          @include breakpoint(920px) {
+            margin-left: -25px;  
+          }
+        }
+        .flowerTwo{
+          margin-right: -70px;
+          @include lg {
+            margin-right: -55px;
+         
+          
+          }
+          @include breakpoint(1020px) {
+            margin-right: -35px;  
+          }
+          @include breakpoint(920px) {
+            margin-right: -15px;  
+          }
+        }
+
+      }
+
+      .bottomFlowers {
+        display: flex;
+        place-self: center;
+        justify-content: space-between;
+        width: 80%;
+     
+        
+        .flowerThree {
+          @include breakpoint(920px) {
+            margin-left: -25px;  
+          }
+        }
+        .flowerFour {
+          margin-right: -70px;
+          @include lg {
+            margin-right: -55px;  
+        
+          }
+          @include breakpoint(1020px) {
+            margin-right: -35px;  
+          }
+          @include breakpoint(920px) {
+            margin-right: -25px;  
+          }
+        }
+        
+      }
+      }
 
       @include sm {
         margin-top: 0;
