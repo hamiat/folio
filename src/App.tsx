@@ -127,7 +127,8 @@ const App: React.FC = () => {
         initial={isMobile ? "initialMobile" : "initial"}
         animate={isMobile ? "animateMobile" : "animate"}
         className={style.leftContent}
-      >  <div className={style.flowers}> 
+      >  <motion.div initial={isMobile ? {opacity: 1} : {opacity: 0}} animate={isMobile ? {opacity: 1} : {opacity: 0.9}} transition={{delay: 3, duration: 5, ease: "easeInOut"}}
+      className={style.flowers}> 
      <div className={style.topFlowers}>
             <Flower classNames={style.flowerOne}/>
         <Flower classNames={style.flowerTwo}/>
@@ -136,7 +137,7 @@ const App: React.FC = () => {
         <Flower classNames={style.flowerThree}/>
         <Flower classNames={style.flowerFour} />
         </div>
-        </div>
+        </motion.div>
         <motion.svg
           variants={goToSideVariants}
           initial={isMobile ? "initialMobile" : "initial"}

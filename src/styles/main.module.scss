@@ -218,7 +218,11 @@ body {
         }
         .flowerTwo{
           margin-right: -30px;
+          @include breakpoint(1450px) {
+            margin-right: -55px;
+         
           
+          }
           @include breakpoint(1020px) {
             margin-right: -35px;  
           }
@@ -243,7 +247,11 @@ body {
         }
         .flowerFour {
           margin-right: -30px;
+          @include breakpoint(1450px) {
+            margin-right: -55px;
          
+          
+          }
           @include breakpoint(1020px) {
             margin-right: -35px;  
           }
