@@ -2,7 +2,6 @@ import style from "./skills.module.scss";
 import { motion, Variants } from "framer-motion";
 import { FaLongArrowAltDown, FaLongArrowAltLeft } from "react-icons/fa";
 import { useState } from "react";
-import Flower from "../Flower/Flower";
 
 
 const titleVariants: Variants = {
