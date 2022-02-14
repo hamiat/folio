@@ -192,6 +192,9 @@ body {
   @include sm {
     width: 22%;
   }
+  @include xs {
+    width: 25%;   
+  }
   
 }
         .flowerOne, .flowerFour {
