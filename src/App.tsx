@@ -129,7 +129,7 @@ const App: React.FC = () => {
         className={style.leftContent}
       > 
        <motion.div 
-       variants={opacityVariants}
+       variants={isMobile ? undefined : opacityVariants}
        initial="initial" animate="animate"
         transition={{delay: 4, duration: 1, ease: "easeInOut"}}
       className={style.flowers}> 
@@ -558,9 +558,15 @@ const App: React.FC = () => {
         </motion.div>
       )}
 
+
       <About showModal={showModal} />
       <Skills />
       <SkillsSvg />
+      <section className={style.flows}>
+      <Flower classNames={style.flowsOne}/>
+       <Flower classNames={style.flowsTwo}/>
+  
+      </section>
       <Contact />
     </main>
   );

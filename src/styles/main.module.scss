@@ -82,48 +82,7 @@ body {
       grid-template-columns: 1fr;
     }
 
-    .flowers {/*
-      grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
-        z-index: 1;
-        display: grid;
-        grid-template-areas: 
-        ". . . . . . "
-      
-        
-        " . one two . . .   "
-        " . three  four . . .  "
-        ". .  . . . . ";
-
-      @include sm {
-        
-        
-         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%; 
-      }*/
-
-
-      /* .topFlowers {
-        display: flex;
-        width: 70%;
-        place-self: center;
-        justify-content: space-between;
-        margin-top: 88px;
-        
-      }
-      .bottomFlowers {
-        display: flex;
-        width: 70%;
-        place-self: center;
-        justify-content: space-between;
-        margin-bottom: 98px;
-      }
- */
-      
-     
-    }
+    
 
     .btnTwo {
       grid-column: 2 / span 1;
@@ -244,12 +203,15 @@ body {
      
         
         .flowerThree {
+      
           @include breakpoint(920px) {
             margin-left: -25px;  
           }
         }
         .flowerFour {
           margin-right: -30px;
+        
+
           @include breakpoint(1450px) {
             margin-right: -55px;
          
@@ -327,4 +289,46 @@ body {
       }
     }
   }
+.flows {
+  width: 65%;
+  height: 35%;
+  grid-row: 5;
+  grid-column: 1 / span 2;
+  justify-self: center;
+align-self: end;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+ margin-bottom: 48px;
+ 
+  
+
+  @include sm {
+    grid-row: 6;
+    width: 85%;
+  }
+
+  .flowsOne, .flowsTwo , .flowsThree{
+    width: 7%;
+    @include md {
+      width: 10%;
+    }
+    @include sm {
+      width: 18%;
+    }
+  
+  }
+
+  .flowsOne {
+    z-index: 60;
+  
+  }
+
+  .flowsTwo {
+    transform: rotateZ(-180deg);
+    z-index: 0;
+  }
+  
+
+}
 }

@@ -9,6 +9,22 @@
   flex-direction: column;
   justify-content: space-between;
   
+  
+  .travelFlower {
+  place-self: end;
+    z-index: 1;
+   
+  
+    
+    .expFlower {
+      width: 25%;
+      
+
+      
+  
+    }
+    
+  }
 
   @include md {
     width: 75%;

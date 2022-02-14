@@ -2,6 +2,7 @@ import style from "./skills.module.scss";
 import { motion, Variants } from "framer-motion";
 import { FaLongArrowAltDown, FaLongArrowAltLeft } from "react-icons/fa";
 import { useState } from "react";
+import Flower from "../Flower/Flower";
 
 
 const titleVariants: Variants = {
@@ -58,6 +59,7 @@ const Skills: React.FC = () => {
       viewport={{ once: false, amount: 0.3 }}
       className={style.skills}
     >
+    
 
          
             
@@ -185,8 +187,7 @@ const Skills: React.FC = () => {
       </motion.div>
 
       
-      
-       
+
     </motion.section>
    
   );
