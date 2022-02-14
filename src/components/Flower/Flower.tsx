@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 
 export type Props = {
     classNames: string
@@ -6,7 +7,7 @@ export type Props = {
 const Flower= ({classNames}: Props) => {
   return (
     <>
-      <svg className={classNames} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375.56 261.17">
+      <motion.svg style={{cursor: "pointer"}} drag whileHover={{ scale: [1, 1.02, 1 ], transition: {type: "spring"}}} className={classNames} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375.56 261.17">
         <g id="Lager_2" data-name="Lager 2">
           <g id="_Lager_" data-name="&lt;Lager&gt;">
             <path
@@ -45,7 +46,7 @@ const Flower= ({classNames}: Props) => {
             <path d="M174.53,67.84h0A79.41,79.41,0,0,0,169,59.12c-1-1.44-2.11-2.76-3.19-4.14s-2.31-2.64-3.47-4c1.45,1,2.95,2,4.39,3s2.88,2.1,4.22,3.28a84.73,84.73,0,0,1,7.93,7.38,81.58,81.58,0,0,1,7,8.53c1.09,1.51,2.1,3.09,3.08,4.72.49.82,1,1.65,1.41,2.51.23.44.46.87.67,1.33.11.23.22.44.33.69s.21.45.35.83l.89,2.44a6.22,6.22,0,0,1-3,7.8,6,6,0,0,1-8.21-3.37C180.92,88.81,177.87,75.19,174.53,67.84Z" />
           </g>
         </g>
-      </svg>
+      </motion.svg>
     </>
   );
 };

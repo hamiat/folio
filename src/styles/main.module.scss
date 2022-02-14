@@ -138,6 +138,7 @@ body {
 
 .flowerOne, .flowerTwo , .flowerThree ,.flowerFour {
   width: 20%;
+  z-index: 60;
   @include lg {
             
    width: 18%;    
@@ -158,6 +159,7 @@ body {
 }
         .flowerOne, .flowerFour {
           transform: rotateZ(90deg);
+       
         }
         
         .topFlowers {
@@ -290,44 +292,38 @@ body {
     }
   }
 .flows {
-  width: 65%;
+  width: 40%;
   height: 35%;
   grid-row: 5;
   grid-column: 1 / span 2;
   justify-self: center;
-align-self: end;
+align-self: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: end;
- margin-bottom: 48px;
+ margin-top: 180px;
  
   
 
   @include sm {
     grid-row: 6;
-    width: 85%;
+    width: 75%;
+    margin-top: 200px;
   }
 
   .flowsOne, .flowsTwo , .flowsThree{
-    width: 7%;
+    width: 8%;
+    z-index: 60;
     @include md {
       width: 10%;
     }
     @include sm {
-      width: 18%;
+      width: 17%;
     }
   
   }
 
-  .flowsOne {
-    z-index: 60;
   
-  }
-
-  .flowsTwo {
-    transform: rotateZ(-180deg);
-    z-index: 0;
-  }
   
 
 }
