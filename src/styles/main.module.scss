@@ -308,7 +308,7 @@ align-self: center;
   @include sm {
     grid-row: 6;
     width: 75%;
-    margin-top: 200px;
+    margin-top: 300px;
   }
 
   .flowsOne, .flowsTwo , .flowsThree{
@@ -318,7 +318,7 @@ align-self: center;
       width: 10%;
     }
     @include sm {
-      width: 17%;
+      width: 12%;
     }
   
   }
