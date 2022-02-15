@@ -59,7 +59,7 @@ const About = ({showModal}: Props) => {
       className={style.rightContent}
       
       transition={
-        showModal && !isMobile ? { delay: 4.5, duration: 1.5 } : { delay: 0, duration: 1.5 }
+        showModal && !isMobile ? { delay: 4, duration: 1.5 } : { delay: 0, duration: 1.5 }
       }
     >
       <motion.div
@@ -68,7 +68,7 @@ const About = ({showModal}: Props) => {
         viewport={{ once: false, amount: 0.5 }}
         transition={
           showModal && !isMobile 
-            ? { delayChildren: 5.5, staggerChildren: 1 }
+            ? { delayChildren: 4.5, staggerChildren: 0.5 }
             : { delayChildren: 0 }
         }
         className={style.about}

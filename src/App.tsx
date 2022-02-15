@@ -131,7 +131,8 @@ const App: React.FC = () => {
        <motion.div 
        variants={isMobile ? undefined : opacityVariants}
        initial="initial" animate="animate"
-        transition={{delay: 4, duration: 1, ease: "easeInOut"}}
+        transition={{delay: 4, duration: 1.5, ease: "easeInOut"}}
+       
       className={style.flowers}> 
      <div className={style.topFlowers}>
             <Flower classNames={style.flowerOne}/>
@@ -547,7 +548,7 @@ const App: React.FC = () => {
           animate="animate"
           transition={
             showModal && !isMobile
-              ? { delay: 8.5, duration: 1.5 }
+              ? { delay: 6, duration: 1.5 }
               : { delay: 1.5, duration: 1.5 }
           }
           className={style.btnTwo}
