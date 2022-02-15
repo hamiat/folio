@@ -293,16 +293,18 @@ body {
   }
 .flows {
   width: 40%;
-  height: 35%;
+  height: 25%;
   grid-row: 5;
   grid-column: 1 / span 2;
   justify-self: center;
-align-self: center;
+align-self: flex-end;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
- margin-top: 180px;
- 
+  align-items: center;
+  gap: 50px;
+
+
+
   
 
   @include sm {

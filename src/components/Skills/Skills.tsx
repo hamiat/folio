@@ -135,7 +135,7 @@ const Skills: React.FC = () => {
         <h3>Judilica AB</h3>
         <div className={style.jobTitleDiv}>
           <h4>Frontend Developer Intern</h4>
-          <p>Sept 2021 - April 2022 </p>
+          <p>Sept 2021 - ongoing </p>
         </div>
 
         <p>

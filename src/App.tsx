@@ -565,8 +565,8 @@ const App: React.FC = () => {
       <SkillsSvg />
       <section className={style.flows}>
       <Flower classNames={style.flowsOne}/>
-     
-  
+     <p>Thanks for dropping by!</p>
+     <Flower classNames={style.flowsTwo}/>
       </section>
       <Contact />
     </main>

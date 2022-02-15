@@ -80,7 +80,7 @@ const About = ({showModal}: Props) => {
           </motion.h2>
           <motion.p variants={contentVariants}>
             My name is Hamiat and I am currently studying to become a web
-            developer.
+            developer. Thanks for stopping by!
           </motion.p>
           <motion.div variants={contentVariants} className={style.arrow}><FaLongArrowAltDown/></motion.div> 
         
