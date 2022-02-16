@@ -15,7 +15,7 @@ const titleVariants: Variants = {
     opacity: 1,
     transition: {
       ease: "easeOut",
-      duration: 1,
+      duration: 0.7,
     },
   },
 };
@@ -71,9 +71,16 @@ const SkillsSvg: React.FC = () => {
         Skills{" "}
       </motion.h2>
 
+
       <motion.div className={style.softSkills} variants={contentVariants}>
-        Problem solving, Empathy, Active listening, Time and self management
-        Adaptivity, Teamwork, Positive attitude
+        
+
+        <p>Swedish, English, Luganda - Fluent <br/>
+        Korean - Intermediate </p>
+        <br/>
+        <p>Problem solving, Empathy, Active listening, Time and self management
+        Adaptivity, Teamwork, Positive attitude </p>
+            
       </motion.div>
 
       {isMobile ? (
@@ -391,7 +398,7 @@ const SkillsSvg: React.FC = () => {
             variants={contentVariants}
             className={style.arrowToContact}
           >
-            <FaLongArrowAltDown />
+            
           </motion.div>
         </motion.div>
       ) : (
@@ -734,7 +741,7 @@ const SkillsSvg: React.FC = () => {
                           variants={contentVariants}
                           className={style.arrowToContact}
                         >
-                          <FaLongArrowAltDown />
+                             <FaLongArrowAltDown />
                         </motion.div>
                       </motion.div>
                     }
@@ -748,6 +755,10 @@ const SkillsSvg: React.FC = () => {
           </Scene>
         </Controller>
       )}
+
+<br/>
+         
+          
     </motion.section>
   );
 };

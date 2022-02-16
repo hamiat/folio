@@ -80,7 +80,7 @@ const Skills: React.FC = () => {
       <h3>Hyper Island<span className={style.city}>, Stockholm (Sweden) </span></h3>
         <div className={style.jobTitleDiv}>
           <h4>Frontend Developer</h4>
-          <p>2020 - 2022 </p>
+          <p>August 2020 - April 2022 </p>
         </div>
        
         <p>
@@ -98,7 +98,7 @@ const Skills: React.FC = () => {
       <h3>Hankuk University of Foreign studies<span className={style.city}>, Seoul (South Korea) </span></h3>
         <div className={style.jobTitleDiv}>
           <h4>Exchange Year</h4>
-          <p>2014 - 2015</p>
+          <p>August 2014 - June 2015</p>
         </div>
         
         <p>
@@ -111,7 +111,7 @@ const Skills: React.FC = () => {
       <h3>Mälardalens högskola<span className={style.city}>, Västerås (Sweden)</span></h3>
         <div className={style.jobTitleDiv}>
           <h4>Aeronautical Engineering</h4>
-          <p>2011-2013 </p>
+          <p>August 2011 - June 2013 </p>
         </div>
         
         <p>- Bachelor’s degree</p>
@@ -135,7 +135,7 @@ const Skills: React.FC = () => {
         <h3>Judilica AB</h3>
         <div className={style.jobTitleDiv}>
           <h4>Frontend Developer Intern</h4>
-          <p>Sept 2021 - ongoing </p>
+          <p>September 2021 - ongoing </p>
         </div>
 
         <p>

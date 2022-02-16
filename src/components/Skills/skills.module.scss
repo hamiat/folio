@@ -217,17 +217,12 @@ padding: 60px 0;
     justify-content: center;
     align-items: center;
     gap: 24px;
-  
-
-    margin: -204px auto 0;
-    @include breakpoint(1200px) {
-     
-    }
-    @include breakpoint(900px) {
     
-    }
+
+    margin: -104px auto 0;
+    
     @include breakpoint(800px) {
-      margin: -254px auto 0;
+      margin: -154px auto 0;
     }
 @include sm {
   margin: 0 auto; 
@@ -283,7 +278,7 @@ padding: 60px 0;
 }
 
 .arrowToContact {
-  padding: $mn ;
+  padding-top:70px ;
     font-size: 25px;
     place-self: center;
 
