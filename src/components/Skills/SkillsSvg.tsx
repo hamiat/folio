@@ -1,8 +1,7 @@
 import style from "./skills.module.scss";
 import { motion, Variants } from "framer-motion";
 import { FaLongArrowAltDown } from "react-icons/fa";
-import { Controller, Scene } from "react-scrollmagic";
-import { Timeline, Tween, ScrollTrigger } from "react-gsap";
+import { Tween, ScrollTrigger } from "react-gsap";
 import { useMediaQuery } from "react-responsive";
 
 const titleVariants: Variants = {
