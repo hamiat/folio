@@ -75,9 +75,9 @@ const SkillsSvg: React.FC = () => {
       <motion.div className={style.softSkills} variants={contentVariants}>
         
 
-        <p>Swedish, English, Luganda - Fluent <br/>
+        <p>Swedish, English, Luganda - Fluent <br/> 
         Korean - Intermediate </p>
-        <br/>
+        <br/><br/>
         <p>Problem solving, Empathy, Active listening, Time and self management
         Adaptivity, Teamwork, Positive attitude </p>
             

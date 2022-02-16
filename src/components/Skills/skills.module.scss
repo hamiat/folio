@@ -10,21 +10,7 @@
   justify-content: space-between;
   
   
-  .travelFlower {
-  place-self: end;
-    z-index: 1;
-   
-  
-    
-    .expFlower {
-      width: 25%;
-      
 
-      
-  
-    }
-    
-  }
 
   @include md {
     width: 75%;
@@ -42,6 +28,18 @@
 
   h2 {
     cursor: pointer;
+
+    .leftArrow {
+      @include breakpoint(500px) {
+        display: none;
+      }
+    }
+    .upArrow {
+      display: none;
+      @include breakpoint(500px) {
+        display: block;
+      }
+    }
 
     @include sm {
       padding-bottom: 24px;
@@ -113,7 +111,7 @@
         }
 
         @include sm {
-        
+          padding: 0;
          width: 100%;
          }
       }

@@ -1,6 +1,6 @@
 import style from "./skills.module.scss";
 import { motion, Variants } from "framer-motion";
-import { FaLongArrowAltDown, FaLongArrowAltLeft } from "react-icons/fa";
+import { FaLongArrowAltDown, FaLongArrowAltLeft, FaLongArrowAltUp } from "react-icons/fa";
 import { useState } from "react";
 
 
@@ -68,11 +68,11 @@ const Skills: React.FC = () => {
     <motion.h2
       onClick={changeTitle}
       variants={titleVariants}
-      whileHover={{ color: "#f7931e" }}
+      whileHover={{ color: "#ff8d0b" }}
     >
       {title}{" "}
-      <motion.span className={style.clickMe}>
-        <FaLongArrowAltLeft /> click me!
+      <motion.span initial={{color: "#ff8d0b"}} className={style.clickMe}>
+        <FaLongArrowAltLeft /> click me for experiences!
       </motion.span>{" "}
     </motion.h2>
     <div className={style.experiences}>
@@ -123,11 +123,12 @@ const Skills: React.FC = () => {
     <motion.h2
       onClick={changeTitle}
       variants={titleVariants}
-      whileHover={{ color: "#f7931e" }}
+      whileHover={{ color: "#ff8d0b" }}
     >
       {title}{" "}
-      <motion.span  className={style.clickMe}>
-        <FaLongArrowAltLeft /> click me!
+      <motion.span initial={{color: "#ff8d0b"}}  className={style.clickMe}>
+        <FaLongArrowAltLeft className={style.leftArrow}/> 
+        <FaLongArrowAltUp className={style.upArrow}/> click me for education!
       </motion.span>{" "}
     </motion.h2>
     <div className={style.experiences}>
