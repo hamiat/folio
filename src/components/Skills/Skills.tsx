@@ -72,7 +72,8 @@ const Skills: React.FC = () => {
     >
       {title}{" "}
       <motion.span initial={{color: "#ff8d0b"}} className={style.clickMe}>
-        <FaLongArrowAltLeft /> click me for experiences!
+      <FaLongArrowAltLeft className={style.leftArrow}/> 
+        <FaLongArrowAltUp className={style.upArrow}/> click me for experiences!
       </motion.span>{" "}
     </motion.h2>
     <div className={style.experiences}>
