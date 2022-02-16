@@ -1,34 +1,25 @@
 @import "../../styles/main.module.scss";
 
 .contact {
-  grid-column: 1 / span 2 ;
+  grid-column: 1 / span 2;
   grid-row: 5;
   place-self: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 50vh;
- 
- padding-bottom: $mn*5;
+  height: 80vh;
   z-index: 5;
-  gap: 28px;
-  @include breakpoint(800px) {
-    
-  }
-  
+
   @include sm {
-    grid-column: 1 / span 1 ;
- grid-row: 6;
- 
-  
- height: auto;
-
+    grid-column: 1 / span 1;
+    grid-row: 6;
   }
 
-
-    
-
+  .contactLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     a {
       text-decoration: none;
       color: $darkOrange;
@@ -38,5 +29,34 @@
       @include box;
       padding: 8px;
     }
-  
+  }
+  .flows {
+    width: 60%;
+    height: 25%;
+    grid-row: 5;
+    grid-column: 1 / span 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    @include sm {
+      grid-row: 6;
+      width: 95%;
+    }
+
+    .flowsOne,
+    .flowsTwo,
+    .flowsThree {
+      width: 8%;
+      z-index: 60;
+      @include md {
+        width: 10%;
+      }
+      @include sm {
+        width: 10%;
+      }
+    }
+  }
 }

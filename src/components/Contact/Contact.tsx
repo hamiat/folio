@@ -1,7 +1,6 @@
 import style from "./contact.module.scss";
 import { motion, Variants } from "framer-motion";
-
-
+import Flower from "../Flower/Flower";
 
 const titleVariants: Variants = {
   offscreen: {
@@ -13,7 +12,20 @@ const titleVariants: Variants = {
     opacity: 1,
     transition: {
       ease: "easeOut",
-      duration: 1,
+      duration: 0.7,
+    },
+  },
+};
+
+const contentVariants: Variants = {
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    transition: {
+      ease: "easeInOut",
+      duration: 1.5,
     },
   },
 };
@@ -49,76 +61,20 @@ const Contact: React.FC = () => {
       className={style.contact}
     >
       <motion.h2 variants={titleVariants}>Contact</motion.h2>
-      <motion.a
-        variants={btnVariants}
-        whileHover="hover"
-        whileTap="hover"
-        id="github"
-        href="https://github.com/hamiat"
-      >
-        Github
-      </motion.a>
-      <motion.a
-        variants={btnVariants}
-        whileHover="hover"
-        whileTap="hover"
-        id="linkedin"
-        href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
-      >
-        LinkedIn
-      </motion.a>
-      <motion.a
-        variants={btnVariants}
-        whileHover="hover"
-        whileTap="hover"
-        id="mail"
-        href="mailto:hamiat.n@hotmai.com"
-      >
-        Email
-      </motion.a>
-    </motion.section>
-  );
-};
-
-export default Contact;
-/* 
-return (
-   
-  <motion.section
-   initial="offscreen"
-   whileInView="onscreen"
-   viewport={{ once: false, amount: 0.3 }}
-    className={style.contact} 
-  >
-     <Controller>
-    
-    <Scene
-     duration={500}
-     triggerHook={0.75}
-     pin={{ pushFollowers: false }}
-     offset={125}>
-       {(progress: any) => (
-          <div>
-            <Timeline totalProgress={progress} paused>
-             
-          
-
-                <Timeline target={
-                <div className={style.contacts}>
-                  <motion.h2 variants={titleVariants} >Contact</motion.h2>
-        <motion.a 
-         variants={btnVariants}
-         whileHover="hover"
-         whileTap="hover"
+      <motion.div className={style.contactLinks}>
+        <motion.a
+          variants={btnVariants}
+          whileHover="hover"
+          whileTap="hover"
           id="github"
           href="https://github.com/hamiat"
         >
           Github
         </motion.a>
         <motion.a
-           variants={btnVariants}
-           whileHover="hover"
-           whileTap="hover"
+          variants={btnVariants}
+          whileHover="hover"
+          whileTap="hover"
           id="linkedin"
           href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
         >
@@ -133,16 +89,14 @@ return (
         >
           Email
         </motion.a>
-       
-      </div>}>
-      <Tween from={{ x: -1000 }} to={{ x: 0 }} />
-                  <Tween from={{ opacity: 1 }} to={{ opacity: 0.9 }} />
-      </Timeline>
-    </Timeline>
-    </div>
-        )}
-    </Scene>
-    </Controller>
-  </motion.section>
-  
-); */
+      </motion.div>
+      <motion.section variants={contentVariants} className={style.flows}>
+        <Flower classNames={style.flowsOne} />
+        <p>Thanks for dropping by!</p>
+        <Flower classNames={style.flowsTwo} />
+      </motion.section>
+    </motion.section>
+  );
+};
+
+export default Contact;

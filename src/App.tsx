@@ -114,34 +114,27 @@ const App: React.FC = () => {
 
   return (
     <main className={style.main}>
-   
-    
-      
-       
-        
-      
-      
-
       <motion.section
         variants={startVariants}
         initial={isMobile ? "initialMobile" : "initial"}
         animate={isMobile ? "animateMobile" : "animate"}
         className={style.leftContent}
-      > 
-       <motion.div 
-       variants={isMobile ? undefined : opacityVariants}
-       initial="initial" animate="animate"
-        transition={{delay: 4, duration: 1.5, ease: "easeInOut"}}
-       
-      className={style.flowers}> 
-     <div className={style.topFlowers}>
-            <Flower classNames={style.flowerOne}/>
-        <Flower classNames={style.flowerTwo}/>
-        </div>
-        <div className={style.bottomFlowers}> 
-        <Flower classNames={style.flowerThree}/>
-        <Flower classNames={style.flowerFour} />
-        </div>
+      >
+        <motion.div
+          variants={isMobile ? undefined : opacityVariants}
+          initial="initial"
+          animate="animate"
+          transition={{ delay: 4, duration: 1.5, ease: "easeInOut" }}
+          className={style.flowers}
+        >
+          <div className={style.topFlowers}>
+            <Flower classNames={style.flowerOne} />
+            <Flower classNames={style.flowerTwo} />
+          </div>
+          <div className={style.bottomFlowers}>
+            <Flower classNames={style.flowerThree} />
+            <Flower classNames={style.flowerFour} />
+          </div>
         </motion.div>
         <motion.svg
           variants={goToSideVariants}
@@ -538,7 +531,6 @@ const App: React.FC = () => {
             fill="#BC2633"
           />
         </motion.svg>
-       
       </motion.section>
 
       {!isMobile && (
@@ -559,15 +551,10 @@ const App: React.FC = () => {
         </motion.div>
       )}
 
-
       <About showModal={showModal} />
       <Skills />
       <SkillsSvg />
-      <section className={style.flows}>
-      <Flower classNames={style.flowsOne}/>
-     <p>Thanks for dropping by!</p>
-     <Flower classNames={style.flowsTwo}/>
-      </section>
+
       <Contact />
     </main>
   );
