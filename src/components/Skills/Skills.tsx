@@ -143,7 +143,7 @@ const Skills: React.FC = () => {
         <p>
           - Created the company’s landing page, from design to deployment
           (continuous deployment).
-          <br />- Worked with Figma, Next.js, TypeScript and Sass for this
+          <br />- Worked with Figma, React, Next.js, TypeScript and Sass for this
           project, as well as Github for collaboration with a fellow
           intern.
         </p>
