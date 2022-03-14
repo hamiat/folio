@@ -23,7 +23,7 @@
 
   h2 {
     cursor: pointer;
-
+color: $redish;
     .leftArrow {
       @include breakpoint(500px) {
         display: none;
@@ -73,6 +73,7 @@
         color: $redish;
         margin: -4px 0px;
         p {
+          @include textShadowSmaller;
           @include sm {
             font-size: 14px;
             padding-bottom: 16px;

@@ -26,7 +26,7 @@
       font-size: 26px;
       width: 100%;
       text-align: center;
-      @include box;
+      border: 1px solid rgb(73, 73, 73);
       padding: 8px;
     }
   }

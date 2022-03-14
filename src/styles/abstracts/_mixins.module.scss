@@ -1,5 +1,5 @@
 @mixin box {
-    border: 1px solid $lightBlack;
+    border: 1px solid #313131;
     box-shadow: 2px 2px $black;
   
 }
@@ -7,4 +7,35 @@
     border-bottom: 2px dotted #313131;
  
   
+}
+
+@mixin textShadow {
+    text-shadow:  0.05em 0 black,
+  0 0.05em black,
+  -0.05em 0 black,
+  0 -0.05em black,
+  -0.05em -0.05em black,
+  -0.05em 0.05em black,
+  0.05em -0.05em black,
+  0.05em 0.05em black;
+}
+@mixin textShadowSmaller {
+    text-shadow:  0.03em 0 black,
+  0 0.03em black,
+  -0.03em 0 black,
+  0 -0.03em black,
+  -0.03em -0.03em black,
+  -0.03em 0.03em black,
+  0.03em -0.03em black,
+  0.03em 0.03em black;
+}
+@mixin textShadowSmallest {
+    text-shadow:  0.01em 0 black,
+  0 0.01em black,
+  -0.01em 0 black,
+  0 -0.01em black,
+  -0.01em -0.01em black,
+  -0.01em 0.01em black,
+  0.01em -0.01em black,
+  0.01em 0.01em black;
 }

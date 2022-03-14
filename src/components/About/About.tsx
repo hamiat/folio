@@ -4,10 +4,10 @@ import { FaLongArrowAltDown } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 
 const delayStartVariants = {
-  initial: {
+  offscreen: {
     opacity: 0,
   },
-  animate: {
+  onscreen: {
     opacity: 1,
   },
 };
@@ -34,7 +34,6 @@ const contentVariants: Variants = {
   onscreen: {
     opacity: 1,
     transition: {
-      ease: "easeInOut",
       duration: 1.5,
     },
   },
@@ -49,8 +48,8 @@ const About = ({ showModal }: Props) => {
   return (
     <motion.section
       variants={delayStartVariants}
-      initial="initial"
-      animate="animate"
+      initial="offscreen"
+      animate="onscreen"
       className={style.rightContent}
       transition={
         showModal && !isMobile

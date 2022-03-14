@@ -4,10 +4,11 @@
 
 /* Variables  */
 $black: #000000;
-$lightBlack: #262529;
+$lightBlack: #151514;
+$lightOrange: #FFAC4D;
 $orange: #f7931e;
 $darkOrange: #ff8d0b;
-$redish: #D5303D;
+$redish: #D42B39;
 
 $mn: 48px;
 
@@ -15,10 +16,12 @@ $mn: 48px;
 h2,
 h4 {
   color: $redish;
+  
 }
 
 h2 {
   font-size: 32px;
+  @include textShadowSmallest;
   @include lg {
     font-size: 30px;
   }
@@ -33,6 +36,7 @@ h2 {
 
 h3 {
   font-size: 16px;
+  @include textShadow;
   @include breakpoint(800px) {
     font-size: 16px;
   }
@@ -43,6 +47,7 @@ h3 {
   }
 }
 h4 {
+  @include textShadowSmaller;
   font-size: 18px;
   color: $redish;
   margin: 0 0 4px 0;
