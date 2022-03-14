@@ -13,7 +13,6 @@ const titleVariants: Variants = {
     y: "-3vh",
     opacity: 1,
     transition: {
-      ease: "easeOut",
       duration: 0.7,
     },
   },
@@ -25,11 +24,6 @@ const contentVariants: Variants = {
   },
   onscreen: {
     opacity: 1,
-
-    transition: {
-      ease: "easeInOut",
-      duration: 1.5,
-    },
   },
   rotateHover: {
     rotate: 15,
