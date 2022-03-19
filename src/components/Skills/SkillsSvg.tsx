@@ -56,7 +56,7 @@ const SkillsSvg: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.4 }}
       className={style.skillsDiv}
     >
       <motion.h2 className={style.softSkillsTitle} variants={titleVariants}>
