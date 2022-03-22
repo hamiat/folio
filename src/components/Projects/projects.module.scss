@@ -1,0 +1,55 @@
+@import "../../styles/main.module.scss";
+
+
+.showMore{
+  display: flex;
+justify-content: space-around;
+
+ 
+}
+
+.showLess{ 
+  display: none;
+}
+
+.projects {
+ padding: 128px ;
+  grid-column: 1 / span 2;
+  grid-row: 5;
+
+
+  .projectsDiv {
+  
+  
+ .companyName {
+   font-size: 24px;
+ 
+ }
+  
+  .projectsBtn {
+@include box;
+
+  }
+
+  .judilicaOne{
+   width: 20%;
+box-shadow: 5px 5px orange;
+
+margin-top: 28px;
+  }
+  .judilicaTwo{
+    width: 70%;
+    box-shadow: 5px 5px orange;
+    margin-top: 28px;
+  
+  }
+
+  .judilicaText {
+    width: 65%;
+    padding: 48px 0;
+  margin: 0 auto;
+  font-size: 22px;
+ 
+  }
+}
+}

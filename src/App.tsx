@@ -8,6 +8,7 @@ import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import SkillsSvg from "./components/Skills/SkillsSvg";
 import Flower from "./components/Flower/Flower";
+import Projects from "./components/Projects/Projects";
 const startVariants = {
   initial: {
     gridColumn: "1/span 2",
@@ -552,8 +553,10 @@ const App: React.FC = () => {
       )}
 
       <About showModal={showModal} />
+
       <Skills />
       <SkillsSvg />
+      <Projects />
 
       <Contact />
     </main>
