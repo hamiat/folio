@@ -17,12 +17,12 @@ export default function Projects(): JSX.Element {
     },
     {
       id: 2,
-      title: "Judilica",
-      image: "/assets/judilica2.jpg",
+      title: "Space game",
+      image: "/assets/spaces.png",
       alt: "desktop and mobile example of a website",
-      text: "Eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet. Consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore",
-      url: "",
-      urlText: "",
+      text: "A space themed 3D gaming experience created with A-frame.",
+      url: "https://hamiat.github.io/spaces/",
+      urlText: "Try this out (for desktop)",
    
     },
   ]);
@@ -30,7 +30,7 @@ export default function Projects(): JSX.Element {
   return (
     <motion.section className={style.projects}>
       <h2>Some of my projects</h2>
-      <div>
+      <div className={style.projectsContainer}>
         {projects.map((project, index) => (
           <Project {...project} index={index} />
         ))}

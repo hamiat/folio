@@ -20,6 +20,10 @@
     padding: 28px;
   }
 
+  .projectsContainer {
+    width: 90%;
+    margin: 0 auto;
+ 
   .projectsDiv {
 
     
@@ -51,7 +55,7 @@
     }
 
     .projectImage {
-      width: 35%;
+      width:  65%;
       margin: 0 auto ;
       padding: 28px 0;
     }
@@ -81,4 +85,5 @@
       }
     }
   }
+}
 }
