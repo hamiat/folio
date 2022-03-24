@@ -556,7 +556,7 @@ const App: React.FC = () => {
 
       <Skills />
       <SkillsSvg />
-      <Projects />
+   <Projects />
 
       <Contact />
     </main>

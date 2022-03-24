@@ -1,24 +1,28 @@
 import style from "./projects.module.scss";
 import { motion, Variants } from "framer-motion";
 import Button from "../Button/Button";
+import { type } from "@testing-library/user-event/dist/type";
 
 
 
-export interface IProps  {
+export type IProps =  {
   hidden: boolean
-  showProject: any;
-  id: number,
-  title: string,
-  image: string,
-  alt: string,
+  showProject: any
+  id: number
+  title: string
+  image: string
+  alt: string
   text: string
 
 }
 
 
-export const Project: React.FC<IProps> = ({id, title, image, alt, text, showProject, hidden}) => {
+const Project: React.FC<IProps> = ({id, title, image, alt, text, showProject, hidden}) => {
+
+
   
-  return <div className={style.projectsDiv}>
+  return (
+  <div className={style.projectsDiv}>
     <h3 className={style.companyName}>{title}</h3>
      <Button  onClick={showProject}>{hidden ? "Show less" : "Show more"}</Button>
      <div className={`${hidden ? style.showMore : style.showLess }`}>
@@ -31,8 +35,10 @@ export const Project: React.FC<IProps> = ({id, title, image, alt, text, showProj
    </div>
 
    <p className={`${hidden ? style.showMore : style.showLess } ${style.judilicaText}`}>{text}</p>
-  </div>
+  </div>)
  
 };
 
+
+export default Project
 

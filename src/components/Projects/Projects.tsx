@@ -1,13 +1,12 @@
 import style from "./projects.module.scss";
 import { motion, Variants } from "framer-motion";
-
 import { useState } from "react";
+import Project, { IProps,  } from "./Project";
 
-import { IProps, iProps } from "./Project";
 
 
 export default function Projects(): JSX.Element {
-  const [hidden, setHidden] = useState(false)
+  const [hidden, setHidden] = useState(false)  
 
   const [projects, setProjects ] = useState<Omit<IProps, "hidden" |"showProject">[]>([
     {
@@ -26,7 +25,6 @@ export default function Projects(): JSX.Element {
     },
   ])
 
-  
   const showProject = () => {
     setHidden(!hidden)
   }
@@ -37,9 +35,9 @@ export default function Projects(): JSX.Element {
    
   
  
-   {projects.map(project => (
-     <Projects {...project}/>
-   ))}
+ {projects.map( project => (
+   <Project {...project} hidden={hidden} showProject={showProject} />
+ ))}
     
     
     </div>
