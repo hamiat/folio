@@ -40,6 +40,8 @@ export default function Projects(): JSX.Element {
     },
   ]);
 
+  console.log(setProjects)
+
   return (
     <motion.section
       initial="offscreen"
@@ -50,7 +52,7 @@ export default function Projects(): JSX.Element {
       <motion.h2 variants={titleVariants}>Some of my projects</motion.h2>
       <div className={style.projectsContainer}>
         {projects.map((project, index) => (
-          <Project {...project} index={index} />
+          <Project {...project}  index={index} />
         ))}
       </div>
     </motion.section>
