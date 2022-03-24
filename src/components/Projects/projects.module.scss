@@ -1,65 +1,66 @@
 @import "../../styles/main.module.scss";
 
-
-.showMore{
+.showMore {
   display: flex;
-justify-content: space-around;
-
- 
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
-.showLess{ 
+.showLess {
   display: none;
 }
 
 .projects {
- padding: 128px ;
+  padding: 128px;
   grid-column: 1 / span 2;
   grid-row: 5;
   @include sm {
     grid-column: 1 / span 1;
     grid-row: 6;
-    padding: 28px ;
+    padding: 28px;
   }
-
 
   .projectsDiv {
-  
-  
- .companyName {
-   font-size: 24px;
- 
- }
-  
-  .projectsBtn {
-@include box;
+   
+    .projectsTitle {
+      color: $darkPink;
+      font-size: 24px;
+   
+    }
 
-  }
+    .projectsBtn {
+      @include box;
+    }
 
-  .judilicaOne{
-   width: 20%;
-box-shadow: 5px 5px orange;
+    .projectImage {
+      width: 30%;
+      margin: 0 auto ;
+      padding: 28px 0;
+    }
 
-margin-top: 28px;
-  }
-  .judilicaTwo{
-    width: 70%;
-    box-shadow: 5px 5px orange;
-    margin-top: 28px;
-  
-  }
+    .projectWrapper {
+    
+      margin: 0 auto;
+      .projectUrl {
+        color: $pink;
+        font-size: 20px;
+      
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
 
-  .judilicaText {
-    width: 65%;
-    padding: 48px 0;
-  margin: 0 auto;
-  font-size: 22px;
+    .projectText {
+      width: 65%;
+      margin: 0 auto ;
+      font-size: 18px;
+      color: $darkPink;
+      
 
-  @include sm {
-    width: 85%;
-  
+      @include sm {
+        width: 85%;
+      }
+    }
   }
- 
-  }
-}
 }
