@@ -24,7 +24,7 @@ const Project: React.FC<IProps> = ({ id, title, image, alt, text, url , urlText,
   return (
     <div className={style.projectsDiv}>
       <h3  className={style.projectsTitle}>{title}</h3>
-      <button onClick={showProject}>
+      <button className={style.projectBtn} onClick={showProject}>
         {hidden ? "Show less" : "Show more"}
       </button>
      

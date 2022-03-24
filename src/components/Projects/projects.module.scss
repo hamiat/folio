@@ -21,19 +21,37 @@
   }
 
   .projectsDiv {
+
+    
+    display: flex;
+    flex-direction: column;
+    @include sm {
+      gap: 28px;
+    }
    
     .projectsTitle {
       color: $darkPink;
       font-size: 24px;
-   
+  
     }
 
-    .projectsBtn {
-      @include box;
+    .projectBtn {
+     padding: 10px 12px;
+     width: max-content;
+      background-color: $black;
+      border: 1px solid $darkPink;
+      color: $darkPink;
+      cursor: pointer;
+      border-radius: 2px;
+
+      &:hover {
+        background-color: $darkPink;
+        color: $black;
+      }
     }
 
     .projectImage {
-      width: 30%;
+      width: 35%;
       margin: 0 auto ;
       padding: 28px 0;
     }
