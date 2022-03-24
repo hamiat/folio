@@ -19,7 +19,7 @@ const titleVariants: Variants = {
 };
 
 export default function Projects(): JSX.Element {
-  const [projects, setProjects] = useState<Omit<IProps, "index">[]>([
+  const [projects, setProjects] = useState<Omit<IProps, "index" | "setProjects">[]>([
     {
       id: 1,
       title: "8 Great Repositories",
@@ -40,7 +40,7 @@ export default function Projects(): JSX.Element {
     },
   ]);
 
-  console.log(setProjects)
+ 
 
   return (
     <motion.section
@@ -52,7 +52,7 @@ export default function Projects(): JSX.Element {
       <motion.h2 variants={titleVariants}>Some of my projects</motion.h2>
       <div className={style.projectsContainer}>
         {projects.map((project, index) => (
-          <Project {...project}  index={index} />
+          <Project {...project} setProjects={setProjects} index={index} />
         ))}
       </div>
     </motion.section>

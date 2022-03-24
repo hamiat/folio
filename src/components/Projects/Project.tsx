@@ -10,6 +10,7 @@ export type IProps = {
   text: string;
   url: string;
   urlText: string;
+  setProjects?: any
 };
 
 const Project: React.FC<IProps> = ({
