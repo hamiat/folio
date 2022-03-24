@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
     <motion.section
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.4 }}
       className={style.contact}
     >
       <motion.h2 variants={titleVariants}>Contact</motion.h2>

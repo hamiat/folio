@@ -1,6 +1,5 @@
 import style from "./skills.module.scss";
 import { motion, Variants } from "framer-motion";
-import { FaLongArrowAltDown } from "react-icons/fa";
 import { Tween, ScrollTrigger } from "react-gsap";
 import { useMediaQuery } from "react-responsive";
 
@@ -63,7 +62,7 @@ const SkillsSvg: React.FC = () => {
         Skills{" "}
       </motion.h2>
 
-      <motion.div className={style.softSkills} variants={contentVariants}>
+      <motion.div className={style.softSkills}>
         <p>
           Swedish, English, Luganda - Fluent <br />
           Korean - Intermediate{" "}
@@ -711,9 +710,7 @@ const SkillsSvg: React.FC = () => {
         </ScrollTrigger>
       )}
 
-      <motion.div variants={contentVariants} className={style.arrowToContact}>
-        <FaLongArrowAltDown />
-      </motion.div>
+     
     </motion.section>
   );
 };

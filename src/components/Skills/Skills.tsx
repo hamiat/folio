@@ -1,6 +1,6 @@
 import style from "./skills.module.scss";
 import { motion, Variants } from "framer-motion";
-import { FaLongArrowAltDown, FaLongArrowAltLeft, FaLongArrowAltUp } from "react-icons/fa";
+import { FaLongArrowAltLeft, FaLongArrowAltUp } from "react-icons/fa";
 import { useState } from "react";
 
 
@@ -54,9 +54,7 @@ const Skills: React.FC = () => {
       className={style.skills}
     >
     
-
-         
-            
+    
   
         {whichTitle ? (
   <motion.div variants={parentContainer} className={style.experiencesDiv}>
@@ -177,11 +175,7 @@ const Skills: React.FC = () => {
     </div>
   </motion.div>
 )}
-    
-      <motion.div variants={contentVariants} className={style.arrowToSkills}>
-        <FaLongArrowAltDown />
-      </motion.div>
-
+  
       
 
     </motion.section>
