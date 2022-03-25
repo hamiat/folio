@@ -74,8 +74,7 @@ const Skills: React.FC = () => {
       <h3>Hyper Island<span className={style.city}>, Stockholm (Sweden) </span></h3>
         <div className={style.jobTitleDiv}>
           <h4>Frontend Developer</h4>
-          <p>August 2020 - April 2022 </p>
-        </div>
+          <span className={style.expSpan}>August 2020 - April 2022 </span></div>
        
         <p>
           - Frontend developer education centering around the web
@@ -92,8 +91,7 @@ const Skills: React.FC = () => {
       <h3>Hankuk University of Foreign studies<span className={style.city}>, Seoul (South Korea) </span></h3>
         <div className={style.jobTitleDiv}>
           <h4>Exchange Year</h4>
-          <p>August 2014 - June 2015</p>
-        </div>
+          <span className={style.expSpan}>August 2014 - June 2015</span></div>
         
         <p>
           - Emphasis on intercultural skills development and the Korean
@@ -105,8 +103,7 @@ const Skills: React.FC = () => {
       <h3>Mälardalens högskola<span className={style.city}>, Västerås (Sweden)</span></h3>
         <div className={style.jobTitleDiv}>
           <h4>Aeronautical Engineering</h4>
-          <p>August 2011 - June 2013 </p>
-        </div>
+          <span className={style.expSpan}>August 2011 - June 2013 </span></div>
         
         <p>- Bachelor’s degree</p>
       </motion.div>
@@ -130,8 +127,7 @@ const Skills: React.FC = () => {
         <h3>Judilica AB</h3>
         <div className={style.jobTitleDiv}>
           <h4>Frontend Developer Intern</h4>
-          <p>September 2021 - ongoing </p>
-        </div>
+          <span className={style.expSpan}>September 2021 - ongoing </span></div>
 
         <p>
           - Created the company’s landing page, from design to deployment
@@ -146,8 +142,7 @@ const Skills: React.FC = () => {
       <h3> Datapath International AB </h3>
         <div className={style.jobTitleDiv}>
         <h4>Procurement Specialist & Order Coordinator</h4>
-          <p>June 2019 - August 2020 </p>
-        </div>
+        <span className={style.expSpan}>June 2019 - August 2020 </span></div>
         
         <p>
           - Operational procurement and purchasing. <br />
@@ -161,8 +156,7 @@ const Skills: React.FC = () => {
       <motion.div variants={contentVariants} className={style.exp}>
         <div className={style.jobTitleDiv}>
           <h4>Customer Service Engineer</h4>
-          <p>March 2016 - June 2019 </p>
-        </div>
+          <span className={style.expSpan}>March 2016 - June 2019 </span></div>
     
         <p>
           - POC for aftersales, providing support and service via phone

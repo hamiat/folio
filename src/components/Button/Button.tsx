@@ -16,7 +16,7 @@ const btnVariants = {
   hover: {
     y: -2,
     x: -2,
-    boxShadow: " 2px 2px  #ff8d0b",
+    boxShadow: " 2px 2px  #FFC380",
     transition: {
       ease: "easeOut",
     },
@@ -37,7 +37,7 @@ function Button({ children, onClick }: iProps) {
         onClick={onClick}
         className={style.button}
       >
-        {children}{" "}
+        {children}
       </motion.div>
     </>
   );

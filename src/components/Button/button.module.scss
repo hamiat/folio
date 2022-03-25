@@ -1,17 +1,14 @@
 @import '../../styles/main.module.scss';
 
 .button {
-    padding: 10px;
-    width: max-content;
-    background-color: $lightBlack;
-    color: $orange;
-    font-family: montserrat;
-    font-weight: 700;
-    font-size: 18px;
-    place-self: self-end;
-    cursor: pointer;
+  padding: 10px 12px;
+  width: max-content;
+  background-color: $background;
+  border: 1px solid $tertiary;
+  color: $tertiary;
+  cursor: pointer;
+  border-radius: 5px;
     @include box;
-    
     @include md {
         font-size: 16px;
       }

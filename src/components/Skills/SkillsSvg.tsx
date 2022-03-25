@@ -63,13 +63,12 @@ const SkillsSvg: React.FC = () => {
       </motion.h2>
 
       <motion.div className={style.softSkills}>
-        <p>
+        <p className={style.softText}>
           Swedish, English, Luganda - Fluent <br />
           Korean - Intermediate{" "}
         </p>
-        <br />
-        <br />
-        <p>
+       
+        <p className={style.softText}>
           Problem solving, Empathy, Active listening, Time and self management
           Adaptivity, Teamwork, Positive attitude{" "}
         </p>

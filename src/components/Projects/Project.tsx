@@ -1,5 +1,6 @@
 import style from "./projects.module.scss";
 import { useState } from "react";
+import Button from "../Button/Button";
 
 export type IProps = {
   index: number;
@@ -31,9 +32,9 @@ const Project: React.FC<IProps> = ({
   return (
     <div className={style.projectsDiv}>
       <h3 className={style.projectsTitle}>{title}</h3>
-      <button className={style.projectBtn} onClick={showProject}>
+      <Button onClick={showProject}>
         {hidden ? "Show less" : "Show more"}
-      </button>
+      </Button> 
 
       <div className={`${hidden ? style.showMore : style.showLess}`}>
         <p className={style.projectWrapper}>

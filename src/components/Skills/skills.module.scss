@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: space-between;
 
+
   @include md {
     width: 75%;
   }
@@ -23,7 +24,6 @@
 
   h2 {
     cursor: pointer;
-color: $redish;
     .leftArrow {
       @include breakpoint(500px) {
         display: none;
@@ -56,11 +56,17 @@ color: $redish;
     flex-direction: column;
     gap: 16px;
     margin-top: -$mn;
+    
 
     .exp {
       display: inline-flex;
       flex-direction: column;
+      position: relative;
       gap: 8px;
+      padding: 28px;
+      margin-top: 28px;
+     @include backgroundBox;
+     color: $secondary;
 
       .city {
         font-size: 14px;
@@ -70,9 +76,18 @@ color: $redish;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: $redish;
         margin: -4px 0px;
-        p {
+        color: $primary;
+        
+        h4 {
+        
+          @include sm {
+            width: 100%;
+            padding: 24px 0 4px 0;
+          }
+        }
+        .expSpan {
+          color: $primary;
           @include textShadowSmaller;
           @include sm {
             font-size: 14px;
@@ -85,12 +100,7 @@ color: $redish;
           flex-direction: column;
         }
       }
-      h4 {
-        @include sm {
-          width: 100%;
-          padding: 24px 0 4px 0;
-        }
-      }
+     
       p {
         padding: 0 0 0 24px;
         @include md {
@@ -103,11 +113,7 @@ color: $redish;
         }
       }
 
-      p {
-        @include sm {
-          margin-bottom: -4px;
-        }
-      }
+      
     }
   }
 
@@ -157,14 +163,21 @@ color: $redish;
 
   .softSkills {
     padding-bottom: 24px;
-    color: $darkOrange;
+    color: $secondary;
     font-size: 20px;
     grid-row: 2;
     text-align: center;
+    position: relative;
 
     @include sm {
       width: 95%;
       padding-bottom: $mn;
+    }
+
+    .softText {
+  
+      @include backgroundBox;
+      
     }
   }
 

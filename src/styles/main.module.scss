@@ -4,20 +4,27 @@
 
 /* Variables  */
 $black: #000000;
-$lightBlack: #121212;
+$background: #121212;
 $lightOrange: #FFC380;
-$orange: #f7d7dc;
-$darkOrange: #f7d7dc;
-$redish: #ff8bb2;
-$pink: #ffc0cb;
-$darkPink: #ff8bb2;
+
+$primary: #CF6679;
+$secondary: #FFC380;
+$tertiary: #de96A3;
+$quaternary: #ff8bb2; 
+$links: rgb(178, 230, 178);
+
+$darkOrange: yellow;
+
+$pink: #ff8bb2;
+$darkPink: white;
+$primaryBg: #251C1F;
 
 $mn: 48px;
 
 /* Global styles */
 h2,
 h4 {
-  color: $redish;
+  color: $primary;
   
 }
 
@@ -51,7 +58,6 @@ h3 {
 h4 {
   @include textShadowSmaller;
   font-size: 18px;
-  color: $redish;
   margin: 0 0 4px 0;
   @include lg {
     font-size: 18px;
@@ -70,13 +76,28 @@ p {
   line-height: 1.5;
 }
 
+button {
+  padding: 10px 12px;
+  width: max-content;
+  background-color: $black;
+  border: 1px solid $tertiary;
+  color: $tertiary;
+  cursor: pointer;
+  border-radius: 2px;
+
+  &:hover {
+    background-color: $primary;
+    color: $black;
+  }
+}
+
 body {
-  background-color: $lightBlack;
+  background-color: $background;
   font-family: montserrat;
 
   .main {
-    background-color: $lightBlack;
-    color: $orange;
+    background-color: $background;
+    color: $primary;
     max-width: 1440px;
     display: grid;
     grid-template-columns: 1fr 1fr;
