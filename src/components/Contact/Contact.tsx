@@ -45,7 +45,7 @@ const btnVariants: Variants = {
   hover: {
     y: -2,
     x: -2,
-    boxShadow: " 2px 2px  #ff8d0b",
+    boxShadow: " 2px 2px  #ffc380",
     transition: {
       ease: "easeOut",
     },

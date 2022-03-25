@@ -10,10 +10,12 @@
   align-items: center;
   height: 80vh;
   z-index: 5;
+  padding-top: 96px;
 
   @include sm {
     grid-column: 1 / span 1;
     grid-row: 7;
+    padding-top: 28px;
   }
 
   .contactLinks {

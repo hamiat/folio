@@ -61,10 +61,10 @@ const Skills: React.FC = () => {
     <motion.h2
       onClick={changeTitle}
       variants={titleVariants}
-      whileHover={{ color: "#ff8d0b" }}
+      whileHover={{ color: "#ffc380" }}
     >
       {title}{" "}
-      <motion.span initial={{color: "#ff8d0b"}} className={style.clickMe}>
+      <motion.span initial={{color: "#ffc380"}} className={style.clickMe}>
       <FaLongArrowAltLeft className={style.leftArrow}/> 
         <FaLongArrowAltUp className={style.upArrow}/> click me for experiences!
       </motion.span>{" "}
@@ -114,10 +114,10 @@ const Skills: React.FC = () => {
     <motion.h2
       onClick={changeTitle}
       variants={titleVariants}
-      whileHover={{ color: "#ff8d0b" }}
+      whileHover={{ color: "#ffc380" }}
     >
       {title}{" "}
-      <motion.span initial={{color: "#ff8d0b"}}  className={style.clickMe}>
+      <motion.span initial={{color: "#ffc380"}}  className={style.clickMe}>
         <FaLongArrowAltLeft className={style.leftArrow}/> 
         <FaLongArrowAltUp className={style.upArrow}/> click me for education!
       </motion.span>{" "}

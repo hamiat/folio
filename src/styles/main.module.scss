@@ -74,20 +74,9 @@ h4 {
 p {
   margin: 0;
   line-height: 1.5;
-}
+  @include sm {
 
-button {
-  padding: 10px 12px;
-  width: max-content;
-  background-color: $black;
-  border: 1px solid $tertiary;
-  color: $tertiary;
-  cursor: pointer;
-  border-radius: 2px;
-
-  &:hover {
-    background-color: $primary;
-    color: $black;
+    line-height: 32px;
   }
 }
 
