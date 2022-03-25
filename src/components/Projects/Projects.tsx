@@ -18,6 +18,15 @@ const titleVariants: Variants = {
   },
 };
 
+const contentVariants: Variants = {
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+  },
+};
+
 export default function Projects(): JSX.Element {
   const [projects, setProjects] = useState<Omit<IProps, "index" | "setProjects">[]>([
     {
@@ -50,11 +59,11 @@ export default function Projects(): JSX.Element {
       className={style.projects}
     >
       <motion.h2 variants={titleVariants}>Some of my projects</motion.h2>
-      <div className={style.projectsContainer}>
+      <motion.div variants={contentVariants} className={style.projectsContainer}>
         {projects.map((project, index) => (
           <Project {...project} setProjects={setProjects} index={index} />
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   );
 }
