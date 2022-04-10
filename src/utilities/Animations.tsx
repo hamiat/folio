@@ -1,3 +1,8 @@
+export const parentContainer = {
+  offscreen: {},
+  onscreen: {},
+};
+
 export const opacityVariants = {
   initial: {
     opacity: 0,
@@ -56,7 +61,39 @@ export const btnVariants = {
   },
 };
 
-/***************** About ****************** */
+/***************** Skills ****************** */
+
+export const skillsSVGContentVariants = {
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+  },
+  rotateHover: {
+    rotate: 15,
+    transition: {
+      type: "spring",
+      duration: 3,
+    },
+  },
+};
+
+export const iconsSvg = {
+  offscreen: {
+    opacity: 0,
+    x: -500,
+  },
+  onscreen: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      type: "spring",
+      stiffness: 120,
+    },
+  },
+};
 
 /***************** Hero ****************** */
 export const startVariants = {
@@ -145,7 +182,7 @@ export const faceSVGPathVariants = {
     opacity: 1,
     pathLength: 1,
     transition: {
-    delay: 0.5,
+      delay: 0.5,
       duration: 1.5,
       ease: "easeInOut",
     },

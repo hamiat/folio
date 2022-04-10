@@ -2,34 +2,11 @@ import style from "./skills.module.scss";
 import { motion, Variants } from "framer-motion";
 import { FaLongArrowAltLeft, FaLongArrowAltUp } from "react-icons/fa";
 import { useState } from "react";
+import { titleVariants, contentVariants, parentContainer } from "../../utilities/Animations";
 
 
-const titleVariants: Variants = {
-  offscreen: {
-    y: 0,
-    opacity: 0,
-  },
-  onscreen: {
-    y: "-3vh",
-    opacity: 1,
-    transition: { 
-      duration: 0.7,
-    },
-  },
-};
 
-const contentVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-  },
-  onscreen: {
-    opacity: 1,
-  },
-};
-const parentContainer: Variants = {
-  offscreen: {},
-  onscreen: {},
-};
+
 
 const Skills: React.FC = () => {
   const [title, setTitle] = useState("Experience");
