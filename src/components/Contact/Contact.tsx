@@ -1,5 +1,5 @@
 import style from "./contact.module.scss";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import Flower from "../Flower/Flower";
 import {
   titleVariants,
