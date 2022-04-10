@@ -2,12 +2,13 @@ import { motion } from "framer-motion";
 import style from "./button.module.scss";
 import { btnVariants } from "../../utilities/Animations";
 
-export interface iProps {
+export interface Props {
   children: React.ReactChild | React.ReactChild[];
   onClick?: any;
 }
 
-function Button({ children, onClick }: iProps) {
+const Button: React.FC<Props> = ( { children, onClick } ) =>
+{
   return (
     <>
       <motion.div

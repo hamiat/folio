@@ -1,12 +1,12 @@
 import style from "./projects.module.scss";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Project, { IProps } from "./Project";
+import Project, { Props } from "./Project";
 import { titleVariants, opacityVariants } from "../../utilities/Animations";
 
-export default function Projects(): JSX.Element {
+const Projects: React.FC = () => {
   const [projects, setProjects] = useState<
-    Omit<IProps, "index" | "setProjects">[]
+    Omit<Props, "index" | "setProjects">[]
   >([
     {
       id: 1,
@@ -47,3 +47,5 @@ export default function Projects(): JSX.Element {
     </motion.section>
   );
 }
+
+export default Projects  

@@ -12,7 +12,7 @@ export type Props = {
   showModal: boolean;
 };
 
-const About = ({ showModal }: Props) => {
+const About : React.FC<Props> = ({ showModal }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   return (
     <motion.section

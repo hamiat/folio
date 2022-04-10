@@ -2,7 +2,7 @@ import style from "./projects.module.scss";
 import { useState } from "react";
 import Button from "../Button/Button";
 
-export type IProps = {
+export type Props = {
   index: number;
   id: number;
   title: string;
@@ -14,7 +14,7 @@ export type IProps = {
   setProjects?: any
 };
 
-const Project: React.FC<IProps> = ({
+const Project: React.FC<Props> = ({
   id,
   title,
   image,

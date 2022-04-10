@@ -2,9 +2,11 @@ import style from "./skills.module.scss";
 import { motion } from "framer-motion";
 import { Tween, ScrollTrigger } from "react-gsap";
 import { useMediaQuery } from "react-responsive";
-import { titleVariants , skillsSVGContentVariants, iconsSvg } from "../../utilities/Animations";
-
-
+import {
+  titleVariants,
+  skillsSVGContentVariants,
+  iconsSvg,
+} from "../../utilities/Animations";
 
 const SkillsSvg: React.FC = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
@@ -25,7 +27,7 @@ const SkillsSvg: React.FC = () => {
           Swedish, English, Luganda - Fluent <br />
           Korean - Intermediate{" "}
         </p>
-       
+
         <p className={style.softText}>
           Problem solving, Empathy, Active listening, Time and self management
           Adaptivity, Teamwork, Positive attitude{" "}
@@ -666,8 +668,6 @@ const SkillsSvg: React.FC = () => {
           </Tween>
         </ScrollTrigger>
       )}
-
-     
     </motion.section>
   );
 };

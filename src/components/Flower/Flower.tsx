@@ -4,7 +4,8 @@ import style from "./flower.module.scss";
 export type Props = {
   classNames: string;
 };
-const Flower = ({ classNames }: Props) => {
+
+const Flower : React.FC<Props> =  ({ classNames }) => {
   return (
     <>
       <motion.svg
