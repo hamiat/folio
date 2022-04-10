@@ -1,11 +1,41 @@
-import { motion, Variants } from "framer-motion";
-
 export const opacityVariants = {
   initial: {
     opacity: 0,
   },
   animate: {
     opacity: 1,
+  },
+};
+
+
+
+/***************** About ****************** */
+
+
+export const titleVariants = {
+  offscreen: {
+    y: 0,
+    opacity: 0,
+  },
+  onscreen: {
+    y: "-3vh",
+    opacity: 1,
+    transition: {
+      ease: "easeOut",
+      duration: 1,
+    },
+  },
+};
+
+export const contentVariants = {
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+    },
   },
 };
 

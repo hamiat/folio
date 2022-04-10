@@ -1,43 +1,12 @@
 import style from "./about.module.scss";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaLongArrowAltDown } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
-
-const delayStartVariants = {
-  offscreen: {
-    opacity: 0,
-  },
-  onscreen: {
-    opacity: 1,
-  },
-};
-
-const titleVariants: Variants = {
-  offscreen: {
-    y: 0,
-    opacity: 0,
-  },
-  onscreen: {
-    y: "-3vh",
-    opacity: 1,
-    transition: {
-      ease: "easeOut",
-      duration: 1,
-    },
-  },
-};
-
-const contentVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-  },
-  onscreen: {
-    opacity: 1,
-    transition: {
-      duration: 1.5,
-    },
-  },
-};
+import {
+  opacityVariants,
+  titleVariants,
+  contentVariants,
+} from "../../utilities/Animations";
 
 export type Props = {
   showModal: boolean;
@@ -47,7 +16,7 @@ const About = ({ showModal }: Props) => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   return (
     <motion.section
-      variants={delayStartVariants}
+      variants={opacityVariants}
       initial="offscreen"
       animate="onscreen"
       className={style.rightContent}
