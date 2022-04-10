@@ -7,11 +7,6 @@ export const opacityVariants = {
   },
 };
 
-
-
-/***************** About ****************** */
-
-
 export const titleVariants = {
   offscreen: {
     y: 0,
@@ -22,7 +17,7 @@ export const titleVariants = {
     opacity: 1,
     transition: {
       ease: "easeOut",
-      duration: 1,
+      duration: 0.7,
     },
   },
 };
@@ -38,6 +33,30 @@ export const contentVariants = {
     },
   },
 };
+
+export const btnVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      mass: 0.4,
+    },
+  },
+  hover: {
+    y: -2,
+    x: -2,
+    boxShadow: " 2px 2px  #FFC380",
+    transition: {
+      ease: "easeOut",
+    },
+  },
+};
+
+/***************** About ****************** */
 
 /***************** Hero ****************** */
 export const startVariants = {

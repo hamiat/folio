@@ -1,56 +1,11 @@
 import style from "./contact.module.scss";
 import { motion, Variants } from "framer-motion";
 import Flower from "../Flower/Flower";
-
-const titleVariants: Variants = {
-  offscreen: {
-    y: 0,
-    opacity: 0,
-  },
-  onscreen: {
-    y: "-3vh",
-    opacity: 1,
-    transition: {
-      ease: "easeOut",
-      duration: 0.7,
-    },
-  },
-};
-
-const contentVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-  },
-  onscreen: {
-    opacity: 1,
-    transition: {
-      ease: "easeInOut",
-      duration: 1.5,
-    },
-  },
-};
-
-const btnVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-  },
-  onscreen: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      mass: 0.4,
-    },
-  },
-  hover: {
-    y: -2,
-    x: -2,
-    boxShadow: " 2px 2px  #ffc380",
-    transition: {
-      ease: "easeOut",
-    },
-  },
-};
+import {
+  titleVariants,
+  contentVariants,
+  btnVariants,
+} from "../../utilities/Animations";
 
 const Contact: React.FC = () => {
   return (
