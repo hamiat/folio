@@ -1,34 +1,13 @@
 import style from "./projects.module.scss";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import Project, { IProps } from "./Project";
-
-const titleVariants: Variants = {
-  offscreen: {
-    y: 0,
-    opacity: 0,
-  },
-  onscreen: {
-    y: "-3vh",
-    opacity: 1,
-    transition: {
-      ease: "easeOut",
-      duration: 0.7,
-    },
-  },
-};
-
-const contentVariants: Variants = {
-  offscreen: {
-    opacity: 0,
-  },
-  onscreen: {
-    opacity: 1,
-  },
-};
+import { titleVariants, opacityVariants } from "../../utilities/Animations";
 
 export default function Projects(): JSX.Element {
-  const [projects, setProjects] = useState<Omit<IProps, "index" | "setProjects">[]>([
+  const [projects, setProjects] = useState<
+    Omit<IProps, "index" | "setProjects">[]
+  >([
     {
       id: 1,
       title: "8 Great Repositories",
@@ -49,8 +28,6 @@ export default function Projects(): JSX.Element {
     },
   ]);
 
- 
-
   return (
     <motion.section
       initial="offscreen"
@@ -59,7 +36,10 @@ export default function Projects(): JSX.Element {
       className={style.projects}
     >
       <motion.h2 variants={titleVariants}>Some of my projects</motion.h2>
-      <motion.div variants={contentVariants} className={style.projectsContainer}>
+      <motion.div
+        variants={opacityVariants}
+        className={style.projectsContainer}
+      >
         {projects.map((project, index) => (
           <Project {...project} setProjects={setProjects} index={index} />
         ))}
