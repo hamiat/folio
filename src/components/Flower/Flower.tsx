@@ -5,7 +5,7 @@ export type Props = {
   classNames: string;
 };
 
-const Flower : React.FC<Props> =  ({ classNames }) => {
+const Flower: React.FC<Props> = ({ classNames }) => {
   return (
     <>
       <motion.svg

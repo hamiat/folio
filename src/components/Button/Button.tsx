@@ -7,8 +7,7 @@ export interface Props {
   onClick?: any;
 }
 
-const Button: React.FC<Props> = ( { children, onClick } ) =>
-{
+const Button: React.FC<Props> = ({ children, onClick }) => {
   return (
     <>
       <motion.div
@@ -22,6 +21,6 @@ const Button: React.FC<Props> = ( { children, onClick } ) =>
       </motion.div>
     </>
   );
-}
+};
 
 export default Button;
