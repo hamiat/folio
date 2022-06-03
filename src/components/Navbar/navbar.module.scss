@@ -7,12 +7,12 @@ nav {
     flex-direction: column;
     position: fixed;
 
-    a{
-        color: $secondary;
-        font-size: 18px;
-        &:hover {
-            color: $primary;
-        }
+    a {
+      color: $secondary;
+      font-size: 18px;
+      &:hover {
+        color: $primary;
+      }
     }
   }
 }

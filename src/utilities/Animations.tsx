@@ -101,11 +101,9 @@ export const btnVariants = {
     x: -2,
     boxShadow: " 2px 2px  #FFC380",
     background: "#transparent",
-    color: "#FFC380"
+    color: "#FFC380",
   },
 };
-
-
 
 /***************** Skills ****************** */
 

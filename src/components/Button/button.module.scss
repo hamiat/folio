@@ -1,4 +1,4 @@
-@import '../../styles/main.module.scss';
+@import "../../styles/main.module.scss";
 
 .button {
   padding: 10px 12px;
@@ -6,16 +6,9 @@
   border: 1px solid $tertiary;
   cursor: pointer;
   border-radius: 5px;
-    @include box;
+  @include box;
 
-    
- 
-  
-    @include md {
-        font-size: 16px;
-      }
-    
-    
-    
+  @include md {
+    font-size: 16px;
+  }
 }
-

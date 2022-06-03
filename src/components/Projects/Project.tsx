@@ -12,7 +12,7 @@ export type Props = {
   text: string;
   url: string;
   urlText: string;
-  setProjects?: any
+  setProjects?: any;
 };
 
 const Project: React.FC<Props> = ({
@@ -33,27 +33,28 @@ const Project: React.FC<Props> = ({
   return (
     <div id="projects" className={style.projectsDiv}>
       <h3 className={style.projectsTitle}>{title}</h3>
-      <motion.button initial="initial" animate="animate" whileHover="hover" variants={btnVariants}  className={style.projectBtn} onClick={showProject}>
+      <motion.button
+        initial="initial"
+        animate="animate"
+        whileHover="hover"
+        variants={btnVariants}
+        className={style.projectBtn}
+        onClick={showProject}
+      >
         {hidden ? "Show less" : "Show more"}
-      </motion.button> 
+      </motion.button>
 
       <div className={`${hidden ? style.showMore : style.showLess}`}>
-        <p className={style.projectWrapper}>
-          {" "}
-          <a className={style.projectUrl} href={url}>
-            {" "}
-            {urlText}
-          </a>
-        </p>
         <img className={style.projectImage} src={image} alt={alt} />
+        <div className={style.projectDesc}>
+          <p className={style.projectText}>{text}</p>
+          <p className={style.projectWrapper}>
+            <a className={style.projectUrl} href={url}>
+              {urlText}
+            </a>
+          </p>
+        </div>
       </div>
-      <p
-        className={`${hidden ? style.showMore : style.showLess} ${
-          style.projectText
-        }`}
-      >
-        {text}
-      </p>
     </div>
   );
 };

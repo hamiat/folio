@@ -1,6 +1,5 @@
 import style from "./about.module.scss";
 import { motion } from "framer-motion";
-import { FaLongArrowAltDown } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 import {
   opacityVariants,
@@ -45,9 +44,6 @@ const About : React.FC<Props> = ({ showModal }) => {
           My name is Hamiat and I am currently studying to become a web
           developer.
         </motion.p>
-        <motion.div variants={contentVariants} className={style.arrow}>
-          <FaLongArrowAltDown />
-        </motion.div>
       </motion.div>
     </motion.section>
   );

@@ -46,6 +46,6 @@ const Projects: React.FC = () => {
       </motion.div>
     </motion.section>
   );
-}
+};
 
-export default Projects  
+export default Projects;

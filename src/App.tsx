@@ -1,13 +1,11 @@
 import style from "./styles/main.module.scss";
-import About from "./components/About/About";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Button from "./components/Button/Button";
 import { useMediaQuery } from "react-responsive";
-
-import Skills from "./components/Skills/Skills";
+import Button from "./components/Button/Button";
+import About from "./components/About/About";
+import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
-import SkillsSvg from "./components/Skills/SkillsSvg";
 import Flower from "./components/Flower/Flower";
 import Projects from "./components/Projects/Projects";
 import {
@@ -16,7 +14,7 @@ import {
   goToSideVariants,
   opacityVariants,
 } from "./utilities/Animations";
-import Navbar from "./components/Navbar/Navbar";
+
 
 const App: React.FC = () => {
   const [mode, setMode] = useState(true);
@@ -470,7 +468,6 @@ const App: React.FC = () => {
           }
           className={style.header}
         >
-           
           <Button onClick={handleToggle}>
             {mode ? "Light mode" : "Dark mode"}
           </Button>
@@ -480,9 +477,7 @@ const App: React.FC = () => {
 
       <About showModal={showModal} />
       <Projects />
-    
       <Contact />
-     
     </main>
   );
 };
