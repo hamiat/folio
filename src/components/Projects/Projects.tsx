@@ -26,6 +26,15 @@ const Projects: React.FC = () => {
       url: "https://hamiat.github.io/spaces/",
       urlText: "Try this out (for desktop)",
     },
+    {
+      id: 3,
+      title: "A funny story",
+      image: "/assets/theme-changer.png",
+      alt: "example of an app",
+      text: "A funny story, to be enjoyed with your favorite color. Or at least of the ones available. Created with React, using the ContextAPI + useReducer.",
+      url: "https://codesandbox.io/s/github/hamiat/theme-color-changer",
+      urlText: "Try this out @ codesandbox",
+    },
   ]);
 
   return (
