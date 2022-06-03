@@ -16,6 +16,10 @@ $links: rgb(178, 230, 178);
 $mn: 48px;
 
 /* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
 h2,
 h4 {
   color: $primary;
