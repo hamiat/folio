@@ -99,13 +99,11 @@ body {
       grid-column: 2 / span 1;
       grid-row: 1;
       place-self: flex-end;
-      margin-top: $mn;
       margin-right: 24px;
       z-index: 50;
       display: flex;
       flex-direction: column;
-      margin-bottom: -60px;
-      gap: 36px;
+      margin-bottom: 28px;
 
       @include lg {
         margin-right: $mn;

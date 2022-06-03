@@ -3,14 +3,14 @@
 nav {
   ul {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     flex-direction: column;
     position: fixed;
 
     a {
-        background-color: $background;
+      background-color: $background;
       color: $secondary;
-      font-size: 18px;
+      font-size: 16px;
       &:hover {
         color: $primary;
       }
