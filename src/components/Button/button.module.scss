@@ -3,18 +3,13 @@
 .button {
   padding: 10px 12px;
   width: max-content;
-  background-color: $background;
   border: 1px solid $tertiary;
-  color: $tertiary;
   cursor: pointer;
   border-radius: 5px;
     @include box;
 
     
-  &:hover {
-    background-color: $primary;
-    color: $black;
-  }
+ 
   
     @include md {
         font-size: 16px;

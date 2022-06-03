@@ -1,6 +1,7 @@
 import style from "./projects.module.scss";
 import { useState } from "react";
-import Button from "../Button/Button";
+import { btnVariants } from "../../utilities/Animations";
+import { motion } from "framer-motion";
 
 export type Props = {
   index: number;
@@ -32,9 +33,9 @@ const Project: React.FC<Props> = ({
   return (
     <div id="projects" className={style.projectsDiv}>
       <h3 className={style.projectsTitle}>{title}</h3>
-      <Button onClick={showProject}>
+      <motion.button initial="initial" animate="animate" whileHover="hover" variants={btnVariants}  className={style.projectBtn} onClick={showProject}>
         {hidden ? "Show less" : "Show more"}
-      </Button> 
+      </motion.button> 
 
       <div className={`${hidden ? style.showMore : style.showLess}`}>
         <p className={style.projectWrapper}>

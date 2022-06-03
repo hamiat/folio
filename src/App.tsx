@@ -479,7 +479,7 @@ const App: React.FC = () => {
       )}
 
       <About showModal={showModal} />
-   
+      <Projects />
     
       <Contact />
      

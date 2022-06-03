@@ -12,8 +12,10 @@ const Button: React.FC<Props> = ({ children, onClick }) => {
     <>
       <motion.div
         variants={btnVariants}
-        whileHover="hover"
-        whileTap="hover"
+        initial="initial"
+        animate="animate"
+        whileHover="hoverTwo"
+        whileTap="hoverTwo"
         onClick={onClick}
         className={style.button}
       >

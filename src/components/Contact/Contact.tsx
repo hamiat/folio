@@ -10,7 +10,6 @@ import {
 const Contact: React.FC = () => {
   return (
     <motion.section
-    id="contact"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.4 }}
@@ -20,8 +19,8 @@ const Contact: React.FC = () => {
       <motion.div className={style.contactLinks}>
         <motion.a
           variants={btnVariants}
-          whileHover="hover"
-          whileTap="hover"
+          whileHover="hoverThree"
+          whileTap="hoverThree"
           id="github"
           href="https://github.com/hamiat"
         >
@@ -29,8 +28,8 @@ const Contact: React.FC = () => {
         </motion.a>
         <motion.a
           variants={btnVariants}
-          whileHover="hover"
-          whileTap="hover"
+          whileHover="hoverThree"
+          whileTap="hoverThree"
           id="linkedin"
           href="https://www.linkedin.com/in/hamiat-nalwanga-b5a93bb1/"
         >
@@ -38,8 +37,8 @@ const Contact: React.FC = () => {
         </motion.a>
         <motion.a
           variants={btnVariants}
-          whileHover="hover"
-          whileTap="hover"
+          whileHover="hoverThree"
+          whileTap="hoverThree"
           id="mail"
           href="mailto:hamiat.n@hotmai.com"
         >

@@ -42,9 +42,11 @@ export const contentVariants = {
 export const btnVariants = {
   initial: {
     opacity: 0,
+    background: "transparent",
   },
   animate: {
     opacity: 1,
+    background: "transparent",
     transition: {
       type: "spring",
       stiffness: 120,
@@ -55,11 +57,55 @@ export const btnVariants = {
     y: -2,
     x: -2,
     boxShadow: " 2px 2px  #FFC380",
+    background: "#CF6679",
+    color: "#222",
     transition: {
       ease: "easeOut",
     },
   },
+
+  initialTwo: {
+    opacity: 0,
+    background: "transparent",
+  },
+  animateTwo: {
+    opacity: 1,
+    background: "transparent",
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      mass: 0.4,
+    },
+  },
+  hoverTwo: {
+    y: -2,
+    x: -2,
+    boxShadow: " 2px 2px  #CF6679",
+    background: "#FFC380",
+    color: "#222",
+    transition: {
+      ease: "easeOut",
+    },
+  },
+
+  initialThree: {
+    opacity: 0,
+    background: "transparent",
+  },
+  animateThree: {
+    opacity: 1,
+    background: "transparent",
+  },
+  hoverThree: {
+    y: -2,
+    x: -2,
+    boxShadow: " 2px 2px  #FFC380",
+    background: "#transparent",
+    color: "#FFC380"
+  },
 };
+
+
 
 /***************** Skills ****************** */
 
