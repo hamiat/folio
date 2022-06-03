@@ -8,6 +8,7 @@ nav {
     position: fixed;
 
     a {
+        background-color: $background;
       color: $secondary;
       font-size: 18px;
       &:hover {

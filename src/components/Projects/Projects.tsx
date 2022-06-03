@@ -30,6 +30,7 @@ const Projects: React.FC = () => {
 
   return (
     <motion.section
+      id="projects"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.4 }}
