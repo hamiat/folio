@@ -30,7 +30,7 @@ const Project: React.FC<Props> = ({
   };
 
   return (
-    <div className={style.projectsDiv}>
+    <div id="projects" className={style.projectsDiv}>
       <h3 className={style.projectsTitle}>{title}</h3>
       <Button onClick={showProject}>
         {hidden ? "Show less" : "Show more"}

@@ -1,0 +1,15 @@
+@import "../../styles/main.module.scss";
+
+nav {
+  ul {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    position: fixed;
+
+    a{
+        color: $secondary;
+        font-size: 16px;
+    }
+  }
+}

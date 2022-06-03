@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Button from "./components/Button/Button";
 import { useMediaQuery } from "react-responsive";
+
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
 import SkillsSvg from "./components/Skills/SkillsSvg";
@@ -15,6 +16,7 @@ import {
   goToSideVariants,
   opacityVariants,
 } from "./utilities/Animations";
+import Navbar from "./components/Navbar/Navbar";
 
 const App: React.FC = () => {
   const [mode, setMode] = useState(true);
@@ -36,7 +38,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className={style.main}>
+    <main id="home" className={style.main}>
       <motion.section
         variants={startVariants}
         initial={isMobile ? "initialMobile" : "initial"}
@@ -457,7 +459,7 @@ const App: React.FC = () => {
       </motion.section>
 
       {!isMobile && (
-        <motion.div
+        <motion.header
           variants={opacityVariants}
           initial="initial"
           animate="animate"
@@ -466,21 +468,21 @@ const App: React.FC = () => {
               ? { delay: 6, duration: 1.5 }
               : { delay: 1.5, duration: 1.5 }
           }
-          className={style.btnTwo}
+          className={style.header}
         >
+           
           <Button onClick={handleToggle}>
             {mode ? "Light mode" : "Dark mode"}
           </Button>
-        </motion.div>
+          <Navbar />
+        </motion.header>
       )}
 
       <About showModal={showModal} />
-
-      <Skills />
-      <SkillsSvg />
-      <Projects />
-
+   
+    
       <Contact />
+     
     </main>
   );
 };

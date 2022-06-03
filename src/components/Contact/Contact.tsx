@@ -10,6 +10,7 @@ import {
 const Contact: React.FC = () => {
   return (
     <motion.section
+    id="contact"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.4 }}
