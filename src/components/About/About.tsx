@@ -11,7 +11,7 @@ export type Props = {
   showModal: boolean;
 };
 
-const About : React.FC<Props> = ({ showModal }) => {
+const About: React.FC<Props> = ({ showModal }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   return (
     <motion.section
@@ -38,12 +38,9 @@ const About : React.FC<Props> = ({ showModal }) => {
       >
         <motion.h1 variants={titleVariants}>Hello there!</motion.h1>
         <motion.h2 variants={contentVariants}>
-          welcome to my online resume...
+          welcome to my portfolio
         </motion.h2>
-        <motion.p variants={contentVariants}>
-          My name is Hamiat and I am currently studying to become a web
-          developer.
-        </motion.p>
+        <motion.p variants={contentVariants}>&lt;WebDeveloper /&gt;</motion.p>
       </motion.div>
     </motion.section>
   );

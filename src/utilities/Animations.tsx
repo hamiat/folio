@@ -97,11 +97,9 @@ export const btnVariants = {
     background: "transparent",
   },
   hoverThree: {
-    y: -2,
-    x: -2,
-    boxShadow: " 2px 2px  #FFC380",
+    borderBottom: "1px dotted #FFC380 ",
     background: "#transparent",
-    color: "#FFC380",
+    
   },
 };
 

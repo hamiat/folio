@@ -10,7 +10,8 @@
   align-items: center;
   height: 80vh;
   z-index: 5;
-  padding-top: 96px;
+  padding-top: 128px;
+
 
   @include sm {
     grid-column: 1 / span 1;
@@ -25,11 +26,11 @@
     a {
       text-decoration: none;
       color: $secondary;
-      font-size: 26px;
-      width: 100%;
+      font-size: 20px;
+      width: max-content;
       text-align: center;
-      border: 1px solid rgb(73, 73, 73);
-      padding: 8px;
+     
+      padding: 10px 0  0 0  ;
     }
   }
   .flows {

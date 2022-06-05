@@ -20,6 +20,7 @@
     flex-direction: column;
     @include sm {
       place-self: center;
+      padding: 158px 0 0 0;
     }
 
     h1 {
@@ -58,7 +59,7 @@
         padding: 0 28px 0 68px;
       }
       @include sm {
-        font-size: 26px;
+        font-size: 24px;
       }
     }
 

@@ -31,7 +31,7 @@ const Project: React.FC<Props> = ({
   };
 
   return (
-    <div id="projects" className={style.projectsDiv}>
+    <div className={style.projectsDiv}>
       <h3 className={style.projectsTitle}>{title}</h3>
       <motion.button
         initial="initial"

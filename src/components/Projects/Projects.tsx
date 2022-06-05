@@ -2,9 +2,11 @@ import style from "./projects.module.scss";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Project, { Props } from "./Project";
+import { useMediaQuery } from "react-responsive";
 import { titleVariants, opacityVariants } from "../../utilities/Animations";
 
 const Projects: React.FC = () => {
+  const isMobileOrTablet = useMediaQuery({ query: "(max-width: 960px)" });
   const [projects, setProjects] = useState<
     Omit<Props, "index" | "setProjects">[]
   >([
@@ -35,6 +37,15 @@ const Projects: React.FC = () => {
       url: "https://codesandbox.io/s/github/hamiat/theme-color-changer",
       urlText: "Try this out @ codesandbox",
     },
+    {
+      id: 4,
+      title: "placeholder",
+      image: "/",
+      alt: "example of an app",
+      text: "Placeholder.",
+      url: "/",
+      urlText: "/",
+    },
   ]);
 
   return (
@@ -42,7 +53,9 @@ const Projects: React.FC = () => {
       id="projects"
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: false, amount: 0.4 }}
+      viewport={
+        isMobileOrTablet ? { once: true, amount: 0.4 } : { once: false, amount: 0.4 }
+      }
       className={style.projects}
     >
       <motion.h2 variants={titleVariants}>Some of my projects</motion.h2>
