@@ -32,7 +32,13 @@ const Project: React.FC<Props> = ({
 
   return (
     <div className={style.projectsDiv}>
-      <h3 className={style.projectsTitle}>{title}</h3>
+      <h3
+        className={`${
+          hidden ? style.projectsTitleClosed : style.projectsTitleOpen
+        }`}
+      >
+        {title}
+      </h3>
       <motion.button
         initial="initial"
         animate="animate"

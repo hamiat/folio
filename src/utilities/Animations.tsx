@@ -54,14 +54,10 @@ export const btnVariants = {
     },
   },
   hover: {
-    y: -2,
-    x: -2,
-    boxShadow: " 2px 2px  #FFC380",
-    background: "#CF6679",
-    color: "#222",
-    transition: {
-      ease: "easeOut",
-    },
+    y: -1,
+    x: -1,
+    border: "1px solid #FFC380",
+    color: "#FFC380",
   },
 
   initialTwo: {
@@ -99,7 +95,6 @@ export const btnVariants = {
   hoverThree: {
     borderBottom: "1px dotted #FFC380 ",
     background: "#transparent",
-    
   },
 };
 

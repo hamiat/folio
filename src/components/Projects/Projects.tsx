@@ -12,6 +12,15 @@ const Projects: React.FC = () => {
   >([
     {
       id: 1,
+      title: "Cakes and Stuff",
+      image: "/assets/cakenstuff.png",
+      alt: "example of an app",
+      text: "A fictional baked goods online store. Built with the MERN stack. Still in progress.",
+      url: "https://csb-f6306p.netlify.app/",
+      urlText: "Continuos deployment with Netlify",
+    },
+    {
+      id: 2,
       title: "8 Great Repositories",
       image: "/assets/repos.png",
       alt: "desktop and mobile example of an app",
@@ -20,31 +29,13 @@ const Projects: React.FC = () => {
       urlText: "Try this out @ codesandbox",
     },
     {
-      id: 2,
+      id: 3,
       title: "Space game",
       image: "/assets/spaces.png",
       alt: "desktop and mobile example of a website",
       text: "A space themed 3D gaming experience created with A-frame.",
       url: "https://hamiat.github.io/spaces/",
       urlText: "Try this out (for desktop)",
-    },
-    {
-      id: 3,
-      title: "A funny story",
-      image: "/assets/theme-changer.png",
-      alt: "example of an app",
-      text: "A funny story, to be enjoyed with your favorite color. Or at least of the ones available. Created with React, using the ContextAPI + useReducer.",
-      url: "https://codesandbox.io/s/github/hamiat/theme-color-changer",
-      urlText: "Try this out @ codesandbox",
-    },
-    {
-      id: 4,
-      title: "placeholder",
-      image: "/",
-      alt: "example of an app",
-      text: "Placeholder.",
-      url: "/",
-      urlText: "/",
     },
   ]);
 
@@ -54,7 +45,9 @@ const Projects: React.FC = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={
-        isMobileOrTablet ? { once: true, amount: 0.4 } : { once: false, amount: 0.4 }
+        isMobileOrTablet
+          ? { once: true, amount: 0.4 }
+          : { once: false, amount: 0.4 }
       }
       className={style.projects}
     >
