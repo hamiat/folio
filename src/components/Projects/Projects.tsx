@@ -37,6 +37,15 @@ const Projects: React.FC = () => {
       url: "https://hamiat.github.io/spaces/",
       urlText: "Try this out (for desktop)",
     },
+    {
+      id: 4,
+      title: "Old McDonald kids game",
+      image: "/assets/spaces.png",
+      alt: "desktop and mobile example of a website",
+      text: "An interactive kids game based on the song "Old McDonald had a farm".",
+      url: "https://creative-starburst-5e276c.netlify.app/",
+      urlText: "Try this out (for desktop)",
+    },
   ]);
 
   return (
