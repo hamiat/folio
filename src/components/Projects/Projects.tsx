@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
       image: "/assets/cakenstuff.png",
       alt: "example of an app",
       text: "A fictional baked goods online store. Built with the MERN stack. Still in progress.",
-      url: "https://effulgent-valkyrie-34b2a0.netlify.app/",
+      url: "https://cakesandstuff.netlify.app/",
       urlText: "Continuos deployment with Netlify",
     },
     {
