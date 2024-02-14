@@ -2,4 +2,4 @@
 
 #### Created with Sass, React & Typescript, and Framer Motion for the snazzy animation. 
 
-by Hamiat. 
+/Hamiat
