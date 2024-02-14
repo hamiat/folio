@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
       title: "Old McDonald kids game",
       image: "/assets/spaces.png",
       alt: "desktop and mobile example of a website",
-      text: "An interactive kids game based on the song "Old McDonald had a farm".",
+      text: "An interactive kids game based on the song 'Old McDonald had a farm'",
       url: "https://creative-starburst-5e276c.netlify.app/",
       urlText: "Try this out (for desktop)",
     },
