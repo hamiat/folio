@@ -1,4 +1,4 @@
 ## A web CV
 
-#### Created with Sass, React & Typescript.
+#### Created with Sass, React & Typescript, and Framer Motion for the snazzy animation. 
 
