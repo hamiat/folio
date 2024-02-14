@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
       alt: "example of an app",
       text: "A fictional online cake shop, apologies in advance for making you hungry. Built with the MERN stack.",
       url: "https://cakesandstuff.netlify.app/",
-      urlText: "Continuos deployment with Netlify",
+      urlText: "Try this out, on any device you please!",
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
       alt: "desktop and mobile example of a website",
       text: "A space themed 3D/VR gaming experience. Created with A-frame.",
       url: "https://hamiat.github.io/spaces/",
-      urlText: "Try this out (for desktop)",
+      urlText: "Try this out on desktop or with a VR headset.",
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
       alt: "desktop and mobile example of a website",
       text: "An interactive kids game based on the song 'Old McDonald had a farm'. Created with vanilla JavaScript.",
       url: "https://creative-starburst-5e276c.netlify.app/",
-      urlText: "Try this out (for desktop)",
+      urlText: "Try this out on desktop.",
     },    
     {
       id: 4,
@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
       alt: "desktop and mobile example of an app",
       text: "A counter that uses the GitHub REST API to retrieve information about 8 great repositories. Created with React & JSS.",
       url: "https://codesandbox.io/s/github/hamiat/eight-great-repos?file=/src/App.js:1866-1895",
-      urlText: "Try this out @ codesandbox",
+      urlText: "Try this codesandbox project on a pad or desktop.",
     },
   ]);
 
