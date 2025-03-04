@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 80vh;
+  height: 50vh;
   z-index: 5;
   padding-top: 128px;
 
@@ -34,7 +34,7 @@
     }
   }
   .flows {
-    width: 60%;
+    width: 65%;
     height: 25%;
     grid-row: 5;
     grid-column: 1 / span 2;
