@@ -54,7 +54,8 @@ const Contact: React.FC = () => {
       </motion.div>
       <motion.section variants={contentVariants} className={style.flows}>
         <Flower classNames={style.flowsOne} />
-        <p>Thanks for dropping by! &copy; Copyright {getCurrentYear()}, Hamiat Nalwanga</p>
+        <p>Thanks for dropping by!</p>
+        <p>&copy; Copyright {getCurrentYear()}, Hamiat Nalwanga</p>
         <Flower classNames={style.flowsTwo} />
       </motion.section>
     </motion.section>
