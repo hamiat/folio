@@ -17,6 +17,7 @@ const Contact: React.FC = () => {
       className={style.contact}
     >
       <motion.h2 variants={titleVariants}>Contact</motion.h2>
+      /*
       <motion.div className={style.contactLinks}>
         <motion.a
           variants={btnVariants}
@@ -27,6 +28,7 @@ const Contact: React.FC = () => {
         >
           Github
         </motion.a>
+        */
         <motion.a
           variants={btnVariants}
           whileHover="hoverThree"
