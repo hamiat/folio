@@ -24,21 +24,12 @@ const Projects: React.FC = () => {
       title: "Space game",
       image: "/assets/spaces.png",
       alt: "desktop and mobile example of a website",
-      text: "A space themed 3D/VR gaming experience. Created with A-frame.",
+      text: "A space themed 3D/VR gaming experience with 3 levels. Use the mouse to explore and click on objects and the arrows to move. Created with A-frame.",
       url: "https://hamiat.github.io/spaces/",
       urlText: "Try this out on desktop or with a VR headset.",
-    },
+    }, 
     {
       id: 3,
-      title: "Interactive children's game",
-      image: "/assets/oldmcdonld.png",
-      alt: "desktop and mobile example of a website",
-      text: "An interactive kids game based on the song 'Old McDonald had a farm'. Created with vanilla JavaScript.",
-      url: "https://creative-starburst-5e276c.netlify.app/",
-      urlText: "Try this out on desktop.",
-    },    
-    {
-      id: 4,
       title: "8 Great Repositories",
       image: "/assets/repos.png",
       alt: "desktop and mobile example of an app",
@@ -46,6 +37,15 @@ const Projects: React.FC = () => {
       url: "https://codesandbox.io/s/github/hamiat/eight-great-repos?file=/src/App.js:1866-1895",
       urlText: "Try this codesandbox project on a pad or desktop.",
     },
+    {
+      id: 4,
+      title: "Interactive children's game",
+      image: "/assets/oldmcdonld.png",
+      alt: "desktop and mobile example of a website",
+      text: "An interactive kids game based on the song 'Old McDonald had a farm'. Created with vanilla JavaScript.",
+      url: "https://creative-starburst-5e276c.netlify.app/",
+      urlText: "Try this out on desktop.",
+    },  
   ]);
 
   return (

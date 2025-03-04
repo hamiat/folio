@@ -40,7 +40,7 @@ const About: React.FC<Props> = ({ showModal }) => {
         <motion.h2 variants={contentVariants}>
           welcome to my portfolio
         </motion.h2>
-        <motion.p variants={contentVariants}>&lt;WebDeveloper /&gt;</motion.p>
+        <motion.p variants={contentVariants}>&lt;Web Developer /&gt;</motion.p>
       </motion.div>
     </motion.section>
   );

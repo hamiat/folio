@@ -1,6 +1,7 @@
 import style from "./contact.module.scss";
 import { motion } from "framer-motion";
 import Flower from "../Flower/Flower";
+
 import {
   titleVariants,
   contentVariants,
@@ -8,16 +9,20 @@ import {
 } from "../../utilities/Animations";
 
 const Contact: React.FC = () => {
+  const getCurrentYear = () => {
+    return new Date().getFullYear();
+  };
+
   return (
     <motion.section
-    id="contact"
+      id="contact"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.4 }}
       className={style.contact}
     >
       <motion.h2 variants={titleVariants}>Contact</motion.h2>
-      /*
+
       <motion.div className={style.contactLinks}>
         <motion.a
           variants={btnVariants}
@@ -28,7 +33,6 @@ const Contact: React.FC = () => {
         >
           Github
         </motion.a>
-        */
         <motion.a
           variants={btnVariants}
           whileHover="hoverThree"
@@ -53,6 +57,11 @@ const Contact: React.FC = () => {
         <p>Thanks for dropping by!</p>
         <Flower classNames={style.flowsTwo} />
       </motion.section>
+      <footer>
+        <small className={style.copyRight}>
+          &copy; Copyright {getCurrentYear()}, Hamiat Nalwanga
+        </small>
+      </footer>
     </motion.section>
   );
 };
