@@ -2,7 +2,7 @@
 @import "abstracts/_breakpoints.module.scss";
 @import "abstracts/_fonts.module.scss";
 
-/* Variables  */
+/* Variables  - Old Theme
 $black: #000000;
 $background: #121212;
 $primaryBg: #251c1f;
@@ -11,6 +11,18 @@ $secondary: #ffc380;
 $tertiary: #de96a3;
 $quaternary: #ff8bb2;
 $links: rgb(178, 230, 178);
+*/
+
+/* Variables */
+$black: #000000;
+$background: #181818;
+$primaryBg: #2d2226;
+$primary: #e57373;
+$secondary: #ffb74d;
+$tertiary: #f48fb1;
+$quaternary: #ff99c8;
+$links: #90ee90;
+
 
 $mn: 48px;
 
