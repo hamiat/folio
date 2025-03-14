@@ -5,9 +5,10 @@ import { useMediaQuery } from "react-responsive";
 import Button from "./components/Button/Button";
 import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
-import Contact from "./components/Contact/Contact";
+/*import Contact from "./components/Contact/Contact";
 import Flower from "./components/Flower/Flower";
 import Projects from "./components/Projects/Projects";
+*/
 import {
   startVariants,
   pathVariants,
@@ -43,13 +44,15 @@ const App: React.FC = () => {
         animate={isMobile ? "animateMobile" : "animate"}
         className={style.leftContent}
       >
+         {/*
         <motion.div
           variants={isMobile ? undefined : opacityVariants}
           initial="initial"
           animate="animate"
           transition={{ delay: 4, duration: 1.5, ease: "easeInOut" }}
           className={style.flowers}
-        >
+        > 
+       
           <div className={style.topFlowers}>
             <Flower classNames={style.flowerOne} />
             <Flower classNames={style.flowerTwo} />
@@ -59,6 +62,7 @@ const App: React.FC = () => {
             <Flower classNames={style.flowerFour} />
           </div>
         </motion.div>
+        */}
         <motion.svg
           variants={goToSideVariants}
           initial={isMobile ? "initialMobile" : "initial"}
@@ -476,8 +480,10 @@ const App: React.FC = () => {
       )}
 
       <About showModal={showModal} />
+      {/* 
       <Projects />
       <Contact />
+      */}
     </main>
   );
 };
