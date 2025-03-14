@@ -90,7 +90,7 @@ const About: React.FC<Props> = ({ showModal }) => {
             >
               space game
             </a>
-            <a className={style.projectUrl} href="https://zwtcv0.csb.app/" target="_blank" rel="noopener noreferrer">
+            <a className={style.projectUrl} href="https://codesandbox.io/p/sandbox/8-great-repos-qxw4g9" target="_blank" rel="noopener noreferrer">
               8 great repositories
             </a>
             <a
