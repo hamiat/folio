@@ -20,7 +20,7 @@
     flex-direction: column;
     @include sm {
       place-self: center;
-      padding: 158px 0 0 0;
+      //padding: 158px 0 0 0;
     }
 
     h1 {
@@ -104,6 +104,34 @@
       @include sm {
         margin: 0 auto;
       }
+    }
+
+
+  }
+
+  .projectsDiv {
+    display: flex;
+    gap: 12px;
+
+    .projectUrl {
+      color: $secondary;
+      font-size: 16px;
+  
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    @include md {
+      padding: 18px 0px;
+    }
+  }
+
+  .footer {
+    @include lg {
+      width: max-content;
+      margin: 0 auto;
+      padding-top: 32px;
     }
   }
 }
