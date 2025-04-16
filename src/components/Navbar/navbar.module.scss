@@ -5,15 +5,18 @@ nav {
     display: flex;
     gap: 16px;
     flex-direction: column;
-    position: fixed;
-
+    align-items: flex-end;
+    margin: -150px 0px 0px 0px;
+ 
     a {
-      background-color: $background;
+      background-color: transparent;
       text-decoration: none;
-      color: $secondary;
+      color: $primary;
       font-size: 16px;
+      font-weight: 600;
       &:hover {
-        color: $primary;
+        color: $background;
+        background-color: transparent;
       }
     }
   }

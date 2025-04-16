@@ -2,23 +2,17 @@ import style from "./styles/main.module.scss";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import Button from "./components/Button/Button";
 import About from "./components/About/About";
-import Navbar from "./components/Navbar/Navbar";
-/*import Contact from "./components/Contact/Contact";
-import Flower from "./components/Flower/Flower";
-import Projects from "./components/Projects/Projects";
-*/
+
 import {
   startVariants,
   pathVariants,
   goToSideVariants,
-  opacityVariants,
+  nameAnimationVariants,
 } from "./utilities/Animations";
 
-
 const App: React.FC = () => {
-  const [mode, setMode] = useState(true);
+  //const [mode, setMode] = useState(true);
   const [showModal, setShowModal] = useState(true);
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
 
@@ -28,13 +22,13 @@ const App: React.FC = () => {
     }, 5000);
   }, []);
 
-  const handleToggle = () => {
+      /*const handleToggle = () => {
     if (mode) {
       alert("coming soon!");
-      /* setMode(!mode) */
+   setMode(!mode) 
       setMode(mode);
     }
-  };
+  };*/
 
   return (
     <main id="home" className={style.main}>
@@ -44,8 +38,7 @@ const App: React.FC = () => {
         animate={isMobile ? "animateMobile" : "animate"}
         className={style.leftContent}
       >
-         {/*
-        <motion.div
+        {/* <motion.div
           variants={isMobile ? undefined : opacityVariants}
           initial="initial"
           animate="animate"
@@ -61,8 +54,7 @@ const App: React.FC = () => {
             <Flower classNames={style.flowerThree} />
             <Flower classNames={style.flowerFour} />
           </div>
-        </motion.div>
-        */}
+        </motion.div>*/}
         <motion.svg
           variants={goToSideVariants}
           initial={isMobile ? "initialMobile" : "initial"}
@@ -391,7 +383,7 @@ const App: React.FC = () => {
         </motion.svg>
 
         <motion.svg
-          variants={goToSideVariants}
+          variants={nameAnimationVariants}
           initial={isMobile ? "initialMobileOne" : "initial"}
           animate={isMobile ? "animateMobile" : "animate"}
           className={style.name}
@@ -460,30 +452,9 @@ const App: React.FC = () => {
         </motion.svg>
       </motion.section>
 
-      {!isMobile && (
-        <motion.header
-          variants={opacityVariants}
-          initial="initial"
-          animate="animate"
-          transition={
-            showModal && !isMobile
-              ? { delay: 6, duration: 1.5 }
-              : { delay: 1.5, duration: 1.5 }
-          }
-          className={style.header}
-        >
-          <Button onClick={handleToggle}>
-            {mode ? "Light mode" : "Dark mode"}
-          </Button>
-          <Navbar />
-        </motion.header>
-      )}
-
       <About showModal={showModal} />
-      {/* 
-      <Projects />
-      <Contact />
-      */}
+      {/*<Projects />
+      <Contact />*/}
     </main>
   );
 };

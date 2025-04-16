@@ -6,9 +6,13 @@
   border: 1px solid $tertiary;
   cursor: pointer;
   border-radius: 5px;
-  @include box;
+  @include box; 
 
   @include md {
     font-size: 16px;
-  }
+  }  
+}
+
+.button:hover a {
+  color: $background;
 }
