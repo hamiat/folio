@@ -35,7 +35,7 @@ const About: React.FC<Props> = ({ showModal }) => {
         viewport={{ once: false, amount: 0.5 }}
         transition={
           showModal && !isMobile
-            ? { delayChildren: 4.5, staggerChildren: 0.5 }
+            ? { delayChildren: 4.5, staggerChildren: 1 }
             : { delayChildren: 0 }
         }
         className={style.about}
@@ -53,7 +53,7 @@ const About: React.FC<Props> = ({ showModal }) => {
         viewport={{ once: false, amount: 0.5 }}
         transition={
           showModal && !isMobile
-            ? { delayChildren: 5.2, staggerChildren: 1.2 }
+            ? { delayChildren: 5.5, staggerChildren: 1.5 }
             : { delayChildren: 0 }
         }
         className={style.about}
@@ -63,7 +63,7 @@ const About: React.FC<Props> = ({ showModal }) => {
           animate="animate"
           transition={
             showModal && !isMobile
-              ? { delay: 6, duration: 1.5 }
+              ? { delay: 7, duration: 1.5 }
               : { delay: 1.5, duration: 1.5 }
           }>
           check out some of my projects
@@ -73,7 +73,7 @@ const About: React.FC<Props> = ({ showModal }) => {
           animate="animate"
           transition={
             showModal && !isMobile
-              ? { delay: 6, duration: 1.5 }
+              ? { delay: 7, duration: 1.5 }
               : { delay: 1.5, duration: 1.5 }
           }>
             <a

@@ -22,7 +22,7 @@ export const titleVariants = {
     opacity: 1,
     transition: {
       ease: "easeOut",
-      duration: 0.7,
+      duration: 1.3,
     },
   },
 };
@@ -34,7 +34,7 @@ export const contentVariants = {
   onscreen: {
     opacity: 1,
     transition: {
-      duration: 1.5,
+      duration: 2,
     },
   },
 };
