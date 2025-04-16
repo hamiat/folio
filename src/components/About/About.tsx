@@ -111,7 +111,7 @@ const About: React.FC<Props> = ({ showModal }) => {
           animate="animate"
           transition={
             showModal && !isMobile
-              ? { delay: 6, duration: 1.5 }
+              ? { delay: 7, duration: 1.5 }
               : { delay: 1.5, duration: 1.5 }
           }>
         <p>&copy; {getCurrentYear()}</p>

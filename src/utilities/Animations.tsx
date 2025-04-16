@@ -178,6 +178,38 @@ export const pathVariants = {
   },
 };
 
+export const nameAnimationVariants = {
+  initial: {
+    x: 0,
+  },
+  initialMobile: {
+    x: 20,
+    y: 0,
+  },
+  initialMobileOne: {
+    x: 0,
+    y: 25,
+    rotate: 0,
+  },
+  animate: {
+    x: "-20vw",
+    transition: {
+      delay: 2.5,
+      duration: 2.5,
+      ease: "easeInOut",
+    },
+  },
+  animateMobile: {
+    x: 0,
+    y: 0,
+    rotate: 0,
+    transition: {
+      duration: 1.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
 export const goToSideVariants = {
   initial: {
     x: 0,

@@ -14,6 +14,7 @@ import {
   pathVariants,
   goToSideVariants,
   opacityVariants,
+  nameAnimationVariants,
 } from "./utilities/Animations";
 
 
@@ -391,7 +392,7 @@ const App: React.FC = () => {
         </motion.svg>
 
         <motion.svg
-          variants={goToSideVariants}
+          variants={nameAnimationVariants}
           initial={isMobile ? "initialMobileOne" : "initial"}
           animate={isMobile ? "animateMobile" : "animate"}
           className={style.name}
@@ -467,7 +468,7 @@ const App: React.FC = () => {
           animate="animate"
           transition={
             showModal && !isMobile
-              ? { delay: 6, duration: 1.5 }
+              ? { delay: 7, duration: 1.5 }
               : { delay: 1.5, duration: 1.5 }
           }
           className={style.header}
