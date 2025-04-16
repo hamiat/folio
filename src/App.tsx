@@ -17,7 +17,6 @@ import {
   nameAnimationVariants,
 } from "./utilities/Animations";
 
-
 const App: React.FC = () => {
   const [mode, setMode] = useState(true);
   const [showModal, setShowModal] = useState(true);
@@ -45,8 +44,7 @@ const App: React.FC = () => {
         animate={isMobile ? "animateMobile" : "animate"}
         className={style.leftContent}
       >
-         {/*
-        <motion.div
+        {/* <motion.div
           variants={isMobile ? undefined : opacityVariants}
           initial="initial"
           animate="animate"
@@ -62,8 +60,7 @@ const App: React.FC = () => {
             <Flower classNames={style.flowerThree} />
             <Flower classNames={style.flowerFour} />
           </div>
-        </motion.div>
-        */}
+        </motion.div>*/}
         <motion.svg
           variants={goToSideVariants}
           initial={isMobile ? "initialMobile" : "initial"}
@@ -473,18 +470,16 @@ const App: React.FC = () => {
           }
           className={style.header}
         >
-          <Button onClick={handleToggle}>
+          {/*<Button onClick={handleToggle}>
             {mode ? "Light mode" : "Dark mode"}
-          </Button>
+          </Button>*/}
           <Navbar />
         </motion.header>
       )}
 
       <About showModal={showModal} />
-      {/* 
-      <Projects />
-      <Contact />
-      */}
+      {/*<Projects />
+      <Contact />*/}
     </main>
   );
 };

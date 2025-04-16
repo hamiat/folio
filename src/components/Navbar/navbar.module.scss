@@ -8,12 +8,14 @@ nav {
     position: fixed;
 
     a {
-      background-color: $background;
+      background-color: transparent;
       text-decoration: none;
-      color: $secondary;
+      color: $primary;
       font-size: 16px;
+      font-weight: 600;
       &:hover {
-        color: $primary;
+        color: $background;
+        background-color: transparent;
       }
     }
   }
