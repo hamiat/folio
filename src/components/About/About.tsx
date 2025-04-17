@@ -61,22 +61,20 @@ const About: React.FC<Props> = ({ showModal }) => {
         className={style.about}
       >
         <motion.h1 variants={titleVariants}>
-          <span>H</span>
-          <span>e</span>
-          <span>l</span>
-          <span>l</span>
-          <span>o</span> 
-          {" "}
-          <span>t</span>
-          <span>h</span>
-          <span>e</span>
-          <span>r</span>
-          <span>e</span>
-          {" "}
-          <span>!</span>
+        Hello there!
         </motion.h1>
         <motion.h2 variants={contentVariants}>
-          welcome to my portfolio
+          welcome to my
+          {" "}
+          <span>p</span>
+          <span>o</span>
+          <span>r</span>
+          <span>t</span>
+          <span>f</span>
+          <span>o</span>
+          <span>l</span>
+          <span>i</span>
+          <span>o</span>
         </motion.h2>
         <motion.p variants={contentVariants}></motion.p>
       </motion.div>
