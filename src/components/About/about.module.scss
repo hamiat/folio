@@ -23,6 +23,16 @@
       //padding: 158px 0 0 0;
     }
 
+    @keyframes wave {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
     h1 {
       font-size: 40px;
 
@@ -40,12 +50,6 @@
         font-size: 34px;
       }
     }
-
-    h1 span {
-      display: inline-block;
-         animation: wave 2s ease-in-out infinite;
-    }
-
 
     h2 {
       padding: 0 0 10px 48px;
@@ -67,6 +71,26 @@
       @include sm {
         font-size: 24px;
       }
+
+      span {
+        display: inline-block;
+        transform: translateY(0);
+        transition: transform 0.2s ease;
+      }
+      
+      &:hover span {
+        animation: wave 1.2s ease-in-out 1 ;
+      }
+
+      span:nth-child(1)  {animation-delay: 0s; }
+      span:nth-child(2)  { animation-delay: 0.1s; }
+      span:nth-child(3)  { animation-delay: 0.2s; }
+      span:nth-child(4)  { animation-delay: 0.3s; }
+      span:nth-child(5)  { animation-delay: 0.4s; }
+      span:nth-child(6)  { animation-delay: 0.5s; }
+      span:nth-child(7)  { animation-delay: 0.6s; }
+      span:nth-child(8)  { animation-delay: 0.7s; }
+      span:nth-child(9)  { animation-delay: 0.8s; }
     }
 
     p {
@@ -111,8 +135,6 @@
         margin: 0 auto;
       }
     }
-
-
   }
 
   .projectsDiv {
@@ -122,7 +144,7 @@
     .projectUrl {
       color: $secondary;
       font-size: 16px;
-  
+
       &:hover {
         color: $primary;
       }
