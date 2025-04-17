@@ -8,9 +8,6 @@ const Navbar: React.FC = () => {
       <ul>
         {links.map((link) => {
           return (
-
-
-
             <Button> 
               <a key={link.id} href={link.url} target="_blank" rel="noopener noreferrer">
             {link.text}
