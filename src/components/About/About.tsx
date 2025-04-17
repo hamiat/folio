@@ -60,7 +60,21 @@ const About: React.FC<Props> = ({ showModal }) => {
         }
         className={style.about}
       >
-        <motion.h1 variants={titleVariants}>Hello there!</motion.h1>
+        <motion.h1 variants={titleVariants}>
+          <span>H</span>
+          <span>e</span>
+          <span>l</span>
+          <span>l</span>
+          <span>o</span> 
+          {" "}
+          <span>t</span>
+          <span>h</span>
+          <span>e</span>
+          <span>r</span>
+          <span>e</span>
+          {" "}
+          <span>!</span>
+        </motion.h1>
         <motion.h2 variants={contentVariants}>
           welcome to my portfolio
         </motion.h2>

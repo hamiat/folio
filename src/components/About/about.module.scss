@@ -41,6 +41,12 @@
       }
     }
 
+    h1 span {
+      display: inline-block;
+         animation: wave 2s ease-in-out infinite;
+    }
+
+
     h2 {
       padding: 0 0 10px 48px;
       font-size: 30px;
