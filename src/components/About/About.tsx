@@ -139,7 +139,7 @@ const About: React.FC<Props> = ({ showModal }) => {
           </a>
           <a
             className={style.projectUrl}
-            href="https://creative-starburst-5e276c.netlify.app/"
+            href="https://oldmcdonald.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
